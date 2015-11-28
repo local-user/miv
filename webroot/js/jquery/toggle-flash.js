@@ -27,8 +27,15 @@
 
         function hide_flash() {
 
+            // flash - add - class(s)a
+            $( '#flash-toggle-body'     ).addClass( 'color-flash-toggle-body' );
+            $( '#flash-toggle-love'     ).addClass( 'color-flash-toggle-love' );
+
             // flash - remove - class(s)
-            $( '#flash' ).removeClass( "love" );
+            $( '#flash'                 ).removeClass( "love" );
+            $( '#flash-toggle-body'     ).removeClass( 'color-flash-toggle-body-active' );
+            $( '#flash-toggle-love'     ).removeClass( 'color-flash-toggle-love-active' );
+            $( '#flash-toggle-message'  ).removeClass( 'hidden' );
 
             // flash - add - class(s)
             $( '#flash' ).addClass( "hidden" );
