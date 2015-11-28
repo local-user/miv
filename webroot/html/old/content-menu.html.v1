@@ -1,0 +1,185 @@
+
+
+        <!--| menu -->
+
+            <style>
+
+                #menu   {
+                            font-family:    'Ubuntu', sans-serif;
+                            height:         100px;
+                            width:          100%;
+                        }
+
+                .edit       {
+                                display: none;
+                            }
+
+                .edit.show      {
+                                    display: block;
+                                }
+
+
+                #form           {
+                                    background-color:   rgb(34, 34, 34);
+                                }
+                #form-create    {
+                                    width:              80%;
+                                    display:            none;
+                                    margin:             50px auto;
+                                    color:              white;
+                                }
+
+                #form-create.show   {
+                                        display:    block;
+                                    }
+
+                #form-create #spacer {
+                                        height:             50px;
+                                        text-align:         center;
+                                    }
+
+
+                #form-create #spacer.black  {
+                                                background-color:   rgb(34, 34, 34);
+                                            }
+                #form-create #spacer.grey   {
+                                                background-color:   #ECEFF1;
+                                            }
+                #form-create #spacer.red    {
+                                                background-color:   #F44336;
+                                            }
+                #form-create #spacer.white  {
+                                                background-color:   white;
+                                            }
+
+                #form-create form   {
+                                        padding:    30px;
+                                    }
+                #form-create form .input    {
+                                                padding:    10px;
+                                            }
+                #form-create form .input label  {
+                                                    width: 100%;
+                                                }
+                #form-create form .input input  {
+                                                    width:      100%;
+                                                    padding:    10px;
+                                                    transition: 1s;
+                                                }
+                #form-create form .input input:active   {
+                                                            padding:    25px;
+                                                        }
+                #form-create form .input input:hover    {
+                                                            padding:    25px;
+                                                        }
+
+
+
+
+
+
+
+
+
+
+
+                table   {
+                            margin:                 100px auto;
+                        }
+                table thead {}
+                table tbody {}
+                table tbody tr {}
+                table tbody tr td   {
+                                        height:         100px;
+                                        width:          100px;
+                                        border:         solid 2px #FFFFFF;
+                                        transition:     1s;
+                                    }
+                table tbody tr td:hover {
+                                            border:         solid 2px #FFFFFF;
+                                            box-shadow:     inset 0 0 10px #212121;
+                                        }
+
+                table tbody tr td.new   {
+                                            text-align:     center;
+                                            vertical-align: middle;
+                                            color:          #F44336;
+                                            font-size:      10px;
+                                        }
+
+                table tbody tr.input    {
+                                        }
+
+
+
+            </style>
+
+            <div id='menu'>
+
+                <div id='form'>
+
+                    <div id='form-create' class=''>
+
+                        <div id='spacer'></div>
+
+                        <form>
+
+                            <div class='input'>
+                                <label for="title"><strong>Title</strong></label>
+                                <input type="input" name="title" value="" placeholder="" />
+                            </div>
+
+                            <div class='input'>
+                                <label for="title"><strong>Application URL</strong></label>
+                                <input type="input" name="title" value="" placeholder="http://example.com/" />
+                            </div>
+
+                            <div class='input'>
+                                <label for="title"><strong>Icon URL</strong></label>
+                                <input type="input" name="title" value="" placeholder="http://example.com/" />
+                            </div>
+
+                            <div class='input'>
+                                <label for="title"><strong>Description</strong></label>
+                                <input type="input" name="title" value="" placeholder="This one does the thing." />
+                            </div>
+
+                        </form>
+
+                        <div id='spacer'></div>
+
+                    </div>
+
+                </div>
+
+                <table>
+                    <thead>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+
+            </div>
+
+            <script>
+                                                                    //
+                var toggle_edit = 0;                                //      -- Declare toggle_edit
+                                                                    //
+                $( "#edit" ).click(function() {                     //      -- Toggle edit
+                    if( toggle_edit == 0 ) {                        //          -- Toggle toggle_edit
+                        $( ".edit" ).addClass( "show" );            //          -- Toggle .edit, .show class
+                        $( "#form-create" ).addClass( "show" );     //          -- Toggle #form-reate, .show class
+                        toggle_edit = 1;                            //          -- Toggle #edit, .active class
+                    } else {                                        //
+                        $( ".edit" ).removeClass( "show" );         //
+                        $( "#form-create" ).removeClass( "show" );  //
+                        toggle_edit = 0;                            //
+                    }                                               //
+                    $("#edit").toggleClass("active");               //
+                });                                                 //
+                                                                    //
+            </script>
+
+        <!-- menu |-->
+
+

@@ -1,0 +1,45 @@
+/**| css - common - color **/
+
+
+
+
+    .color-toggle-inactive                  {              color: #212121;          }
+
+
+    .color-create-background                {   background-color: rgb(34, 34, 34);  }
+
+    .color-create-text                      {              color: #FFFFFF;          }
+    .color-create-text-active               {              color: #F44336;          }
+    .color-create-text-hover:hover          {              color: #F44336;          }
+    .color-create-text-invalid              {              color: #F44336;          }
+    .color-create-text-valid                {              color: #4CAF50;          }
+
+
+    .color-edit-background                  {   background-color: #F44336;          }
+
+    .color-edit-text                        {              color: #F44336;          }
+    .color-edit-text-active                 {              color: #F44336;          }
+    .color-edit-text-active:hover           {              color: #F44336;          }
+    .color-edit-text-hover:hover            {              color: #F44336;          }
+
+
+    .color-flash-background                 {   background-color: #424242;          }
+    .color-flash-background-head            {   background-color: #424242;          }
+
+    .color-flash-text-head                  {              color: #FFFFFF;          }
+
+
+    .color-flash-toggle-message             {              color: #FFFFFF;          }
+    .color-flash-toggle-message:hover       {              color: #4CAF50;          }
+    .color-flash-toggle-message-active      {              color: #F44336;          }
+    .color-flash-toggle-love                {              color: #FFFFFF;          }
+    .color-flash-toggle-love:hover          {              color: #4CAF50;          }
+    .color-flash-toggle-love-active         {              color: #424242;          }
+    .color-flash-toggle-hide                {              color: #FFFFFF;          }
+    .color-flash-toggle-hide:hover          {              color: #F44336;          }
+    .color-flash-toggle-hide-active         {              color: #424242;          }
+
+
+
+
+/** css - common - color |**/

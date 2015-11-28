@@ -1,0 +1,51 @@
+/**| css - content - header **/
+
+
+
+
+    #header {
+                color:          #212121;
+                width:          100%;
+                min-height:     50px;
+                height:         50px;
+                transition:     1s;
+            }
+
+
+    #header .title  {
+                        padding:        20px 0 0 80px;
+                        float:          left;
+                    }
+
+
+    #header .toggle {
+                        padding:        20px 80px 0 0;
+                        float:          right;
+                        user-select:    none;
+                    }
+
+    #header .toggle .fa     {
+                                cursor:         pointer;
+                                transition:     1s;
+                            }
+
+    #header .toggle .hidden {
+                                color:          white;
+                            }
+
+    #header .toggle .spacer {
+                                height:         10px;
+                                width:          50px;
+                                display:        inline-block;
+                                transition:     0.5s;
+                            }
+
+    #header .toggle .spacer.hidden  {
+                                        width:          0px;
+                                        font-size:      2px;
+                                    }
+
+
+
+
+/**| css - content - header **/

@@ -1,0 +1,88 @@
+/**| css - content - flash **/
+
+
+
+
+        #flash {
+            transition:         2s;
+            color:              white;
+            width:              100%;
+            height:             50px;
+        }
+
+
+        #flash .head {
+            font-size:          15px;
+            transition:         1s;
+            width:              100%;
+            overflow:           hidden;
+        }
+
+
+        #flash .head .icon {
+            font-size:          15px;
+            transition:         1s;
+            cursor:             pointer;
+            user-select:        none;
+        }
+
+        #flash .head i {
+            transition:         0.5s;
+        }
+
+        #flash .head .count {
+            padding:            20px 0 0 80px;
+            float:              left;
+        }
+
+        #flash .head .toggle {
+            padding:            20px 80px 0 0;
+            float:              right;
+        }
+
+        #flash .head i.hidden {
+            font-size:          0px;
+        }
+
+
+        #flash.message {
+            height:             100%;
+            width:              100%;
+        }
+
+
+        #flash.love {
+            height:             100%;
+            width:              100%;
+            background:         url(../img/bg/blm.png) no-repeat center center fixed;
+            background-size:    cover;
+    -webkit-background-size:    cover;
+       -moz-background-size:    cover;
+         -o-background-size:    cover;
+            background-color:   #4CAF50;
+        }
+
+        #flash.love .icon {
+            margin:             50px 0 0 0;
+            font-size:          24px;
+        }
+
+        #flash.love i:hover {
+            color:              #424242 !important;
+        }
+
+        #flash.love .count {
+            margin:             50px 0 0 0;
+            color:              #4CAF50;
+        }
+
+        #flash.hidden {
+            height:             0%;
+            min-height:         0%;
+            overflow:           hidden;
+        }
+
+
+
+
+/** css - content - flash |**/
