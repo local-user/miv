@@ -25,21 +25,20 @@
 
             function display_create() {
 
-                // reset - create - form
+                // lock - create - form - reset
                 lock_create_form_reset();
 
-                // create - hide - extra
+                // flash - add - class
                 $( "#flash" ).addClass( "hidden" );
 
-                // create - toggle
+                // create - toggle - class
                 $( "#create"            ).toggleClass( "hidden"                   );
-                $( "#create #spacer"    ).toggleClass( "hidden"                   );
                 $( "#toggle-create"     ).toggleClass( "color-create-text-active" );
 
-                // create - input - focus
+                // create - form- input - url - focus
                 $( "#create-form-input-url" ).focus();
 
-                // create - input - empty
+                // create - form - input - url -  empty
                 $( "#create-form-input-url" ).val('');
 
                 // return
@@ -49,12 +48,14 @@
 
             function hide_create() {
 
-                // hide - create
+                // create - add - class
                 $( "#create" ).addClass( "hidden" );
 
-                // hide - create - toggle
-                $( "#create #spacer" ).addClass( "hidden"                   );
-                $( "#toggle-create"  ).addClass( "color-create-text-active" );
+                // toggle - create - add - class
+                $( "#toggle-create"  ).addClass( "color-create-text-inactive" );
+
+                // toggle - create - remove - class
+                $( "#toggle-create"  ).removeClass( "color-create-text-active" );
 
                 // return
                 return true;
