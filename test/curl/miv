@@ -1,0 +1,14 @@
+#!/bin/bash
+#
+#   miv
+#
+
+
+    miv_curl='--verbose'
+    miv_http_address='http://miv/api.php'
+    miv_http_request_method='POST'
+
+
+#
+# $(#_@)!--
+#

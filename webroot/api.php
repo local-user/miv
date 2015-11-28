@@ -12,16 +12,10 @@
     require_once('../php/class-router.php');
 
 
-    // router - init
-    $router = new router();
-
-    // router - set - payload - get
-    $router->set_payload_get($_GET);
-
-    // router - set - payload - post
-    $router->set_payload_post($_POST);
-
     // router - route
+    $router = new \miv\router();
+    $router->set_request_data($_GET, $_POST);
+    $router->set_request_method_from_request_data();
     $router->route();
 
 
