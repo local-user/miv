@@ -27,6 +27,7 @@ class router {
             if( $request_method === false ){    return false;   }
 
             // load
+            require_once(__DIR__."/class-exception-invalid-argument.php");
             require_once(__DIR__."/class-request-$request_method.php");
 
             // route
@@ -37,6 +38,15 @@ class router {
 
         }
 
+        public function route_error($code) {
+
+            switch($code) {
+                default:
+                    echo 'error';
+            }
+
+        }
+
     /** route | **/
 
 
@@ -44,7 +54,7 @@ class router {
 
         private function get_request_method() {
             if( is_null($this->request_method) ){
-                $this->route_error(400, 'Invalid request method');
+                $this->route_error(400);
                 return false;
             }
             return $this->request_method;
@@ -52,7 +62,7 @@ class router {
 
         private function get_request_data() {
             if( is_null($this->request_data) ){
-                $this->route_error(400, 'Invalid request data');
+                $this->route_error(400);
                 return false;
             }
             return $this->request_data;
