@@ -1,0 +1,13 @@
+#!/bin/bash
+#
+#   curl - test - ajax - create - bad - data
+#
+
+
+    source "`dirname $0`/miv"
+    curl "$miv_curl" -X "$miv_http_request_method" --data 'request_method=create&bad_key=http://example.com/' "$miv_http_address" $@
+
+
+#
+#   curl - test - ajax - create - bad - data 
+#
