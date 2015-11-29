@@ -14,6 +14,19 @@ class router {
     private $request_method = null;
 
 
+
+
+    /** | display **/
+
+        private function display_static_json($filename) {
+            header('Content-Type: application/json');
+            readfile(__DIR__.'/../json/'.$filename);
+            return true;
+        }
+
+    /** display | **/
+
+
     /** | route **/
 
         public function route() {
@@ -38,12 +51,21 @@ class router {
 
         }
 
-        public function route_error($code) {
+        public function route_error($code = 500) {
 
+            // code -> file
             switch($code) {
-                default:
-                    echo 'error';
+                case 200:   $static_json_error = 'static-error-200.json';   break;
+                case 400:   $static_json_error = 'static-error-400.json';   break;
+                case 404:   $static_json_error = 'static-error-404.json';   break;
+                default:    $static_json_error = 'static-error-500.json';   break;
             }
+
+            // display - static - json
+            $this->display_static_json($static_json_error);
+
+            // die die die!
+            die;
 
         }
 
