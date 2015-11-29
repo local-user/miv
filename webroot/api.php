@@ -11,7 +11,6 @@
     // require - router
     require_once('../php/class-router.php');
 
-
     // router - route
     $router = new \miv\router();
     $router->set_request_data($_GET, $_POST);
