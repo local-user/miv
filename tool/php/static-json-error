@@ -1,0 +1,46 @@
+#!/usr/bin/php
+<?php
+/*
+ *
+ *  Print JSON Error Message
+ *
+ */
+?>
+<?php
+
+
+
+
+    /** Default -- Error Message **/
+    $message['code']    =   00;
+    $message['text']    =   'Sample message text';
+
+
+
+
+?>
+<?php
+
+
+
+
+    /** Args -- Update -- Error Message **/
+    if( isset($argv[1]) ){ $message['code'] = $argv[1]; }
+    if( isset($argv[1]) ){ $message['text'] = $argv[2]; }
+
+
+
+
+?>
+<?php
+
+
+
+
+    /** Print -- Error Message **/
+    print_r(json_encode($message));
+
+
+
+
+?>
