@@ -91,7 +91,7 @@ class router {
 
         }
 
-        private function route_error($code = 500, $e) {
+        private function route_error($code = 500, $e = false) {
 
             // code -> file
             switch($code) {
@@ -105,7 +105,7 @@ class router {
             $this->display_static_json($static_json_error);
 
             // debug - dump - exception
-            if( $this->flag_debug ){ print_r($e); }
+            if( $e && $this->flag_debug ){ print_r($e); }
 
             // return
             return true;
@@ -174,7 +174,7 @@ class router {
         }
 
         private function valid_request_method($request_method) {
-            if(preg_match("/^[a-zA-Z]+$/", $request_method) == 1) {
+            if(preg_match("/^[a-zA-Z-]+$/", $request_method) == 1) {
                                 $class_method_path = __DIR__."/class-request-$request_method.php";
                 if( file_exists($class_method_path) ){
                     return true;
