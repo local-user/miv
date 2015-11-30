@@ -1,10 +1,18 @@
 <?php namespace miv; ?>
 <?php
+
+
+    // require - miv
+    require_once(__DIR__.'/miv.php');
+
+
+?>
+<?php
 /*
- *  php - class - router
+ *  php - miv  - router
  *
  */
-class router {
+class miv_router extends miv {
 
 
 
@@ -48,8 +56,7 @@ class router {
             if( $request_method === false ){    return false;   }
 
             // request - method - load
-            require_once(__DIR__."/class-exception-invalid-argument.php");
-            require_once(__DIR__."/class-request-$request_method.php");
+            require_once(__DIR__."/request_$request_method.php");
 
             // route - request
             try {
@@ -174,8 +181,8 @@ class router {
         }
 
         private function valid_request_method($request_method) {
-            if(preg_match("/^[a-zA-Z-]+$/", $request_method) == 1) {
-                                $class_method_path = __DIR__."/class-request-$request_method.php";
+            if(preg_match("/^[a-zA-Z_-]+$/", $request_method) == 1) {
+                                $class_method_path = __DIR__."/action_$request_method.php";
                 if( file_exists($class_method_path) ){
                     return true;
                 }
@@ -190,7 +197,7 @@ class router {
 
 }
 /*
- *  php - class - router
+ *  php - miv - router
  *
  */
 ?>

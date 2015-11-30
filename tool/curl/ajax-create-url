@@ -4,7 +4,7 @@
 #
 
 
-    miv_request_method='create-url'
+    miv_request_method='create_url'
 
 
 #

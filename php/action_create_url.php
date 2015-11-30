@@ -1,10 +1,18 @@
 <?php namespace miv; ?>
 <?php
+
+
+    // require - action
+    require_once(__DIR__.'/action.php');
+
+
+?>
+<?php
 /*
- *  php - class - action - create - url
+ *  php - action - create - url
  *
  */
-class create_url {
+class action_create_url extends action {
 
 
 
@@ -39,7 +47,7 @@ class create_url {
             echo ' -- END - DEBUG -- ';
 
             // return
-            true;
+            return true;
 
         }
 

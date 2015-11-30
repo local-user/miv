@@ -1,7 +1,7 @@
 <?php namespace miv; ?>
 <?php
 /*
- *  php - class - template
+ *  php - template
  *
  */
 class template {
@@ -29,7 +29,7 @@ class template {
 
 }
 /*
- *  php - class - template
+ *  php - template
  *
  */
 ?>

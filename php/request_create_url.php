@@ -1,10 +1,19 @@
 <?php namespace miv; ?>
 <?php
+
+
+    // require - php - action - create - url
+    require_once(__DIR__.'/action_create_url.php');
+
+
+?>
+<?php
 /*
- *  php - class - request - create - url
+ *  php - request - create - url
+ *   ( masquarades as request )
  *
  */
-class request {
+class request extends miv {
 
 
 
@@ -19,11 +28,8 @@ class request {
 
         public function __construct() {
 
-            // require - class - action - create
-            require(__DIR__.'/class-action-create-url.php');
-
             // init - class - create
-            $this->create_url = new create_url();
+            $this->create_url = new action_create_url();
 
             // return
             return true;
@@ -37,7 +43,7 @@ class request {
 
         public function process() {
 
-            // create - url - database - create
+            // action - create - url - database - create
             $this->create_url->database_create();
 
             // return
@@ -68,7 +74,7 @@ class request {
 
 }
 /*
- *  php - class - request - create - url
+ *  php - request - create - url
  *
  */
 ?>
