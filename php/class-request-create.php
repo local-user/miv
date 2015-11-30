@@ -17,7 +17,9 @@ class request {
 
     /** | magic **/
 
-        public function __construct() {}
+        public function __construct() {
+
+        }
 
     /** magic | **/
 
@@ -28,16 +30,27 @@ class request {
             foreach( $data as $key => $value ){
                 if( in_array($key, $this->valid_data_keys) ){
                     $method = "set_data_$key";
-                    $this->$method($value);
+                    if( $this->$method($value) ){
+                        //
+                        //  ^_^ { .. all the cheese! }
+                        //
+                    } else {
+                        throw new InvalidArgumentException("Invalid value.");
+                    }
                 } else {
-                    throw new InvalidArgumentException("Unrecognized key '$key'");
+                    throw new InvalidArgumentException("Invalid key.");
                 }
             }
             return true;
         }
 
         private function set_data_url($url) {
-            $this->data_url = $url;
+            if ( ! filter_var($url, FILTER_VALIDATE_URL) === false ){
+                $this->data_url = $url;
+                return true;
+            } else {
+                return false;
+            }
         }
 
     /** set | **/

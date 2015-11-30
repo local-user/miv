@@ -9,6 +9,9 @@ class router {
 
 
 
+    /** flag(s) **/
+    private $flag_debug     = false;
+
     /** global **/
     private $request_data   = null;
     private $request_method = null;
@@ -16,9 +19,18 @@ class router {
 
 
 
+    /** | magic **/
+
+        public function __construct( $debug = false ){
+            $this->flag_debug = $debug;
+        }
+
+    /** magic | **/
+
+
     /** | display **/
 
-        private function display_static_json($filename) {
+        private function display_static_json( $filename ){
             header('Content-Type: application/json');
             readfile(__DIR__.'/../json/'.$filename);
             return true;
@@ -31,49 +43,49 @@ class router {
 
         public function route() {
 
-
-            // get
-            $request_data   = $this->get_request_data();
-            $request_method = $this->get_request_method();
-
-            // check
-            if( $request_data   === false ){    return false;   }
+                // request - method
+                $request_method = $this->get_request_method();
             if( $request_method === false ){    return false;   }
 
-            // load
+            // request - method - load
             require_once(__DIR__."/class-exception-invalid-argument.php");
             require_once(__DIR__."/class-request-$request_method.php");
 
-
-            // route - main
+            // route - request
             try {
-
-
-                // route - init
-                try     { $request = new request();  }
-                catch   ( Exception $e              ){
-                    return $this->route_error(500);
-                }
-
-                // route - set - request - data
-                try     { $request->set_request_data($request_data);  }
-                catch   ( InvalidArgumentException $e                ){
-                    return $this->route_error(400);
-                }
-
+                return $this->route_request();
 
             // route - unrecognized - error
             } catch( Exception $e ){
-                return $this->route_error(500);
-            }
+                return $this->route_error(500, $e);
 
+            }
 
             // return
             return true;
 
         }
 
-        public function route_error($code = 500) {
+        private function route_request() {
+
+            // route - request - init
+            try     { $request = new request($this->flag_debug);            }
+            catch   ( Exception $e                                         ){
+                return $this->route_error(500, $e);
+            }
+
+            // route - request - set - request - data
+            try     { $request->set_request_data($this->get_request_data()); }
+            catch   ( InvalidArgumentException $e                           ){
+                return $this->route_error(400, $e);
+            }
+
+            // return
+            return true;
+
+        }
+
+        private function route_error($code = 500, $e) {
 
             // code -> file
             switch($code) {
@@ -82,6 +94,9 @@ class router {
                 case 404:   $static_json_error = 'static-error-404.json';   break;
                 default:    $static_json_error = 'static-error-500.json';   break;
             }
+
+            // debug
+            if( $this->flag_debug ){ print_r($e); }
 
             // display - static - json
             $this->display_static_json($static_json_error);
