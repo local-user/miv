@@ -13,7 +13,7 @@
     # curl
     curl "$miv_curl" -X "$miv_http_request_method"  \
         "$miv_http_address" $@                      \
-        --data "request_method=$miv_request_method&data_url=http://example.com/"
+        --data "request_method=$miv_request_method&url=http://example.com/"
 
 
 
