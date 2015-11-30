@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-#   curl - test - ajax - create - bad - data - value
+#   curl - test - ajax - create - url - bad - data
 #
 
 
@@ -13,11 +13,11 @@
     # curl
     curl "$miv_curl" -X "$miv_http_request_method"  \
         "$miv_http_address" $@                      \
-        --data "request_method=$request_method&bad_key=example"
+        --data "request_method=$miv_request_method&data_url=http://example.com/"
 
 
 
 
 #
-#   curl - test - ajax - create - bad - data - value
+#   curl - test - ajax - create - url - bad - data
 #
