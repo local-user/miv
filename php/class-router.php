@@ -31,6 +31,7 @@ class router {
 
         public function route() {
 
+
             // get
             $request_data   = $this->get_request_data();
             $request_method = $this->get_request_method();
@@ -43,8 +44,29 @@ class router {
             require_once(__DIR__."/class-exception-invalid-argument.php");
             require_once(__DIR__."/class-request-$request_method.php");
 
-            // route
-            $request = new request($request_data);
+
+            // route - main
+            try {
+
+
+                // route - init
+                try     { $request = new request();  }
+                catch   ( Exception $e              ){
+                    return $this->route_error(500);
+                }
+
+                // route - set - request - data
+                try     { $request->set_request_data($request_data);  }
+                catch   ( InvalidArgumentException $e                ){
+                    return $this->route_error(400);
+                }
+
+
+            // route - unrecognized - error
+            } catch( Exception $e ){
+                return $this->route_error(500);
+            }
+
 
             // return
             return true;
@@ -64,8 +86,8 @@ class router {
             // display - static - json
             $this->display_static_json($static_json_error);
 
-            // die die die!
-            die;
+            // return
+            return true;
 
         }
 

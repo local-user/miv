@@ -1,3 +1,4 @@
+<?php namespace miv; ?>
 <?php
 /*
  *  php - class - exception - invalid - argument

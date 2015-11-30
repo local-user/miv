@@ -1,3 +1,4 @@
+<?php namespace miv; ?>
 <?php
 /*
  *  php - class - request - create
@@ -12,18 +13,18 @@ class request {
     private $valid_data_keys = array('url');
 
 
+
+
     /** | magic **/
 
-        public function __construct($data) {
-            $this->load_data($data);
-        }
+        public function __construct() {}
 
     /** magic | **/
 
 
-    /** | load **/
+    /** | set **/
 
-        private function load_data($data) {
+        public function set_request_data($data) {
             foreach( $data as $key => $value ){
                 if( in_array($key, $this->valid_data_keys) ){
                     $method = "set_data_$key";
@@ -34,11 +35,6 @@ class request {
             }
             return true;
         }
-
-    /** load |**/
-
-
-    /** | set **/
 
         private function set_data_url($url) {
             $this->data_url = $url;
