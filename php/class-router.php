@@ -69,14 +69,20 @@ class router {
         private function route_request() {
 
             // route - request - init
-            try     { $request = new request($this->flag_debug);            }
-            catch   ( Exception $e                                         ){
+            try     { $request = new request($this->flag_debug);             }
+            catch   ( Exception $e                                          ){
                 return $this->route_error(500, $e);
             }
 
             // route - request - set - request - data
             try     { $request->set_request_data($this->get_request_data()); }
             catch   ( InvalidArgumentException $e                           ){
+                return $this->route_error(400, $e);
+            }
+
+            // route - request - process
+            try     { $request->process();                                   }
+            catch   ( Exception $e                                          ){
                 return $this->route_error(400, $e);
             }
 

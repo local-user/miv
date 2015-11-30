@@ -1,7 +1,7 @@
 <?php namespace miv; ?>
 <?php
 /*
- *  php - class - request - create
+ *  php - class - request - create - url
  *
  */
 class request {
@@ -9,8 +9,8 @@ class request {
 
 
 
-    /** global **/
-    private $valid_data_keys = array('url');
+    // var - object
+    private $create_url = null;
 
 
 
@@ -19,52 +19,56 @@ class request {
 
         public function __construct() {
 
+            // require - class - action - create
+            require(__DIR__.'/class-action-create-url.php');
+
+            // init - class - create
+            $this->create_url = new create_url();
+
+            // return
+            return true;
+
         }
 
     /** magic | **/
 
 
+    /** | process **/
+
+        public function process() {
+
+            // create - url - database - create
+            $this->create_url->database_create();
+
+            // return
+            return true;
+
+        }
+
+    /** process | **/
+
+
     /** | set **/
 
         public function set_request_data($data) {
-            foreach( $data as $key => $value ){
-                if( in_array($key, $this->valid_data_keys) ){
-                    $method = "set_data_$key";
-                    if( $this->$method($value) ){
-                        //
-                        //  ^_^ { .. all the cheese! }
-                        //
-                    } else {
-                        throw new InvalidArgumentException("Invalid value.");
-                    }
-                } else {
-                    throw new InvalidArgumentException("Invalid key.");
-                }
-            }
-            return true;
-        }
 
-        private function set_data_url($url) {
-            if ( ! filter_var($url, FILTER_VALIDATE_URL) === false ){
-                $this->data_url = $url;
-                return true;
-            } else {
-                return false;
-            }
+            // create - url - set - data
+            if( isset($data['url'] )){ $this->create_url->set_data_url($data['url']); }
+            else                     { throw new InvalidArgumentException();          }
+
+            // return
+            return true;
+
         }
 
     /** set | **/
-
-
-    /** | valid **/
-    /** valid | **/
 
 
 
 
 }
 /*
- *  php - class - router
+ *  php - class - request - create - url
  *
  */
 ?>
