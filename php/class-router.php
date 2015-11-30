@@ -95,11 +95,11 @@ class router {
                 default:    $static_json_error = 'static-error-500.json';   break;
             }
 
-            // debug
-            if( $this->flag_debug ){ print_r($e); }
-
             // display - static - json
             $this->display_static_json($static_json_error);
+
+            // debug - dump - exception
+            if( $this->flag_debug ){ print_r($e); }
 
             // return
             return true;
