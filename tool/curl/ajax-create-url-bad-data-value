@@ -1,0 +1,23 @@
+#!/bin/bash
+#
+#   curl - test - ajax - create - bad - data - value
+#
+
+
+
+
+    # src
+    source "`dirname $0`/miv"
+    source "`dirname $0`/ajax-create-url"
+
+    # curl
+    curl "$miv_curl" -X "$miv_http_request_method"  \
+        "$miv_http_address" $@                      \
+        --data "request_method=$request_method&bad_key=example"
+
+
+
+
+#
+#   curl - test - ajax - create - bad - data - value
+#
