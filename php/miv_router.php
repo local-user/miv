@@ -12,7 +12,7 @@
  *  php - miv  - router
  *
  */
-class miv_router extends miv {
+class router extends miv {
 
 
 

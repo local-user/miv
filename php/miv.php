@@ -4,6 +4,7 @@
 
     /** require - exception(s)**/
     require_once(__DIR__.'/exception-invalid-argument.php');
+    require_once(__DIR__.'/exception-no-data.php');
 
 
 ?>

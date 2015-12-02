@@ -15,7 +15,7 @@
     require_once('../php/miv_router.php');
 
     // router - route
-    $router = new \miv\miv_router($debug);
+    $router = new \miv\router($debug);
     $router->set_request_data($_GET, $_POST);
     $router->set_request_method_from_request_data();
     $router->route($debug);

@@ -2,8 +2,15 @@
 <?php
 
 
+
+
     // require - action
     require_once(__DIR__.'/action.php');
+
+    // require - miv - database
+    require_once(__DIR__.'/miv_database.php');
+
+
 
 
 ?>
@@ -18,6 +25,7 @@ class action_create_url extends action {
 
 
     // var - database
+    private $database               = null;
     private $database_query_create  = '
         INSERT INTO url (url)
                                       ';
@@ -29,6 +37,17 @@ class action_create_url extends action {
 
 
     /** | magic **/
+
+        public function __construct() {
+
+            // db - init
+            $this->database = new \miv\database();
+
+            // return
+            return true;
+
+        }
+
     /** magic | **/
 
 
@@ -36,18 +55,11 @@ class action_create_url extends action {
 
         public function database_create() {
 
-            // prepare - data
-            $data  = $this->get_data();
-
-            // database - create
-            //$this->database->create($this->database_query_create, $data);
-
-            // DEBUG
-            print_r($data);
-            echo ' -- END - DEBUG -- ';
-
-            // return
-            return true;
+                    // database - get - set - create
+                    $this->database->set_query($this->database_query_create);
+                    $this->database->set_query_data($data  = $this->get_data());
+                    $this->database->prepare();
+            return  $this->database->query();
 
         }
 
@@ -57,9 +69,12 @@ class action_create_url extends action {
     /** | get **/
 
         public function get_data() {
+
+                    // data - get
                     $data           =   array();
                     $data['url']    =   $this->data_url;
             return  $data;
+
         }
 
     /** get | **/
@@ -68,12 +83,18 @@ class action_create_url extends action {
     /** | set **/
 
         public function set_data_url($url) {
-            if ( ! filter_var($url, FILTER_VALIDATE_URL) === false ){
-                $this->data_url = $url;
-            } else {
+
+            // ? valid - url
+            if ( filter_var($url, FILTER_VALIDATE_URL) === false ){
                 throw new InvalidArgumentException();
             }
+
+            // set
+            $this->data_url = $url;
+
+            // return
             return true;
+
         }
 
     /** set | **/
