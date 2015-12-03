@@ -1,9 +1,16 @@
-<?php namespace miv; ?>
+<?php namespace miv\request; ?>
 <?php
 
 
+
+
     // require - php - action - create - url
-    require_once(__DIR__.'/action_create_url.php');
+    require_once(__DIR__.'/../action/create/url.php');
+
+    // require - php - request
+    require_once(__DIR__.'/../request.php');
+
+
 
 
 ?>
@@ -13,17 +20,17 @@
  * ( masquarades as request_ext )
  *
  */
-class request_ext extends miv {
+class request_ext extends request {
 
 
 
+
+    // var - action
+    private $action         =   null;
 
     // var - data
-    private $request_data = null;
-    private $return_data  = null;
-
-    // var - object
-    private $create_url = null;
+    private $request_data   =   null;
+    private $return_data    =   null;
 
 
 
@@ -33,7 +40,7 @@ class request_ext extends miv {
         public function __construct() {
 
             // init - class - create
-            $this->create_url = new action_create_url();
+            $this->action = new \miv\action\create\url();
 
             // return
             return true;
@@ -48,7 +55,7 @@ class request_ext extends miv {
         public function process() {
 
             // action - create - url - database - create
-            $id = $this->create_url->database_create();
+            $id = $this->action->database_create();
 
             // set - return - data
             $this->set_return_data('url', array( 'id' => $id ));
@@ -83,8 +90,8 @@ class request_ext extends miv {
         public function set_request_data($data) {
 
             // create - url - set - data
-            if( isset($data['url'] )){ $this->create_url->set_data_url($data['url']); }
-            else                     { throw new InvalidArgumentException();          }
+            if( isset($data['url'] )){ $this->action->set_data_url($data['url']); }
+            else                     { throw new InvalidArgumentException();      }
 
             // set - request - data
             $this->request_data = $data;

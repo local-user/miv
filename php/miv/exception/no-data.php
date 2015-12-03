@@ -1,16 +1,16 @@
-<?php namespace miv; ?>
+<?php namespace miv\exception; ?>
 <?php
 /*
  *  php - exception - no - data
  *
  */
-class NoDataException extends \Exception {
+class no_data extends exception {
 
 
 
 
     // var - message
-    protected $message = 'no data'; 
+    protected $message = 'no data';
 
 
 

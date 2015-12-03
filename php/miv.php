@@ -3,8 +3,9 @@
 
 
     /** require - exception(s)**/
-    require_once(__DIR__.'/exception-invalid-argument.php');
-    require_once(__DIR__.'/exception-no-data.php');
+    require_once(__DIR__.'/miv/exception.php');
+    require_once(__DIR__.'/miv/exception/invalid-argument.php');
+    require_once(__DIR__.'/miv/exception/no-data.php');
 
 
 ?>

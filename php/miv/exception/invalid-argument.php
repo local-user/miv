@@ -1,10 +1,22 @@
-<?php namespace miv; ?>
+<?php namespace miv\exception; ?>
+<?php
+
+
+
+
+    // require - miv - exception
+    require_once(__DIR__.'/../exception.php');
+
+
+
+
+?>
 <?php
 /*
  *  php - exception - invalid - argument
  *
  */
-class InvalidArgumentException extends \Exception {
+class invalid_argument extends exception {
 
 
 

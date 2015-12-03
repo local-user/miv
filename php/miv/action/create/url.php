@@ -1,14 +1,14 @@
-<?php namespace miv; ?>
+<?php namespace miv\action\create; ?>
 <?php
 
 
 
 
-    // require - action
-    require_once(__DIR__.'/action.php');
+    // require - action - create
+    require_once(__DIR__.'/../create.php');
 
-    // require - miv - database
-    require_once(__DIR__.'/miv_database.php');
+    // require - miv - system - database
+    require_once(__DIR__.'/../../system/database.php');
 
 
 
@@ -19,7 +19,7 @@
  *  php - action - create - url
  *
  */
-class action_create_url extends action {
+class url extends create {
 
 
 
@@ -41,7 +41,7 @@ class action_create_url extends action {
         public function __construct() {
 
             // db - init
-            $this->database = new \miv\database();
+            $this->database = new \miv\system\database();
 
             // return
             return true;
@@ -87,7 +87,7 @@ class action_create_url extends action {
 
             // ? valid - url
             if ( filter_var($url, FILTER_VALIDATE_URL) === false ){
-                throw new InvalidArgumentException();
+                throw new \miv\exception\invalid_argument();
             }
 
             // set

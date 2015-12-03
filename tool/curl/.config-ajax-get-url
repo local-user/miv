@@ -1,0 +1,12 @@
+#!/bin/bash
+#
+#   curl - test - ajax - get - urls
+#
+
+
+    miv_request_method='get-urls'
+
+
+#
+#   curl - test - ajax - get - urls
+#

@@ -1,9 +1,13 @@
-<?php namespace miv; ?>
+<?php namespace miv\system; ?>
 <?php
 
 
-    // require - miv
-    require_once(__DIR__.'/miv.php');
+
+
+    // require - miv - system
+    require_once(__DIR__.'/../system.php');
+
+
 
 
 ?>
@@ -12,7 +16,7 @@
  *  php - miv  - router
  *
  */
-class router extends miv {
+class router extends system {
 
 
 
@@ -39,28 +43,25 @@ class router extends miv {
     /** | display **/
 
         private function display_json( $code, $data ){
+            http_response_code($code);
             header('Content-Type: application/json');
-            echo json_encode(
-                                array(
-                                        'code' => $code,
-                                        'data' => $data
-                                     )
-                            );
+            echo json_encode($data);
             return true;
         }
 
         private function display_json_error( $code, $message ){
+            http_response_code($code);
             header('Content-Type: application/json');
             echo json_encode(
                                 array(
-                                        'code'    =>  $code,
                                         'message' =>  $message
                                      )
                             );
             return true;
         }
 
-        private function display_json_static( $filename ){
+        private function display_json_static( $code, $filename ){
+            http_response_code($code);
             header('Content-Type: application/json');
             readfile(__DIR__.'/../json/'.$filename);
             return true;
@@ -78,7 +79,7 @@ class router extends miv {
             if( $request_method === false ){    return false;   }
 
             // request - method - load
-            require_once(__DIR__."/request_$request_method.php");
+            require_once(__DIR__."/../request/$request_method.php");
 
             // route - request
             try {
@@ -98,32 +99,32 @@ class router extends miv {
         private function route_request() {
 
             // route - request - init
-            try     { $request = new request_ext($this->flag_debug);         }
-            catch   ( Exception $e                                          ){
+            try     { $request = new \miv\request\request_ext($this->flag_debug);   }
+            catch   ( Exception $e                                                  ){
                 return $this->route_error(500, $e);
             }
 
             // route - request - set - request - data
-            try     { $request->set_request_data($this->get_request_data()); }
-            catch   ( InvalidArgumentException $e                           ){
+            try     { $request->set_request_data($this->get_request_data());    }
+            catch   ( \miv\exception\invalid_argument $e                        ){
                 return $this->route_error(400, $e);
             }
 
             // route - request - process
-            try     { $request->process();                                   }
-            catch   ( Exception $e                                          ){
+            try     { $request->process();                      }
+            catch   ( Exception $e                              ){
                 return $this->route_error(400, $e);
             }
 
             // route - request - get - return - data
-            try     { $data = $request->get_return_data();                   }
-            catch   ( Exception $e                                          ){
+            try     { $data = $request->get_return_data();      }
+            catch   ( Exception $e                              ){
                 return $this->route_error(400, $e);
             }
 
             // route - request - display - json
-            try     { $this->display_json(201, $data);                       }
-            catch   ( Exception $e                                          ){
+            try     { $this->display_json(200, $data);          }
+            catch   ( Exception $e                              ){
                 return $this->route_error(500, $e);
             }
 
@@ -132,13 +133,18 @@ class router extends miv {
 
         }
 
-        private function route_error($code = 500, $e = false) {
+        private function route_error($code = 500, $e = null, $message = null) {
 
-            // get - message - from - code
-            if( $e ){
-                $message = $e->getMessage();
-            } else {
-                $message = 'internal server error';
+            // ? message
+            if( ! $message ){
+
+                // get - message - from - code
+                if( $e ){
+                    $message = $e->getMessage();
+                } else {
+                    $message = 'internal route error';
+                }
+
             }
 
             // display - static - json
@@ -159,7 +165,7 @@ class router extends miv {
 
         private function get_request_method() {
             if( is_null($this->request_method) ){
-                $this->route_error(400);
+                $this->route_error(404, null, 'request method not found');
                 return false;
             }
             return $this->request_method;
@@ -215,7 +221,7 @@ class router extends miv {
 
         private function valid_request_method($request_method) {
             if(preg_match("/^[a-zA-Z_-]+$/", $request_method) == 1) {
-                                $class_method_path = __DIR__."/action_$request_method.php";
+                                $class_method_path = __DIR__."/../request/$request_method.php";
                 if( file_exists($class_method_path) ){
                     return true;
                 }

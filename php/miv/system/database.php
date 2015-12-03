@@ -1,10 +1,10 @@
-<?php namespace miv; ?>
+<?php namespace miv\system; ?>
 <?php
 /*
  *  php - miv - database
  *
  */
-class database extends miv {
+class database extends system {
 
 
 
@@ -25,7 +25,7 @@ class database extends miv {
         public function __construct() {
 
             // db - require - config - database
-            require_once(__DIR__.'/../config/database.php');
+            require_once(__DIR__.'/../../../config/database.php');
 
             // db - init
             $this->db = new \PDO("{$db_type}:host={$db_host};dbname={$db_name}", $db_user, $db_pass);
