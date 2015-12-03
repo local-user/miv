@@ -1,4 +1,4 @@
-/** | database **/
+/** | create - database - miv **/
 
 
 
@@ -9,10 +9,7 @@
     /** create - database - miv **/
     CREATE DATABASE miv;
 
-    /** use - database - miv **/
-    USE miv;
 
 
 
-
-/** database | **/
+/** create - database - miv | **/

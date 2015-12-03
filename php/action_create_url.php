@@ -59,7 +59,8 @@ class action_create_url extends action {
                     $this->database->set_query($this->database_query_create);
                     $this->database->set_query_data($data  = $this->get_data());
                     $this->database->prepare();
-            return  $this->database->query();
+                    $this->database->query();
+            return  $this->database->get_last_insert_id();
 
         }
 

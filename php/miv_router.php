@@ -38,7 +38,22 @@ class router extends miv {
 
     /** | display **/
 
-        private function display_static_json( $filename ){
+        private function display_json( $data ){
+            header('Content-Type: application/json');
+            echo json_encode(
+                                array(
+                                        'code' => 200,
+                                        'data' => $data
+                                     )
+                            );
+            return true;
+        }
+
+        private function display_json_error( $code, $message ){
+            throw new exception('bridge incomplete');
+        }
+
+        private function display_json_static( $filename ){
             header('Content-Type: application/json');
             readfile(__DIR__.'/../json/'.$filename);
             return true;
@@ -76,7 +91,7 @@ class router extends miv {
         private function route_request() {
 
             // route - request - init
-            try     { $request = new request($this->flag_debug);             }
+            try     { $request = new request_ext($this->flag_debug);         }
             catch   ( Exception $e                                          ){
                 return $this->route_error(500, $e);
             }
@@ -91,6 +106,18 @@ class router extends miv {
             try     { $request->process();                                   }
             catch   ( Exception $e                                          ){
                 return $this->route_error(400, $e);
+            }
+
+            // route - request - get - return - data
+            try     { $data = $request->get_return_data();                   }
+            catch   ( Exception $e                                          ){
+                return $this->route_error(400, $e);
+            }
+
+            // route - request - display - json
+            try     { $this->display_json($data);                            }
+            catch   ( Exception $e                                          ){
+                return $this->route_error(500, $e);
             }
 
             // return

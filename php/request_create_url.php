@@ -10,13 +10,17 @@
 <?php
 /*
  *  php - request - create - url
- *   ( masquarades as request )
+ * ( masquarades as request_ext )
  *
  */
-class request extends miv {
+class request_ext extends miv {
 
 
 
+
+    // var - data
+    private $request_data = null;
+    private $return_data  = null;
 
     // var - object
     private $create_url = null;
@@ -44,7 +48,10 @@ class request extends miv {
         public function process() {
 
             // action - create - url - database - create
-            $this->create_url->database_create();
+            $id = $this->create_url->database_create();
+
+            // set - return - data
+            $this->set_return_data('url', array( 'id' => $id ));
 
             // return
             return true;
@@ -54,6 +61,23 @@ class request extends miv {
     /** process | **/
 
 
+    /** | get **/
+
+        public function get_return_data() {
+
+            // ? null
+            if( is_null($this->return_data) ){
+                throw new NoDataException();
+            }
+
+            // return
+            return $this->return_data;
+
+        }
+
+    /** get | **/
+
+
     /** | set **/
 
         public function set_request_data($data) {
@@ -61,6 +85,19 @@ class request extends miv {
             // create - url - set - data
             if( isset($data['url'] )){ $this->create_url->set_data_url($data['url']); }
             else                     { throw new InvalidArgumentException();          }
+
+            // set - request - data
+            $this->request_data = $data;
+
+            // return
+            return true;
+
+        }
+
+        private function set_return_data($type, $data) {
+
+            // set - return - data
+            $this->return_data = array( $type => $data );
 
             // return
             return true;
