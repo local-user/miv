@@ -38,11 +38,11 @@ class router extends miv {
 
     /** | display **/
 
-        private function display_json( $data ){
+        private function display_json( $code, $data ){
             header('Content-Type: application/json');
             echo json_encode(
                                 array(
-                                        'code' => 200,
+                                        'code' => $code,
                                         'data' => $data
                                      )
                             );
@@ -50,7 +50,14 @@ class router extends miv {
         }
 
         private function display_json_error( $code, $message ){
-            throw new exception('bridge incomplete');
+            header('Content-Type: application/json');
+            echo json_encode(
+                                array(
+                                        'code'    =>  $code,
+                                        'message' =>  $message
+                                     )
+                            );
+            return true;
         }
 
         private function display_json_static( $filename ){
@@ -115,7 +122,7 @@ class router extends miv {
             }
 
             // route - request - display - json
-            try     { $this->display_json($data);                            }
+            try     { $this->display_json(201, $data);                       }
             catch   ( Exception $e                                          ){
                 return $this->route_error(500, $e);
             }
@@ -127,16 +134,15 @@ class router extends miv {
 
         private function route_error($code = 500, $e = false) {
 
-            // code -> file
-            switch($code) {
-                case 200:   $static_json_error = 'static-error-200.json';   break;
-                case 400:   $static_json_error = 'static-error-400.json';   break;
-                case 404:   $static_json_error = 'static-error-404.json';   break;
-                default:    $static_json_error = 'static-error-500.json';   break;
+            // get - message - from - code
+            if( $e ){
+                $message = $e->getMessage();
+            } else {
+                $message = 'internal server error';
             }
 
             // display - static - json
-            $this->display_static_json($static_json_error);
+            $this->display_json_error($code, $message);
 
             // debug - dump - exception
             if( $e && $this->flag_debug ){ print_r($e); }

@@ -9,7 +9,7 @@
 
 
     // debug
-    $debug = true;
+    $debug = false;
 
     // require - router
     require_once('../php/miv_router.php');
