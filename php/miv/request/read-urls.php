@@ -5,7 +5,7 @@
 
 
     // require - php - action - create - url
-    require_once(__DIR__.'/../action/create/url.php');
+    require_once(__DIR__.'/../action/read/url.php');
 
     // require - php - request
     require_once(__DIR__.'/../request.php');
@@ -16,7 +16,7 @@
 ?>
 <?php
 /*
- *  php - request - create - url
+ *   php - request - get - url
  * ( masquarades as request_ext )
  *
  */
@@ -40,7 +40,7 @@ class request_ext extends request {
         public function __construct() {
 
             // init - class - create
-            $this->action = new \miv\action\create\url();
+            $this->action = new \miv\action\read\url();
 
             // return
             return true;
@@ -54,11 +54,11 @@ class request_ext extends request {
 
         public function process() {
 
-            // action - create - url - database - create
-            $id = $this->action->database_create();
+            // action - create - url - read - all
+            $data = $this->action->database_read_all();
 
             // set - return - data
-            $this->set_return_data( 201, 'url', array( 'id' => $id ));
+            $this->set_return_data( 200, 'urls', $data );
 
             // return
             return true;
@@ -74,7 +74,7 @@ class request_ext extends request {
 
             // ? null
             if( is_null($this->return_data) ){
-                throw new NoDataException();
+                return array();
             }
 
             // return
@@ -89,10 +89,6 @@ class request_ext extends request {
 
         public function set_request_data($data) {
 
-            // create - url - set - data
-            if( isset($data['url'] )){ $this->action->set_data_url($data['url']); }
-            else                     { throw new InvalidArgumentException();      }
-
             // set - request - data
             $this->request_data = $data;
 
@@ -101,10 +97,10 @@ class request_ext extends request {
 
         }
 
-        private function set_return_data( $code, $type, $data) {
+        private function set_return_data($code, $type, $data) {
 
             // set - return - data
-            $this->return_data = array( 'code' => $code, array( $type => $data ) );
+            $this->return_data = array( $code, array( $type => $data ) );
 
             // return
             return true;
@@ -118,7 +114,7 @@ class request_ext extends request {
 
 }
 /*
- *  php - request - create - url
+ *   php - request - get - url
  *
  */
 ?>

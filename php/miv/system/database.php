@@ -71,6 +71,18 @@ class database extends system {
     /** query | **/
 
 
+    /** | read **/
+
+        public function read_list() {
+
+            // return - fetch - all
+            return $this->dbh->fetchAll(\PDO::FETCH_COLUMN, 0);
+
+        }
+
+    /** read | **/
+
+
     /** | get **/
 
         public function get_last_insert_id() {

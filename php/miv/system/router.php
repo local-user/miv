@@ -42,29 +42,43 @@ class router extends system {
 
     /** | display **/
 
-        private function display_json( $code, $data ){
-            http_response_code($code);
+        private function display_json( $data ){
+
+            // http - code - override
+            if(isset($data['code'])) {
+                http_response_code($data['code']);
+                unset($data['code']);
+            }
+
+            // display - json
             header('Content-Type: application/json');
             echo json_encode($data);
+
+            // return
             return true;
+
         }
 
         private function display_json_error( $code, $message ){
-            http_response_code($code);
-            header('Content-Type: application/json');
-            echo json_encode(
-                                array(
-                                        'message' =>  $message
-                                     )
-                            );
-            return true;
+
+            // return - display - json
+            return $this->display_json( array(
+                'code'  => $code,
+                'error' => $message
+            ));
+
         }
 
         private function display_json_static( $code, $filename ){
+
+            // display - json
             http_response_code($code);
             header('Content-Type: application/json');
             readfile(__DIR__.'/../json/'.$filename);
+
+            // return
             return true;
+
         }
 
     /** display | **/
@@ -123,7 +137,7 @@ class router extends system {
             }
 
             // route - request - display - json
-            try     { $this->display_json(200, $data);          }
+            try     { $this->display_json($data);               }
             catch   ( Exception $e                              ){
                 return $this->route_error(500, $e);
             }

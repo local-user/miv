@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-#   curl - test - ajax - create - url - bad - data
+#   curl - test - ajax - read - urls
 #
 
 
@@ -8,7 +8,7 @@
 
     # src
     source "`dirname $0`/.config-ajax-miv"
-    source "`dirname $0`/.config-ajax-get-url"
+    source "`dirname $0`/.config-ajax-read-urls"
 
     # curl
     curl "$miv_curl" -X "$miv_http_request_method"  \
@@ -19,5 +19,5 @@
 
 
 #
-#   curl - test - ajax - create - url - bad - data
+#   curl - test - ajax - read - urls
 #
