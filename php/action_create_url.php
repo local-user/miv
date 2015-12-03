@@ -26,9 +26,9 @@ class action_create_url extends action {
 
     // var - database
     private $database               = null;
-    private $database_query_create  = '
-        INSERT INTO url (url)
-                                      ';
+    private $database_query_create  =               '
+        INSERT INTO url ( url ) VALUES ( :url )
+                                                    ';
 
     // var - data
     private $data_url   =   null;

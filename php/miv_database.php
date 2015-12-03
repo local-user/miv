@@ -23,12 +23,11 @@ class database extends miv {
 
         public function __construct() {
 
-            // db - detail(s)
-            $db_type = 'sqlite';
-            $db_path = __DIR__.'/../database.sqlite';
+            // db - require - config - database
+            require_once(__DIR__.'/../config/database.php');
 
             // db - init
-            $this->db = new \PDO("{$db_type}:{$db_path}");
+            $this->db = new \PDO("{$db_type}:{$db_host};{$db_name}", $db_user, $db_pass);
 
             // db - attribute(s)
             $this->db->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
@@ -46,7 +45,7 @@ class database extends miv {
         public function prepare() {
 
             // db - prepare
-            $this->db->prepare($this->get_query());
+            $this->db = $this->db->prepare($this->get_query());
 
             // return
             return true;
@@ -61,7 +60,7 @@ class database extends miv {
         public function query() {
 
             // db - execute - w/ - query - data
-            $this->db->excute(array($this->get_query_data()));
+            $this->db->execute($this->get_query_data());
 
             // return
             return true;
@@ -82,6 +81,18 @@ class database extends miv {
 
             // return
             return $this->query;
+
+        }
+
+        private function get_query_data() {
+
+            // ? null - query
+            if( is_null($this->query_data) ){
+                throw new NoDataException();
+            }
+
+            // return
+            return $this->query_data;
 
         }
 
