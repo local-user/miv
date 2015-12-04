@@ -4,7 +4,7 @@
 #
 
 
-    miv_request_method='read-urls'
+    miv_request_method='read-url'
 
 
 #
