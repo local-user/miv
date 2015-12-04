@@ -36,7 +36,7 @@ class request_ext extends request {
         public function __construct() {
 
             // load - miv - action - read - url
-            $this->action  = new \miv\action\read\url();
+            $this->action = new \miv\action\read\url();
 
             // return
             return true;
