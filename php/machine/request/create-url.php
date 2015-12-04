@@ -101,16 +101,6 @@ class request_ext extends request {
 
         }
 
-        private function set_return_data( $code, $type, $data) {
-
-            // set - return - data
-            $this->return_data = array( 'code' => $code, array( $type => $data ) );
-
-            // return
-            return true;
-
-        }
-
     /** set | **/
 
 

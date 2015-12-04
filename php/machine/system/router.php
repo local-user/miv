@@ -13,7 +13,7 @@
 ?>
 <?php
 /*
- *  php - miv  - router
+ *  php - miv - system - router
  *
  */
 class router extends system {
@@ -112,7 +112,7 @@ class router extends system {
 
         private function route_request() {
 
-            // route - request - init
+            // route - request - load
             try     { $request = new \miv\request\request_ext($this->flag_debug);   }
             catch   ( Exception $e                                                  ){
                 return $this->route_error(500, $e);
@@ -250,7 +250,7 @@ class router extends system {
 
 }
 /*
- *  php - miv - router
+ *  php - miv - system - router
  *
  */
 ?>

@@ -5,7 +5,7 @@
 
 
     // require - miv
-    require_once(__DIR__.'/../miv.php');
+    require_once(__DIR__.'/../machine.php');
 
 
 
@@ -16,7 +16,7 @@
  *  php - miv - system
  *
  */
-class system extends \miv\miv {}
+class system extends \miv\machine {}
 /*
  *  php - miv - system
  *

@@ -3,7 +3,10 @@
  *
  *      MIV/API
  *
+ *
  */
+?>
+<?php
 
 
 
@@ -11,8 +14,8 @@
     // debug
     $debug = false;
 
-    // require - router
-    require_once('../php/miv/system/router.php');
+    // require - php - machine - system - router
+    require_once('../php/machine/system/router.php');
 
     // router - route
     $router = new \miv\system\router($debug);

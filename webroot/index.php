@@ -1,3 +1,11 @@
+<?php
+/*
+ *
+ *      MIV/INDEX
+ *
+ *
+ */
+?>
 <html>
     <head>
 
