@@ -86,21 +86,19 @@
     }
 
     #input form .indicator {
+        height:                 0px;
         width:                  100%;
-        background-color:       white;
-        height:                 2px;
-        margin:                 10px auto;
-        transition:             2s;
+        transition:             1s;
     }
 
     #input form .indicator.s200 {
         background-color:       #4CAF50;
-        height:                 2px;
+        height:                 10px;
     }
 
     #input form .indicator.s400 {
         background-color:       #F44336;
-        height:                 2px;
+        height:                 10px;
     }
 
 

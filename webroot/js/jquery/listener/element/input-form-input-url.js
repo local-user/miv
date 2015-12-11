@@ -28,16 +28,21 @@ console.log(' . js/jquery/listener/element/input-form-input-url.js');
             // reset - form - create
             input.display_reset();
 
-            // ? valid - url
-            if ( valid_url(url) ) {
+            // ? length - url
+            if( url.length > 0 ){
 
-                // input - display - lock
-                input.display_unlock();
+                // ? valid - url
+                if( valid_url(url) ){
 
-            } else {
+                    // input - display - lock
+                    input.display_unlock();
 
-                // input - display - lock
-                input.display_lock();
+                } else {
+
+                    // input - display - lock
+                    input.display_lock();
+
+                }
 
             }
 
@@ -96,6 +101,9 @@ console.log(' . js/jquery/listener/element/input-form-input-url.js');
                     // flash - display - show
                     flash.display_show();
 
+                    // header - display - hide
+                    header.display_hide();
+
                 }
             }
 
@@ -122,6 +130,9 @@ console.log(' . js/jquery/listener/element/input-form-input-url.js');
 
                 // flash - display - show
                 flash.display_show();
+
+                // header - display - hide
+                header.display_hide();
 
             }
 

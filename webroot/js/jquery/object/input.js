@@ -96,7 +96,7 @@ var input = {
         // function - input - display - lock
         display_lock : function() {
 
-            // input - form - remove - class(s)
+            // input - form - add - class(s)
             $( '#input-form-input-indicator' ).addClass('s400');
             $( '#input-form-input-url'       ).addClass('color-input-text-invalid');
 
@@ -110,12 +110,12 @@ var input = {
         display_reset : function() {
 
             // remove - class(s)
-            $( '#input-form-input-indicator' ).removeClass('s200');
-            $( '#input-form-input-indicator' ).removeClass('s400');
-            $( '#input-form-input-submit'    ).removeClass('s2');
-            $( '#input-form-input-url'       ).removeClass('s2');
-            $( '#input-form-input-url'       ).removeClass('color-input-text-invalid');
-            $( '#input-form-input-url'       ).removeClass('color-input-text-valid');
+            $( '#input-form-input-indicator' ).removeClass( 's200'                      );
+            $( '#input-form-input-indicator' ).removeClass( 's400'                      );
+            $( '#input-form-input-submit'    ).removeClass( 's2'                        );
+            $( '#input-form-input-url'       ).removeClass( 's2'                        );
+            $( '#input-form-input-url'       ).removeClass( 'color-input-text-invalid'  );
+            $( '#input-form-input-url'       ).removeClass( 'color-input-text-valid'    );
 
             // return
             return true;
