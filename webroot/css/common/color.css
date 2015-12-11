@@ -3,18 +3,6 @@
 
 
 
-    .color-toggle-inactive                  {              color: #212121;          }
-
-
-    .color-input-background                 {   background-color: rgb(34, 34, 34);  }
-
-    .color-input-text                       {              color: #FFFFFF;          }
-    .color-input-text-active                {              color: #F44336;          }
-    .color-input-text-hover:hover           {              color: #F44336;          }
-    .color-input-text-invalid               {              color: #F44336;          }
-    .color-input-text-valid                 {              color: #4CAF50;          }
-
-
     .color-edit-background                  {   background-color: #F44336;          }
 
     .color-edit-text                        {              color: #F44336;          }
@@ -28,7 +16,6 @@
 
     .color-flash-text-head                  {              color: #FFFFFF;          }
 
-
     .color-flash-toggle-message             {              color: #FFFFFF;          }
     .color-flash-toggle-message:hover       {              color: #4CAF50;          }
     .color-flash-toggle-message-active      {              color: #F44336;          }
@@ -38,6 +25,22 @@
     .color-flash-toggle-hide                {              color: #FFFFFF;          }
     .color-flash-toggle-hide:hover          {              color: #F44336;          }
     .color-flash-toggle-hide-active         {              color: #424242;          }
+
+
+    .color-header-title:hover               {              color: #F44336;          }
+    .color-header-title-active              {              color: #F44336;          }
+
+
+    .color-input-background                 {   background-color: rgb(34, 34, 34);  }
+
+    .color-input-text                       {              color: #FFFFFF;          }
+    .color-input-text-active                {              color: #F44336;          }
+    .color-input-text-hover:hover           {              color: #F44336;          }
+    .color-input-text-invalid               {              color: #F44336;          }
+    .color-input-text-valid                 {              color: #4CAF50;          }
+
+
+    .color-toggle-inactive                  {              color: #212121;          }
 
 
 

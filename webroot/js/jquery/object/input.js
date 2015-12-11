@@ -56,6 +56,7 @@ var input = {
 
                 // display - show
                 this.display_show();
+                header.display_show();
 
                 // update - visibility
                 this.visibility = 1;
@@ -64,6 +65,7 @@ var input = {
 
                 // display - hide
                 this.display_hide();
+                header.display_hide();
 
                 // update - visibility
                 this.visibility = 0;
@@ -83,7 +85,7 @@ var input = {
             $( "#input" ).addClass( "hidden" );
 
             // toggle - input - remove - class - 'color-input-text-active'
-            $( "#toggle-input" ).removeClass( "color-input-text-active" );
+            $( "#header-toggle-input" ).removeClass( "color-input-text-active" );
 
             // return
             return true;
@@ -131,7 +133,7 @@ var input = {
             $( "#input" ).removeClass( "hidden" );
 
             // toggle - input - add - class - 'color-input-text-active'
-            $( "#toggle-input" ).addClass( "color-input-text-active" );
+            $( "#header-toggle-input" ).addClass( "color-input-text-active" );
 
             // input - form- input - url - focus
             $( "#input-form-input-url" ).focus();

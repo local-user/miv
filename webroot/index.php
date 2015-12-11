@@ -56,12 +56,14 @@
 
                 <!-- js - jquery - object(s) -->
                 <script src='js/jquery/object/flash.js'></script>
+                <script src='js/jquery/object/header.js'></script>
                 <script src='js/jquery/object/input.js'></script>
 
                 <!-- js - jquery - listener(s) - element -->
                 <script src='js/jquery/listener/element/flash-toggle-body.js'></script>
                 <script src='js/jquery/listener/element/flash-toggle-hide.js'></script>
                 <script src='js/jquery/listener/element/flash-toggle-love.js'></script>
+                <script src='js/jquery/listener/element/header-title.js'></script>
                 <script src='js/jquery/listener/element/header-toggle-input.js'></script>
                 <script src='js/jquery/listener/element/input-form-input-url.js'></script>
 
