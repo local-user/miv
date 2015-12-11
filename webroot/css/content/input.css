@@ -1,9 +1,9 @@
-/**| css -- content -- create **/
+/**| css -- content -- input **/
 
 
 
 
-    #create {
+    #input {
         height:     400px;
         overflow:   hidden;
         transition: 1.5s;
@@ -11,29 +11,29 @@
         box-shadow: inset 0px 0px 10px 0px rgb(0,0,0,1);
     }
 
-    #create.hidden {
+    #input.hidden {
         height: 1px;
     }
 
 
-    #create #spacer {
+    #input #spacer {
         height:             50px;
         background-color:   white;
         transition:         1s;
     }
 
-    #create #spacer.hidden {
+    #input #spacer.hidden {
         height: 0px;
     }
 
 
-    #create form {
+    #input form {
         width:      80%;
         min-width:  400px;
         margin:     100px auto;
     }
 
-    #create form input {
+    #input form input {
         height:     150px;
         width:      100%;
         padding:    0 5% 0 5%;
@@ -41,16 +41,16 @@
         transition: 1s;
     }
 
-    #create form #create-form-input-submit-real {
+    #input form #input-form-input-submit-real {
         display:    none    ;
     }
 
-    #create form input.s2 {
+    #input form input.s2 {
         width:      80%;
         text-align: left;
     }
 
-    #create form .submit {
+    #input form .submit {
         width:              0;
         float:              right;
         background-color:   green;
@@ -59,12 +59,12 @@
         overflow:           hidden;
     }
 
-    #create form .submit i {
+    #input form .submit i {
         font-size;          0px;
         display:            none;
     }
 
-    #create form .submit.s2 {
+    #input form .submit.s2 {
         width:              20%;
         height:             150px;
         background-color:   #4CAF50;
@@ -72,7 +72,7 @@
         transition:         1s;
     }
 
-    #create form .submit.s2 i {
+    #input form .submit.s2 i {
         color:              white;
         font-size:          20px;
         margin:             60px auto;
@@ -80,12 +80,12 @@
         display:            inline-block;
     }
 
-    #create form .submit.s2:active, #create form .submit.s2.active {
+    #input form .submit.s2:active, #input form .submit.s2.active {
         box-shadow:         inset 0 0 20px #000000;
         transition:         0.5s ease-out;
     }
 
-    #create form .indicator {
+    #input form .indicator {
         width:                  100%;
         background-color:       white;
         height:                 2px;
@@ -93,12 +93,12 @@
         transition:             2s;
     }
 
-    #create form .indicator.s200 {
+    #input form .indicator.s200 {
         background-color:       #4CAF50;
         height:                 2px;
     }
 
-    #create form .indicator.s400 {
+    #input form .indicator.s400 {
         background-color:       #F44336;
         height:                 2px;
     }
@@ -106,4 +106,4 @@
 
 
 
-/** css -- content -- create |**/
+/** css -- content -- input |**/
