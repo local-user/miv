@@ -34,11 +34,12 @@
     }
 
     #input form input {
-        height:     150px;
-        width:      100%;
-        padding:    0 5% 0 5%;
-        font-size:  24px;
-        transition: 1s;
+        height:         40%;
+        min-height:     100px;
+        width:          100%;
+        padding:        0 5% 0 5%;
+        font-size:      24px;
+        transition:     1s;
     }
 
     #input form #input-form-input-submit-real {
@@ -65,8 +66,9 @@
     }
 
     #input form .submit.s2 {
+        height:             40%;
+        min-height:         100px;
         width:              20%;
-        height:             150px;
         background-color:   #4CAF50;
         text-align:         center;
         transition:         1s;
@@ -93,12 +95,14 @@
 
     #input form .indicator.s200 {
         background-color:       #4CAF50;
-        height:                 10px;
+        min-height:             8px;
+        height:                 4%;
     }
 
     #input form .indicator.s400 {
         background-color:       #F44336;
-        height:                 10px;
+        min-height:             16px;
+        height:                 8%;
     }
 
 

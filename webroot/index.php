@@ -20,9 +20,12 @@
         <link rel="stylesheet" type="text/css" href="css/common/container.css"  >
 
         <!-- css - content -->
-        <link rel="stylesheet" type="text/css" href="css/content/flash.css" >
-        <link rel="stylesheet" type="text/css" href="css/content/header.css" >
-        <link rel="stylesheet" type="text/css" href="css/content/input.css" >
+        <link rel="stylesheet" type="text/css" href="css/content/flash.css"     >
+        <link rel="stylesheet" type="text/css" href="css/content/header.css"    >
+        <link rel="stylesheet" type="text/css" href="css/content/input.css"     >
+
+        <!-- css - z - animation -->
+        <link rel="stylesheet" type="text/css" href="css/animation/welcome.css" >
 
         <!-- icon - fav -->
         <link rel="shortcut icon" href="img/icon/favicon.ico">
