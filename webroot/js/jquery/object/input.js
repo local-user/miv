@@ -55,8 +55,8 @@ var input = {
             if ( this.visibility === 0 ){
 
                 // display - show
-                this.display_show();
                 header.display_show();
+                this.display_show();
 
                 // update - visibility
                 this.visibility = 1;
@@ -64,8 +64,8 @@ var input = {
             } else {
 
                 // display - hide
-                this.display_hide();
                 header.display_hide();
+                this.display_hide();
 
                 // update - visibility
                 this.visibility = 0;

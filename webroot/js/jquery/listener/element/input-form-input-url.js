@@ -95,6 +95,9 @@ console.log(' . js/jquery/listener/element/input-form-input-url.js');
                     // input - create - url
                     //url.create();
 
+                    // input - display - reset
+                    input.display_reset();
+
                     // input - display - hide
                     input.display_hide();
 
@@ -127,6 +130,9 @@ console.log(' . js/jquery/listener/element/input-form-input-url.js');
 
                 // input - display - hide
                 input.display_hide();
+
+                // input - display - reset
+                input.display_reset();
 
                 // flash - display - show
                 flash.display_show();
