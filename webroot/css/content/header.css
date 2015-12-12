@@ -15,7 +15,8 @@
                 transition:     1s;
             }
     #header.hidden  {
-                        width:          15%;
+                        width:          20%;
+                        min-width:      140px;
                         transition:     2s ease-in-out;
                         border-bottom:  1px solid #ffffff;
                         opacity:        0.25;
