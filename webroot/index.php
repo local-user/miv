@@ -82,7 +82,8 @@
                 <script src='js/jquery/listener/element/overlay.js'></script>
 
                 <!-- js - jquery - listener(s) - keyboard -->
-                <script src='js/jquery/listener/keyboard/escape.js'></script>
+                <script src='js/jquery/listener/keyboard/ctrl.js'></script>
+                <script src='js/jquery/listener/keyboard/esc.js'></script>
 
             <!-- js - jquery | -->
 

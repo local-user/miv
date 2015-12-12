@@ -79,6 +79,17 @@ var overlay = {
             // return
             return true;
 
+        },
+
+        // function - overlay - display - text
+        display_text : function() {
+
+            // overlay - welcome - toggle - class - hidden
+            $( "#welcome-title" ).toggleClass('hidden');
+
+            // return
+            return true;
+
         }
 
     // function(s) |

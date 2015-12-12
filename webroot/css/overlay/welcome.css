@@ -16,7 +16,7 @@
 
     #welcome .title {
         margin:             300px auto;
-        transition:         1.5s ease-out;
+        transition:         0.5s;
         text-align:         center;
     }
 
@@ -26,12 +26,41 @@
 
     #welcome .title h1 {
         font-size:          20px;
-        transition:         0.5s ease-out;
+        transition:         0.5s;
+    }
+
+    #welcome .title h1.hidden {
+        font-size:          0px;
+    }
+
+    #welcome .title h1 .fixed {
+        font-size:          20px !important;
+        transition:         0.5s;
+    }
+
+    #welcome .title h1 .uppercase {
+        color:              green;
+        text-transform:     uppercase;
+    }
+
+    #welcome .title h1.hidden .uppercase {
+        color:              #F44336;
+        text-transform:     lowercase;
     }
 
     #welcome.hidden .title h1 {
         font-size:          0px;
     }
+
+    #welcome .title h1 .nw {
+        color:              #2196F3;
+        transition:         0.5s;
+    }
+
+    #welcome .title h1 .red {
+        color:              #F44336;
+    }
+
 
 
 
