@@ -7,7 +7,7 @@
         height:             100%;
         width:              100%;
         overflow:           hidden;
-        transition:         1.5s;
+        transition:         2.5s;
     }
 
     #welcome.hidden {
@@ -16,7 +16,7 @@
 
     #welcome .title {
         margin:             300px auto;
-        transition:         0.5s;
+        transition:         1.5s;
         text-align:         center;
     }
 
@@ -41,11 +41,14 @@
 
     #welcome .title h1 .m {
         color:              #6ccd6c;
+        font-size:          20px;
+        transition:         2.5s;
     }
 
     #welcome .title h1.hidden .m {
         color:              #F44336;
         text-transform:     lowercase;
+        font-size:          0px;
     }
 
     #welcome.hidden .title h1 {
@@ -54,7 +57,12 @@
 
     #welcome .title h1 .nw {
         color:              #2196F3;
-        transition:         0.5s;
+        transition:         1.5s ease-out;
+        font-size:          40px;
+    }
+
+    #welcome .title h1.hidden .nw {
+        font-size:          0px;
     }
 
     #welcome .title h1 .red {
