@@ -29,8 +29,12 @@
 
     #header .title h1   {
                             font-size:  20px;
+                            color:      #F44336;
                         }
 
+    #header .title h1 span  {
+                                color:  rgb(34,34,34);
+                            }
 
     #header .toggle {
                         padding:        20px 80px 0 0;
