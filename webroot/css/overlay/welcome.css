@@ -1,0 +1,38 @@
+/**| css - content - welcome **/
+
+
+
+
+    #welcome {
+        height:             100%;
+        width:              100%;
+        overflow:           hidden;
+        transition:         1.5s;
+    }
+
+    #welcome.hidden {
+        height:             0;
+    }
+
+    #welcome .title {
+        margin:             300px auto;
+        transition:         1.5s ease-out;
+        text-align:         center;
+    }
+
+    #welcome.hidden .title {
+        margin:             500px auto;
+    }
+
+    #welcome .title h1 {
+        font-size:          20px;
+        transition:         0.5s ease-out;
+    }
+
+    #welcome.hidden .title h1 {
+        font-size:          0px;
+    }
+
+
+
+/**| css - content - welcome **/

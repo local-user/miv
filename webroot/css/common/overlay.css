@@ -1,0 +1,19 @@
+/**| css - common - overlay **/
+
+
+
+
+    /** | overlay - body **/
+
+        body.overlay .body  {
+            height:             100%;
+            width:              100%;
+            overflow:           hidden;
+        }
+
+    /** overlay - body | **/
+
+
+
+
+/** css - common - overlay |**/

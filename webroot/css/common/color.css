@@ -43,6 +43,9 @@
     .color-toggle-inactive                  {              color: #212121;          }
 
 
+    .color-welcome-text                     {              color: #FFFFFF;          }
+    .color-welcome-background               {   background-color: rgb(34, 34, 34);  }
+
 
 
 /** css - common - color |**/

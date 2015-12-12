@@ -17,6 +17,9 @@ console.log(' . js/jquery/listener/keybord/escape.js');
                     // debug - console
                     if ( debug ){ console.log(' D js/jquery/listener/keybord/escape.js'); }
 
+                    // overlay - display - hide
+                    overlay.display_hide();
+
                     // flash - display - hide
                     flash.display_hide();
 

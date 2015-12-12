@@ -13,16 +13,22 @@
         <!-- title -->
         <title>Miv</title>
 
-        <!-- css - common -->
+        <!-- css - common - reset -->
         <link rel="stylesheet" type="text/css" href="css/common/reset.css"      >
-        <link rel="stylesheet" type="text/css" href="css/common/font.css"       >
+
+        <!-- css - common -->
         <link rel="stylesheet" type="text/css" href="css/common/color.css"      >
         <link rel="stylesheet" type="text/css" href="css/common/container.css"  >
+        <link rel="stylesheet" type="text/css" href="css/common/font.css"       >
+        <link rel="stylesheet" type="text/css" href="css/common/overlay.css"    >
 
         <!-- css - content -->
         <link rel="stylesheet" type="text/css" href="css/content/flash.css"     >
         <link rel="stylesheet" type="text/css" href="css/content/header.css"    >
         <link rel="stylesheet" type="text/css" href="css/content/input.css"     >
+
+        <!-- css - overlay -->
+        <link rel="stylesheet" type="text/css" href="css/overlay/welcome.css"   >
 
         <!-- css - z - animation -->
         <link rel="stylesheet" type="text/css" href="css/animation/welcome.css" >
@@ -37,10 +43,13 @@
 
 
     </head>
-    <body>
+    <body id='body' class='overlay'>
 
 
-        <!-- html -  content -->
+        <!-- html - overlay -->
+        <?php require_once('html/overlay/welcome.html'); ?>
+
+        <!-- html - content -->
         <?php require_once('html/content/flash.html');   ?>
         <?php require_once('html/content/header.html');  ?>
         <?php require_once('html/content/input.html');   ?>
@@ -61,6 +70,7 @@
                 <script src='js/jquery/object/flash.js'></script>
                 <script src='js/jquery/object/header.js'></script>
                 <script src='js/jquery/object/input.js'></script>
+                <script src='js/jquery/object/overlay.js'></script>
 
                 <!-- js - jquery - listener(s) - element -->
                 <script src='js/jquery/listener/element/flash-toggle-body.js'></script>
@@ -69,6 +79,7 @@
                 <script src='js/jquery/listener/element/header-title.js'></script>
                 <script src='js/jquery/listener/element/header-toggle-input.js'></script>
                 <script src='js/jquery/listener/element/input-form-input-url.js'></script>
+                <script src='js/jquery/listener/element/overlay.js'></script>
 
                 <!-- js - jquery - listener(s) - keyboard -->
                 <script src='js/jquery/listener/keyboard/escape.js'></script>
