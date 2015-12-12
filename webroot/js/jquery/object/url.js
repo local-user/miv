@@ -57,7 +57,7 @@ var url = {
                         error:      function() {
 
                             // msg
-                            msg.create( 400, 'AJAX? More like.. FAILJAX! Yep... not allot going on right now...' );
+                            msg.create( 400, 'AJAX? More like.. FAILJAX!' );
 
                         }
             });
