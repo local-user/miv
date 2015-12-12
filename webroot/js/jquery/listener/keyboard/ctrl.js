@@ -8,7 +8,26 @@ console.log(' . js/jquery/listener/keybord/ctrl.js');
 
 
 
-            // key - press - release
+            // key - press
+            $(document).keydown(function (e){
+
+                // key - ctrl
+                if(e.keyCode == 17){
+
+                    // debug - console
+                    if ( debug ){ console.log(' D js/jquery/listener/keybord/ctrl.js'); }
+
+                    // overlay - display - text
+                    overlay.display_text();
+
+                }
+
+                // return
+                return true;
+
+            });
+
+            // key - release
             $(document).keyup(function (e){
 
                 // key - ctrl
