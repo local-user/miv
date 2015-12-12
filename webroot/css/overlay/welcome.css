@@ -38,12 +38,11 @@
         transition:         0.5s;
     }
 
-    #welcome .title h1 .uppercase {
+    #welcome .title h1 .m {
         color:              green;
-        text-transform:     uppercase;
     }
 
-    #welcome .title h1.hidden .uppercase {
+    #welcome .title h1.hidden .m {
         color:              #F44336;
         text-transform:     lowercase;
     }
