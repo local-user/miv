@@ -101,8 +101,10 @@ console.log(' . js/jquery/listener/element/input-form-input-url.js');
                     // input - display - hide
                     input.display_hide();
 
-                    // flash - display - show
-                    flash.display_show();
+                    // flash - display - show - wait 0.5 seconds
+                    setTimeout(function() {
+                        flash.display_show();
+                    }, 0500);
 
                     // header - display - hide
                     header.display_hide();
@@ -133,9 +135,6 @@ console.log(' . js/jquery/listener/element/input-form-input-url.js');
 
                 // input - display - reset
                 input.display_reset();
-
-                // flash - display - show
-                flash.display_show();
 
                 // header - display - hide
                 header.display_hide();

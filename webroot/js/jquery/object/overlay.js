@@ -68,10 +68,10 @@ var overlay = {
         // function - overlay - display - hide
         display_hide : function() {
 
-            // body - remove - class - overlay - wait 2seconds
+            // body - remove - class - overlay - wait 2 seconds
             setTimeout(function(){
                 $(" #body ").removeClass('overlay');
-            }, 4000);
+            }, 2000);
 
             // welcome - hide
             $(" #welcome ").addClass('hidden');
