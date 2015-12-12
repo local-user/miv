@@ -22,23 +22,6 @@ console.log(' . js/jquery/listener/element/welcome.js');
     });
 
 
-    // mouseover - key - enter - welcome - disply - hide
-    $( '#welcome' ).mouseover( function() {
-
-        // key - press
-        $( document ).keydown(function (e){
-
-            // overlay - display - hide
-            overlay.display_hide();
-
-            // return
-            return true;
-
-        });
-
-    });
-
-
 
 
 //
