@@ -7,8 +7,8 @@
 
 
     # src
-    source "`dirname $0`/.config-ajax-miv"
-    source "`dirname $0`/.config-ajax-read-url"
+    source "`dirname $0`/config-ajax-miv"
+    source "`dirname $0`/config-ajax-read-url"
 
     # curl
     curl "$miv_curl" -X "$miv_http_request_method"  \
