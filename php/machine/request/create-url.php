@@ -26,11 +26,11 @@ class request_ext extends request {
 
 
     // var - action
-    private $action         =   null;
+    protected $action         =   null;
 
     // var - data
-    private $request_data   =   null;
-    private $return_data    =   null;
+    protected $request_data   =   null;
+    protected $return_data    =   null;
 
 
 
