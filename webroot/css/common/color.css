@@ -44,7 +44,10 @@
 
 
     .color-welcome-text                     {              color: #FFFFFF;          }
+    .color-welcome-text-active              {              color: #F44336;          }
+    .color-welcome-text-hover:hover         {              color: #F44336;          }
     .color-welcome-background               {   background-color: rgb(34, 34, 34);  }
+
 
 
 

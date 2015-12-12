@@ -67,23 +67,24 @@
             <!-- | js - jquery -->
 
                 <!-- js - jquery - object(s) -->
-                <script src='js/jquery/object/flash.js'></script>
-                <script src='js/jquery/object/header.js'></script>
-                <script src='js/jquery/object/input.js'></script>
-                <script src='js/jquery/object/overlay.js'></script>
+                <script src='js/jquery/object/flash.js'                             ></script>
+                <script src='js/jquery/object/header.js'                            ></script>
+                <script src='js/jquery/object/input.js'                             ></script>
+                <script src='js/jquery/object/overlay.js'                           ></script>
 
                 <!-- js - jquery - listener(s) - element -->
-                <script src='js/jquery/listener/element/flash-toggle-body.js'></script>
-                <script src='js/jquery/listener/element/flash-toggle-hide.js'></script>
-                <script src='js/jquery/listener/element/flash-toggle-love.js'></script>
-                <script src='js/jquery/listener/element/header-title.js'></script>
-                <script src='js/jquery/listener/element/header-toggle-input.js'></script>
-                <script src='js/jquery/listener/element/input-form-input-url.js'></script>
-                <script src='js/jquery/listener/element/overlay.js'></script>
+                <script src='js/jquery/listener/element/flash-toggle-body.js'       ></script>
+                <script src='js/jquery/listener/element/flash-toggle-hide.js'       ></script>
+                <script src='js/jquery/listener/element/flash-toggle-love.js'       ></script>
+                <script src='js/jquery/listener/element/header-title.js'            ></script>
+                <script src='js/jquery/listener/element/header-toggle-input.js'     ></script>
+                <script src='js/jquery/listener/element/header-toggle-overlay.js'   ></script>
+                <script src='js/jquery/listener/element/input-form-input-url.js'    ></script>
+                <script src='js/jquery/listener/element/welcome.js'                 ></script>
 
                 <!-- js - jquery - listener(s) - keyboard -->
-                <script src='js/jquery/listener/keyboard/ctrl.js'></script>
-                <script src='js/jquery/listener/keyboard/esc.js'></script>
+                <script src='js/jquery/listener/keyboard/ctrl.js'                   ></script>
+                <script src='js/jquery/listener/keyboard/esc.js'                    ></script>
 
             <!-- js - jquery | -->
 
