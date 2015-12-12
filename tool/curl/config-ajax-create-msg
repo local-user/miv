@@ -1,12 +1,12 @@
 #!/bin/bash
 #
-#   curl - test - ajax - create - url
+#   curl - test - ajax - create - msg
 #
 
 
-    miv_request_method='create-url'
+    miv_request_method='create-msg'
 
 
 #
-#   curl - test - ajax - create - url
+#   curl - test - ajax - create - msg
 #
