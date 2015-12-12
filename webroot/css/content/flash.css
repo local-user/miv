@@ -60,11 +60,11 @@
     -webkit-background-size:    cover;
        -moz-background-size:    cover;
          -o-background-size:    cover;
-            background-color:   #4CAF50;
+            background-color:   #6CCD6C;
         }
 
         #flash.love .head {
-            background-color:   #4CAF50;
+            background-color:   #6CCD6C;
         }
 
         #flash.love .icon {
@@ -73,12 +73,12 @@
         }
 
         #flash.love i:hover {
-            color:              #424242 !important;
+            color:              #2196F3 !important;
         }
 
         #flash.love .count {
             margin:             50px 0 0 0;
-            color:              #4CAF50;
+            color:              #6CCD6C;
         }
 
         #flash.hidden {

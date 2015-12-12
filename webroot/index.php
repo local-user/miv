@@ -36,6 +36,16 @@
         <!-- icon - fav -->
         <link rel="shortcut icon" href="img/icon/favicon.ico">
 
+        <!-- js - config -->
+        <script>
+
+            //  debug 0 = Disable
+            //        1 = Enable
+            //
+            var debug = 1;
+
+        </script>
+
         <!-- vendor - * -->
         <link rel="stylesheet" type="text/css" href="vendor/font-awesome-4.5.0/css/font-awesome.min.css"    >
         <link rel="stylesheet" type="text/css" href="vendor/google-font-exo/exo.css"                        >
@@ -49,30 +59,21 @@
         <!-- html - overlay -->
         <?php require_once('html/overlay/welcome.html'); ?>
 
+        <!-- html - common -->
+        <?php require_once('html/common/flash.html');   ?>
+        <?php require_once('html/common/header.html');  ?>
+
         <!-- html - content -->
-        <?php require_once('html/content/flash.html');   ?>
-        <?php require_once('html/content/header.html');  ?>
         <?php require_once('html/content/input.html');   ?>
         <?php require_once('html/content/message.html'); ?>
 
 
         <!-- | js -->
 
-            <!-- js - debug [ 0 = Disable, 1 = Enable ] -->
-            <script>var debug = 1;</script>
-
             <!-- js - function(s) -->
             <script src='js/function/valid/url.js'></script>
 
             <!-- | js - jquery -->
-
-                <!-- js - jquery - object(s) -->
-                <script src='js/jquery/object/flash.js'                             ></script>
-                <script src='js/jquery/object/header.js'                            ></script>
-                <script src='js/jquery/object/input.js'                             ></script>
-                <script src='js/jquery/object/msg.js'                               ></script>
-                <script src='js/jquery/object/overlay.js'                           ></script>
-                <script src='js/jquery/object/url.js'                               ></script>
 
                 <!-- js - jquery - listener(s) - element -->
                 <script src='js/jquery/listener/element/flash-toggle-body.js'       ></script>
@@ -88,6 +89,14 @@
                 <script src='js/jquery/listener/keyboard/ctrl.js'                   ></script>
                 <script src='js/jquery/listener/keyboard/down.js'                   ></script>
                 <script src='js/jquery/listener/keyboard/esc.js'                    ></script>
+
+                <!-- js - jquery - object(s) -->
+                <script src='js/jquery/object/flash.js'                             ></script>
+                <script src='js/jquery/object/header.js'                            ></script>
+                <script src='js/jquery/object/input.js'                             ></script>
+                <script src='js/jquery/object/msg.js'                               ></script>
+                <script src='js/jquery/object/overlay.js'                           ></script>
+                <script src='js/jquery/object/url.js'                               ></script>
 
             <!-- js - jquery | -->
 
