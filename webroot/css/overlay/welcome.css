@@ -27,6 +27,7 @@
     #welcome .title h1 {
         font-size:          20px;
         transition:         0.5s;
+        user-select:        none !important;
     }
 
     #welcome .title h1.hidden {

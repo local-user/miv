@@ -11,7 +11,7 @@
 
 
         <!-- title -->
-        <title>Miv</title>
+        <title>miv.</title>
 
         <!-- css - common - reset -->
         <link rel="stylesheet" type="text/css" href="css/common/reset.css"      >
@@ -59,7 +59,7 @@
         <!-- | js -->
 
             <!-- js - debug [ 0 = Disable, 1 = Enable ] -->
-            <script>var debug = 0;</script>
+            <script>var debug = 1;</script>
 
             <!-- js - function(s) -->
             <script src='js/function/valid/url.js'></script>
@@ -71,6 +71,7 @@
                 <script src='js/jquery/object/header.js'                            ></script>
                 <script src='js/jquery/object/input.js'                             ></script>
                 <script src='js/jquery/object/overlay.js'                           ></script>
+                <script src='js/jquery/object/url.js'                               ></script>
 
                 <!-- js - jquery - listener(s) - element -->
                 <script src='js/jquery/listener/element/flash-toggle-body.js'       ></script>
