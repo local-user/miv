@@ -102,6 +102,9 @@ class msg extends create {
 
         public function set_data_msg($msg) {
 
+            // ? length
+            if( strlen($code) > 256 ){ throw new \miv\exception\invalid_argument(); }
+
             // set
             $this->data_msg = $msg;
 
