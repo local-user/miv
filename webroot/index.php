@@ -21,10 +21,10 @@
         <link rel="stylesheet" type="text/css" href="css/common/container.css"  >
         <link rel="stylesheet" type="text/css" href="css/common/font.css"       >
         <link rel="stylesheet" type="text/css" href="css/common/overlay.css"    >
+        <link rel="stylesheet" type="text/css" href="css/common/flash.css"      >
+        <link rel="stylesheet" type="text/css" href="css/common/header.css"     >
 
         <!-- css - content -->
-        <link rel="stylesheet" type="text/css" href="css/content/flash.css"     >
-        <link rel="stylesheet" type="text/css" href="css/content/header.css"    >
         <link rel="stylesheet" type="text/css" href="css/content/input.css"     >
 
         <!-- css - overlay -->
