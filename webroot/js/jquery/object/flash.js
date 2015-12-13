@@ -104,6 +104,9 @@ var flash = {
         // function - flash - display - show
         display_show : function() {
 
+            // msgs - refresh
+            msgs.refresh();
+
             // flash - remove - class(s)
             $( '#flash' ).removeClass( "hidden" );
             $( '#flash' ).removeClass( "love" );

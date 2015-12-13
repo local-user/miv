@@ -70,10 +70,15 @@
         #flash.love .icon {
             margin:             50px 0 0 0;
             font-size:          24px;
+            color:              #F44336;
+        }
+
+        #flash.love i {
+            color:              #2196F3;
         }
 
         #flash.love i:hover {
-            color:              #2196F3 !important;
+            color:              #FFFFFF;
         }
 
         #flash.love .count {

@@ -16,10 +16,10 @@
 ?>
 <?php
 /*
- *  php - action - read - url
+ *  php - action - read - msgs
  *
  */
-class url extends read {
+class msgs extends read {
 
 
 
@@ -27,11 +27,11 @@ class url extends read {
     // var - database
     private $database               = null;
     private $database_query_read    =               '
-        SELECT id FROM url
+        SELECT id FROM msg
                                                     ';
 
     // var - data
-    private $data_url   =   null;
+    private $data_msgs   =   null;
 
 
 
@@ -73,10 +73,6 @@ class url extends read {
             return array();
         }
 
-        private function get_query_data() {
-            return array();
-        }
-
     /** get | **/
 
 
@@ -88,7 +84,7 @@ class url extends read {
 
 }
 /*
- *  php - class - action - read - url
+ *  php - class - action - read - msgs
  *
  */
 ?>

@@ -4,8 +4,8 @@
 
 
 
-    // require - php - action - read - url
-    require_once(__DIR__.'/../action/read/url.php');
+    // require - php - action - read - msgs
+    require_once(__DIR__.'/../action/read/msgs.php');
 
     // require - php - request
     require_once(__DIR__.'/../request.php');
@@ -16,7 +16,7 @@
 ?>
 <?php
 /*
- *   php - request - read - url
+ *   php - request - read - msgs
  * ( masquarades as request_ext )
  *
  */
@@ -35,8 +35,8 @@ class request_ext extends request {
 
         public function __construct() {
 
-            // load - miv - action - read - url
-            $this->action = new \miv\action\read\url();
+            // load - miv - action - read - msgs
+            $this->action = new \miv\action\read\msgs();
 
             // return
             return true;
@@ -50,11 +50,11 @@ class request_ext extends request {
 
         public function process() {
 
-            // action - url - read - all
+            // action - msgs - read - all
             $data = $this->action->database_read_all();
 
             // set - return - data
-            $this->set_return_data( 200, 'urls', $data );
+            $this->set_return_data( 200, 'msgs', $data );
 
             // return
             return true;
@@ -68,7 +68,7 @@ class request_ext extends request {
 
 }
 /*
- *   php - request - get - url
+ *   php - request - get - msgs
  *
  */
 ?>
