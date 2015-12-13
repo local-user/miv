@@ -51,16 +51,14 @@ var msg = {
                                     },
                         success:    function(data) {
 
-                            //
-                            //  ajax success
-                            //
+                            //  msgs - refresh
+                            msgs.refresh();
 
                         },
                         error:      function() {
 
-                            //
-                            //  ajax success
-                            //
+                            //  error - display
+                            error.display('Unable to create message.');
 
                         }
             });

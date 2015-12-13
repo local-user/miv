@@ -50,14 +50,17 @@ var url = {
                         data:       data,
                         success:    function(data) {
 
+                            // debug
+                            if( debug ){ console.log(data); }
+
                             // msg
-                            msg.create( 200, 'Succesfully created a new URL with the ID{}' );
+                            msg.create( 200, 'Created a new URL[' + data[0]['url']['id'] + '].' );
 
                         },
                         error:      function() {
 
                             // msg
-                            msg.create( 400, 'AJAX? More like.. FAILJAX!' );
+                            msg.create( 400, 'Failed to create a new URL.' );
 
                         }
             });
