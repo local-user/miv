@@ -75,6 +75,9 @@
                     // input - form - input - submit - add - active
                     $("#input-form-input-submit").addClass("active");
 
+                    // input - form - input - indicator - add - active
+                    $("#input-form-input-indicator").addClass("active");
+
                 }
             }
 
@@ -119,6 +122,9 @@
                     // input - form - input - submit - active
                     $("#input-form-input-submit").removeClass("active");
 
+                    // input - form - input - indicator - add - active
+                    $("#input-form-input-indicator").removeClass("active");
+
                 }
             }
 
@@ -158,7 +164,10 @@
                 input.display_reset();
 
                 // input - form - input - submit - active
-                $("#input-form-input-submit").removeClass("active");
+                $("#input-form-input-submit").addClass("active");
+
+                // input - form - input - indicator - add - active
+                $("#input-form-input-indicator").addClass("active");
 
             }
 
