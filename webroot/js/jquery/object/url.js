@@ -54,13 +54,13 @@ var url = {
                             if( debug ){ console.log(data); }
 
                             // msg
-                            msg.create( 200, 'Created a new URL[' + data[0]['url']['id'] + '].' );
+                            msg.create( 200, 'Created URL[' + data[0]['url']['id'] + ']' );
 
                         },
                         error:      function() {
 
                             // msg
-                            msg.create( 400, 'Failed to create a new URL.' );
+                            msg.create( 400, 'Create URL failed' );
 
                         }
             });

@@ -49,12 +49,6 @@ var msg = {
                                                   code: code,
                                                    msg: msg
                                     },
-                        success:    function(data) {
-
-                            //  msgs - refresh
-                            msgs.refresh();
-
-                        },
                         error:      function() {
 
                             //  error - display
