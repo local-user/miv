@@ -51,11 +51,13 @@ var input = {
         // function - input - display
         display : function() {
 
-            // display - toggle
+            // input - display - toggle
             if ( this.visibility === 0 ){
 
-                // display - show
+                // header - display - show
                 header.display_show();
+
+                // input - display - show
                 this.display_show();
 
                 // update - visibility
@@ -63,11 +65,10 @@ var input = {
 
             } else {
 
-                // display - hide
-                header.display_hide();
+                // input - display - hide
                 this.display_hide();
 
-                // update - visibility
+                // input - update - visibility
                 this.visibility = 0;
 
             }
@@ -80,6 +81,9 @@ var input = {
 
         // function - input - display - hide
         display_hide : function() {
+
+            // header - remove - class - input
+            $( "#header" ).removeClass( "input" );
 
             // input - add - class - hidden
             $( "#input" ).addClass( "hidden" );
@@ -128,6 +132,9 @@ var input = {
 
             // flash - add - class - hidden
             $( "#flash" ).addClass( "hidden" );
+
+            // header - add - class - input
+            $( "#header" ).addClass( "input" );
 
             // input - remove - class - hidden
             $( "#input" ).removeClass( "hidden" );
