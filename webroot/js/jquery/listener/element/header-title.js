@@ -10,8 +10,8 @@ console.log(' . js/jquery/listener/element/header-title.js');
 
 
 
-        //  'header-title' - mouseover - input - display
-        $( '#header-title' ).mouseover(function() {
+        //  'header-title' - mouseenter - input - display
+        $( '#header-title' ).mouseenter(function() {
 
             // input - display
             header.display();
