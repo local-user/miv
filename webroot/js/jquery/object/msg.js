@@ -46,8 +46,8 @@ var msg = {
                         url:        action,
                         data:       {
                                         request_method: 'create-msg',
-                                                  code: this.code,
-                                                   msg: this.msg
+                                                  code: code,
+                                                   msg: msg
                                     },
                         success:    function(data) {
 

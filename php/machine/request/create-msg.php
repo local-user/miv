@@ -89,8 +89,6 @@ class request_ext extends request {
 
         public function set_request_data($data) {
 
-            print_r($data);
-
             // create - msg - set - data - code
             if( isset($data['code'] )){ $this->action->set_data_code($data['code']);    }
             else                      { throw new \miv\exception\invalid_argument;      }
