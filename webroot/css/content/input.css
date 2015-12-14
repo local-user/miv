@@ -15,22 +15,14 @@
         height: 0px;
     }
 
-
-    #input #spacer {
-        height:             50px;
-        background-color:   white;
-        transition:         1s;
-    }
-
-    #input #spacer.hidden {
-        height: 0px;
-    }
-
-
     #input form {
         width:      80%;
         min-width:  400px;
         margin:     100px auto;
+    }
+
+    #input.hidden form {
+        margin:     0px auto;
     }
 
     #input form input {
@@ -40,6 +32,7 @@
         padding:        0 5% 0 5%;
         font-size:      24px;
         transition:     1s;
+        text-align:     left;
     }
 
     #input form #input-form-input-submit-real {
@@ -48,7 +41,6 @@
 
     #input form input.s2 {
         width:      80%;
-        text-align: left;
     }
 
     #input form .submit {
@@ -56,32 +48,39 @@
         min-height:         116px;
         width:              0;
         float:              right;
-        background-color:   green;
+        color:              #6CCD6C;
+        background-color:   #6CCD6C;
         cursor:             pointer;
         user-select:        none;
         overflow:           hidden;
+        transition:         1s;
     }
 
     #input form .submit i {
         font-size;          0px;
-        display:            none;
+        display:            inline-block;
+        transition:         0.5s;
+        padding:            70px 0 70px 0;
     }
 
     #input form .submit.s2 {
         height:             44%;
         min-height:         108px;
         width:              20%;
-        background-color:   #4CAF50;
+        background-color:   #6CCD6C;
+        display:            inline-block;
         text-align:         center;
         transition:         1s;
     }
 
     #input form .submit.s2 i {
         color:              white;
-        font-size:          20px;
-        margin:             60px auto;
-        user-select:        none;
-        display:            inline-block;
+        font-size:          40px;
+        padding:            70px 0 70px 0;
+    }
+
+    #input form .submit.s2:hover i {
+        color:              #2196f3;
     }
 
     #input form .submit.s2:active, #input form .submit.s2.active {
@@ -97,7 +96,7 @@
     }
 
     #input form .indicator.s200 {
-        background-color:       #4CAF50;
+        background-color:       #6CCD6C;
         min-height:             8px;
         height:                 4%;
         width:                  80%;
