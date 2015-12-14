@@ -42,7 +42,7 @@
             //  debug 0 = Disable
             //        1 = Enable
             //
-            var debug = 1;
+            var debug = 0;
 
         </script>
 

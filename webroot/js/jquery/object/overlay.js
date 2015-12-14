@@ -63,7 +63,9 @@ var overlay = {
         display_hide : function() {
 
             // body - remove - class - overlay
-            $(" #body ").removeClass('overlay');
+            setTimeout(function() {
+                $(" #body ").removeClass('overlay');
+            }, 1100);
 
             // welcome - hide
             $(" #welcome ").addClass('hidden');
