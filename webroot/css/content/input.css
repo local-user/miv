@@ -52,8 +52,8 @@
     }
 
     #input form .submit {
-        height:             40%;
-        min-height:         100px;
+        height:             46%;
+        min-height:         116px;
         width:              0;
         float:              right;
         background-color:   green;
@@ -90,8 +90,9 @@
     }
 
     #input form .indicator {
-        height:                 0px;
-        width:                  100%;
+        min-height:             16px;
+        height:                 6%;
+        width:                  0%;
         transition:             1s;
     }
 
@@ -106,6 +107,7 @@
         background-color:       #F44336;
         min-height:             16px;
         height:                 6%;
+        width:                  100%;
     }
 
     #input-form-input-indicator.active {
