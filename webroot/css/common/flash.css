@@ -65,16 +65,19 @@
        -moz-background-size:    cover;
          -o-background-size:    cover;
             background-color:   #6CCD6C;
+            transition:         0.75s ease-out;
         }
 
         #flash.love .head {
             background-color:   #6CCD6C;
+            transition:         0.5s;
         }
 
         #flash.love .icon {
             margin:             50px 0 0 0;
             font-size:          24px;
             color:              #F44336;
+            transition:         1s ease-out;
         }
 
         #flash.love i {
