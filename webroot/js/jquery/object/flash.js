@@ -107,8 +107,10 @@ var flash = {
             // msgs - refresh
             msgs.refresh();
 
-            // flash - remove - class(s)
+            // flash - remove - class - hidden - wait 0.5
             $( '#flash' ).removeClass( "hidden" );
+
+            // flash - remove - class(s)
             $( '#flash' ).removeClass( "love" );
 
             // return
@@ -119,11 +121,14 @@ var flash = {
         // function - flash - display - love
         display_love : function() {
 
+            // body - toggle - class
+            $( 'body' ).addClass( 'overlay' );
+
             // flash - toggle - class(s) - love
+            $( '#flash-toggle-message' ).toggleClass( 'hidden' );
             $( '#flash'                ).toggleClass( "love" );
             $( '#flash-toggle-love'    ).toggleClass( 'color-flash-toggle-love' );
             $( '#flash-toggle-love'    ).toggleClass( 'color-flash-toggle-love-active' );
-            $( '#flash-toggle-message' ).toggleClass( 'hidden' );
 
             // return
             return true;
