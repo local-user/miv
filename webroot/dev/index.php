@@ -36,13 +36,10 @@
         <!-- icon - fav -->
         <link rel="shortcut icon" href="img/icon/favicon.ico">
 
-        <!-- js - config -->
+        <!-- js - min - config -->
         <script>
 
-            //  debug 0 = Disable
-            //        1 = Enable
-            //
-            var debug = 0;
+            var debug = 1;      //  1 - Enable, 0 - Disable |\
 
         </script>
 

@@ -12,10 +12,10 @@
 
 
     // debug
-    $debug = false;
+    $debug = true;
 
     // require - php - machine - system - router
-    require_once('../php/machine/system/router.php');
+    require_once('../../php/machine/system/router.php');
 
     // router - route
     $router = new \miv\system\router($debug);
