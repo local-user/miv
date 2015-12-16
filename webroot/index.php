@@ -57,15 +57,15 @@
 
 
         <!-- html - overlay -->
-        <?php require_once('html/overlay/welcome.html'); ?>
+        <?php require_once('html/overlay/welcome.html');    ?>
 
         <!-- html - common -->
-        <?php require_once('html/common/flash.html');   ?>
-        <?php require_once('html/common/header.html');  ?>
+        <?php require_once('html/common/flash.html');       ?>
+        <?php require_once('html/common/header.html');      ?>
 
         <!-- html - content -->
-        <?php require_once('html/content/input.html');   ?>
-        <?php require_once('html/content/message.html'); ?>
+        <?php require_once('html/content/input.html');      ?>
+        <?php require_once('html/content/message.html');    ?>
 
 
         <!-- | js -->
