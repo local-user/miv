@@ -11,17 +11,36 @@
 
 
 
-    // debug
+    // global(s)
     $debug = true;
 
-    // require - php - machine - system - router
-    require_once('../../php/machine/system/router.php');
 
-    // router - route
-    $router = new \miv\system\router($debug);
-    $router->set_request_data($_GET, $_POST);
-    $router->set_request_method_from_request_data();
-    $router->route($debug);
+
+
+    /** | require **/
+
+        require_once('../../php/system/router.php');
+        require_once('../../php/display/json.php');
+
+    /** require | **/
+
+
+    /** | router **/
+
+        $router = new \miv\system\router($debug);
+        $router->set_request(200, $_SERVER['HTTP_MIV_OBJECT'], $_SERVER['HTTP_MIV_METHOD'], $_POST);
+        $router->route();
+
+    /** router | **/
+
+
+    /** | display **/
+
+        $display = new \miv\display\json($debug);
+        $display->set_response($router->get_response());
+        $display->display();
+
+    /** display | **/
 
 
 
