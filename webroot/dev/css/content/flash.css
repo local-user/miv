@@ -65,7 +65,7 @@
        -moz-background-size:    cover;
          -o-background-size:    cover;
             background-color:   #6CCD6C;
-            transition:         0.75s ease-out;
+            transition:         1s;
         }
 
         #flash.love .head {
@@ -91,6 +91,10 @@
         #flash.love .count {
             margin:             50px 0 0 0;
             color:              #6CCD6C;
+        }
+
+        #flash .flash-text-hidden {
+            font-size:          0px;
         }
 
 

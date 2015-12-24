@@ -118,6 +118,17 @@ var flash = {
 
         },
 
+        // function - flash - display - text
+        display_text : function() {
+
+            // flash - toggle - class(s) - text
+            $( '#flash-toggle-love' ).toggleClass( 'flash-text-hidden' );
+
+            // return
+            return true;
+
+        },
+
         // function - flash - display - love
         display_love : function() {
 

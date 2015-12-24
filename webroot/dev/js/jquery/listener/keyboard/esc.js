@@ -23,6 +23,9 @@ console.log(' . js/jquery/listener/keybord/escape.js');
                     // flash - display - hide
                     flash.display_hide();
 
+                    // header - display - hide
+                    header.display_hide();
+
                     // input - display
                     input.display();
 

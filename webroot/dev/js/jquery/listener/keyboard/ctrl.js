@@ -20,6 +20,9 @@ console.log(' . js/jquery/listener/keybord/ctrl.js');
                     // overlay - display - text
                     overlay.display_text();
 
+                    // flash - display - text
+                    flash.display_text();
+
                 }
 
                 // return
@@ -38,6 +41,9 @@ console.log(' . js/jquery/listener/keybord/ctrl.js');
 
                     // overlay - display - text
                     overlay.display_text();
+
+                    // flash - display - text
+                    flash.display_text();
 
                 }
 
