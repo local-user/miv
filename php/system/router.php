@@ -63,7 +63,7 @@ class router {
                 $object = "\miv\object\\{$this->request_object}";
                 $this->route_object = new $object ();
                 return true;
-            } catch( \miv\exception\e400 $e ){
+            } catch( \exception $e ){
                 $this->set_response(501, array('error' => $e->getMessage()));
                 return false;
             }
@@ -81,14 +81,14 @@ class router {
 
         private function route_exec() {
             if( ! method_exists($this->route_object, $this->request_method) ){
-                $this->set_response(404, array('error' => 'Invalid miv method'));
+                $this->set_response(404, array('error' => "method not found"));
                 return false;
             }
             try {
                 $method = $this->request_method;
                 $this->route_data = $this->route_object->$method();
                 return true;
-            } catch( \miv\exception\e400 $e ){
+            } catch( \exception $e ){
                 $this->set_response(400, array('error' => $e->getMessage()));
                 return false;
             }
@@ -98,7 +98,7 @@ class router {
             try {
                 $this->set_response_code(200);
                 $this->set_response_data($this->route_data);
-            } catch( \miv\exception\e400 $e ){
+            } catch( \exception $e ){
                 $this->set_response(500, array('error' => $e->getMessage()));
                 return false;
             }

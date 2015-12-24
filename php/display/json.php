@@ -19,6 +19,11 @@ class json {
 
         public function display() {
 
+            // display - resposne - code
+            if( isset($this->response['code']) ){
+                http_response_code($this->response['code']);
+            }
+
             // display - header
             header('Content-Type: application/json');
 
