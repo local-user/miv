@@ -48,29 +48,6 @@ class router {
     /** magic | **/
 
 
-    /** | display **/
-
-        private function display_json() {
-
-            // response - code - http
-            if(isset($this->response_code)) {
-                http_response_code($this->response_code);
-            }
-
-            // response - data - response
-
-            // display - json - data
-            header('Content-Type: application/json');
-            echo json_encode($this->response_data);
-
-            // return
-            return true;
-
-        }
-
-    /** display | **/
-
-
     /** | route **/
 
         public function route() {
@@ -103,6 +80,10 @@ class router {
         }
 
         private function route_exec() {
+            if( ! method_exists($this->route_object, $this->request_method) ){
+                $this->set_response(404, array('error' => 'Invalid miv method'));
+                return false;
+            }
             try {
                 $method = $this->request_method;
                 $this->route_data = $this->route_object->$method();
