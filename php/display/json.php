@@ -28,7 +28,7 @@ class json {
             header('Content-Type: application/json');
 
             // display - json
-            echo json_encode($this->response);
+            echo json_encode($this->response['data']);
 
             // return
             return true;
