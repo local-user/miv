@@ -16,10 +16,11 @@
 
     #error .title {
         position:           relative;
-        top:                50%;
-        transition:         1s;
+        top:                40%;
+        transition:         0.5s;
         opacity:            1;
         padding:            0 0 0 5%;
+        cursor:             pointer;
     }
 
     #error.hidden .title {
@@ -34,6 +35,20 @@
     }
 
     #error.hidden .title h1 {
+    }
+
+    #error .title h2 {
+        margin:             5px 0 0 0;
+        font-style:         italic;
+        font-size:          12px;
+    }
+
+    #error .title:hover span {
+        color:              #FFFFFF;
+    }
+
+    #error .title:hover #error-message {
+        color:              rgb(34, 34, 34);
     }
 
 

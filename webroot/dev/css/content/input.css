@@ -8,7 +8,6 @@
         overflow:   hidden;
         transition: 1.5s;
         width:      100%;
-        box-shadow: inset 0px 0px 10px 0px rgb(0,0,0,1);
     }
 
     #input.hidden {
