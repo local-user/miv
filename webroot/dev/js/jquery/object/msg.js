@@ -51,8 +51,8 @@ var msg = {
                                     },
                         error:      function() {
 
-                            //  error - display
-                            error.display('Unable to create message.');
+                            // error - display - show
+                            error.display_show('Unable to create message.');
 
                         }
             });

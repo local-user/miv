@@ -61,7 +61,7 @@ var msgs = {
                         error:      function() {
 
                             //  error - display
-                            error.display('Unable to create message.');
+                            error.display_msgs('Unable to retrieve message count.');
 
                         }
             });

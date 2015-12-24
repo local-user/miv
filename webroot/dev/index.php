@@ -27,6 +27,7 @@
         <link rel="stylesheet" type="text/css" href="css/content/header.css"    >
         <link rel="stylesheet" type="text/css" href="css/content/input.css"     >
         <link rel="stylesheet" type="text/css" href="css/content/welcome.css"   >
+        <link rel="stylesheet" type="text/css" href="css/content/error.css"     >
 
         <!-- css - z - animation -->
         <link rel="stylesheet" type="text/css" href="css/animation/welcome.css" >
@@ -49,12 +50,12 @@
         <!-- | html -->
 
             <!-- html - content -->
+            <?php require_once('html/content/error.html');      ?>
             <?php require_once('html/content/welcome.html');    ?>
             <?php require_once('html/content/flash.html');      ?>
             <?php require_once('html/content/input.html');      ?>
             <?php require_once('html/content/header.html');     ?>
             <?php require_once('html/content/message.html');    ?>
-            <?php require_once('html/content/error.html');      ?>
             <!-- note - [ order affects visual(s) ] -->
 
         <!-- html | -->
@@ -67,6 +68,7 @@
             <!-- | js - jquery -->
 
                 <!-- js - jquery - listener(s) - element -->
+                <script src='js/jquery/listener/element/error.js'                   ></script>
                 <script src='js/jquery/listener/element/flash-toggle-body.js'       ></script>
                 <script src='js/jquery/listener/element/flash-toggle-hide.js'       ></script>
                 <script src='js/jquery/listener/element/flash-toggle-love.js'       ></script>

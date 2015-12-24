@@ -1,0 +1,42 @@
+/** | css - content - error **/
+
+
+
+
+    #error {
+        height:             100%;
+        width:              100%;
+        overflow:           hidden;
+        transition:         1.0s;
+    }
+
+    #error.hidden {
+        height:             0px;
+    }
+
+    #error .title {
+        position:           relative;
+        top:                50%;
+        transition:         1s;
+        opacity:            1;
+        padding:            0 0 0 5%;
+    }
+
+    #error.hidden .title {
+        position:           relative;
+        opacity:            0;
+        padding:            0;
+    }
+
+    #error .title h1 {
+        font-size:          30px;
+        vertical-align:     middle;
+    }
+
+    #error.hidden .title h1 {
+    }
+
+
+
+
+/** css - content - error | **/
