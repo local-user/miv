@@ -21,14 +21,12 @@
         <link rel="stylesheet" type="text/css" href="css/common/container.css"  >
         <link rel="stylesheet" type="text/css" href="css/common/font.css"       >
         <link rel="stylesheet" type="text/css" href="css/common/overlay.css"    >
-        <link rel="stylesheet" type="text/css" href="css/common/flash.css"      >
-        <link rel="stylesheet" type="text/css" href="css/common/header.css"     >
 
         <!-- css - content -->
+        <link rel="stylesheet" type="text/css" href="css/content/flash.css"     >
+        <link rel="stylesheet" type="text/css" href="css/content/header.css"    >
         <link rel="stylesheet" type="text/css" href="css/content/input.css"     >
-
-        <!-- css - overlay -->
-        <link rel="stylesheet" type="text/css" href="css/overlay/welcome.css"   >
+        <link rel="stylesheet" type="text/css" href="css/content/welcome.css"   >
 
         <!-- css - z - animation -->
         <link rel="stylesheet" type="text/css" href="css/animation/welcome.css" >
@@ -39,7 +37,8 @@
         <!-- js - min - config -->
         <script>
 
-            var debug = 1;      //  1 - Enable, 0 - Disable |\
+                                 // |--------- Debug -------- | \\
+            var debug = 1;      //  | 1 - Enable, 0 - Disable |  \\
 
         </script>
 
@@ -52,18 +51,17 @@
     </head>
     <body id='body' class='overlay'>
 
+        <!-- | html -->
 
-        <!-- html - overlay -->
-        <?php require_once('html/overlay/welcome.html');    ?>
+            <!-- html - content -->
+            <?php require_once('html/content/welcome.html');    ?>
+            <?php require_once('html/content/flash.html');      ?>
+            <?php require_once('html/content/header.html');     ?>
+            <?php require_once('html/content/input.html');      ?>
+            <?php require_once('html/content/message.html');    ?>
+            <?php require_once('html/content/error.html');      ?>
 
-        <!-- html - common -->
-        <?php require_once('html/common/flash.html');       ?>
-        <?php require_once('html/common/header.html');      ?>
-
-        <!-- html - content -->
-        <?php require_once('html/content/input.html');      ?>
-        <?php require_once('html/content/message.html');    ?>
-
+        <!-- html | -->
 
         <!-- | js -->
 
@@ -88,6 +86,7 @@
                 <script src='js/jquery/listener/keyboard/esc.js'                    ></script>
 
                 <!-- js - jquery - object(s) -->
+                <script src='js/jquery/object/error.js'                             ></script>
                 <script src='js/jquery/object/flash.js'                             ></script>
                 <script src='js/jquery/object/header.js'                            ></script>
                 <script src='js/jquery/object/input.js'                             ></script>
@@ -99,7 +98,6 @@
             <!-- js - jquery | -->
 
         <!-- js | -->
-
 
     </body>
 </html>

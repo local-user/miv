@@ -28,7 +28,7 @@
     /** | router **/
 
         $router = new \miv\system\router($debug);
-        $router->set_request(200, $_SERVER['HTTP_MIV_OBJECT'], $_SERVER['HTTP_MIV_METHOD'], $_POST);
+        $router->set_request(200, null, null, $_POST);
         $router->route();
 
     /** router | **/
