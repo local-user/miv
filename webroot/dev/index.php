@@ -35,12 +35,7 @@
         <link rel="shortcut icon" href="img/icon/favicon.ico">
 
         <!-- js - min - config -->
-        <script>
-
-                                 // |--------- Debug -------- | \\
-            var debug = 1;      //  | 1 - Enable, 0 - Disable |  \\
-
-        </script>
+        <script> var debug = 1; </script>
 
         <!-- vendor - * -->
         <link rel="stylesheet" type="text/css" href="vendor/font-awesome-4.5.0/css/font-awesome.min.css"    >
@@ -55,11 +50,12 @@
 
             <!-- html - content -->
             <?php require_once('html/content/welcome.html');    ?>
+            <?php require_once('html/content/input.html');      ?>
             <?php require_once('html/content/flash.html');      ?>
             <?php require_once('html/content/header.html');     ?>
-            <?php require_once('html/content/input.html');      ?>
             <?php require_once('html/content/message.html');    ?>
             <?php require_once('html/content/error.html');      ?>
+            <!-- note - [ order affects visual(s) ] -->
 
         <!-- html | -->
 
