@@ -55,7 +55,7 @@ class msg {
                     $this->db->query();
             $id  =  $this->db->get_last_insert_id();
 
-            // return - [ msg -> id ]
+            // return - [ msg -> id -> { . } ]
             return array( "msg" => array( "id" => $id ) );
 
         }
