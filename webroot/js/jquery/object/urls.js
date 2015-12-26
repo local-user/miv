@@ -53,8 +53,8 @@ var urls = {
                             // debug
                             if( debug ){ console.log(data); }
 
-                            // messages - update - html
-                            //$( ".urls-count" ).html( length );
+                            // urls - update - html - length
+                            $( ".urls-count" ).html( data["urls"]["count"] );
 
                         },
                         context:    this,

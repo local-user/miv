@@ -56,6 +56,7 @@
             <?php require_once('html/content/input.html');      ?>
             <?php require_once('html/content/header.html');     ?>
             <?php require_once('html/content/message.html');    ?>
+            <?php require_once('html/content/urls.html');       ?>
             <!-- note - [ order affects visual(s) ] -->
 
         <!-- html | -->

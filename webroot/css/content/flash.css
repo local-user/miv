@@ -38,6 +38,7 @@
         #flash .head .count {
             padding:            20px 0 0 80px;
             float:              left;
+            cursor:             default;
         }
 
         #flash .head .toggle {

@@ -11,7 +11,7 @@
     miv_object='url'
     miv_method='create'
     miv_data="url=http://example.com.au/"
-    miv_url='miv/dev/api.php'
+    miv_url='miv/api.php'
 
     # curl
     curl "$miv_curl"                                \
