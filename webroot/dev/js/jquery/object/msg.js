@@ -48,12 +48,10 @@ var msg = {
                                             request.setRequestHeader("Miv-Object", "msg");
                                             request.setRequestHeader("Miv-Method", "create");
                                         },
-
                         data:           {
                                             code:   code,
                                             msg:    msg
                                         },
-
                         error:          function() {
                                             error.display_show('Unable to create message.');
                                         }

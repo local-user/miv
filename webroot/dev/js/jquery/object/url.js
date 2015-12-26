@@ -23,7 +23,7 @@ var url = {
     // identity
     identify : function() {
 
-        // console - log
+        // console - log - identity
         console.log(' I ' + this.identity);
 
         // return
@@ -36,33 +36,24 @@ var url = {
 
         create : function( url ){
 
-            // var  - http - head
-            var method = "POST";
-            var action = "api.php";
-
-            // var  - http - body
-            var data   = $("#input-form").serialize();
-
-            // ajax - http
+            // ajax
             $.ajax({
-                        type:       method,
-                        url:        action,
-                        data:       data,
-                        success:    function(data) {
 
-                            // debug
-                            if( debug ){ console.log(data); }
+                        type:           "POST",
+                        url:            "api.php",
+                        data:           $("#input-form").serialize(),
 
-                            // msg
-                            msg.create( 200, 'Created URL[' + data[0]['url']['id'] + ']' );
-
-                        },
-                        error:      function() {
-
-                            // msg
-                            msg.create( 400, 'Create URL failed' );
-
-                        }
+                        beforeSend:     function(request) {
+                                            request.setRequestHeader("Miv-Object", "url");
+                                            request.setRequestHeader("Miv-Method", "create");
+                                        },
+                        success:        function(data) {
+                                            if( debug ){ console.log(data); }
+                                            msg.create( 200, 'Created URL[' + data['url']['id'] + ']' );
+                                        },
+                        error:          function() {
+                                            msg.create( 400, 'Create URL failed' );
+                                        }
             });
 
             // return
@@ -78,7 +69,7 @@ var url = {
 }
 //
 //
-//  reference @ http://stackoverflow.com/questions/1960240/jquery-ajax-submit-form
+//
 //
 // js - jquery - toggle - url |
 //

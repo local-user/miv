@@ -53,8 +53,11 @@ var msgs = {
                             // debug
                             if( debug ){ console.log(data); }
 
+                            // messages - length
+                            var length = data["msgs"].length;
+
                             // messages - update - html
-                            $( ".msgs-count" ).html( data[0]["msgs"].length );
+                            $( ".msgs-count" ).html( length );
 
                         },
                         context:    this,

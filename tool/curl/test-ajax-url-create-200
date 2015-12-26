@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-#   curl - test - ajax - msg - create - 200
+#   curl - test - ajax - url - create - 200
 #
 
 
@@ -8,9 +8,9 @@
 
     # variable(s)
     miv_curl="--verbose"
-    miv_object='msg'
+    miv_object='url'
     miv_method='create'
-    miv_data="code=000&msg=This is just a test of the emergency broadcast system."
+    miv_data="url=http://example.com.au/"
     miv_url='miv/dev/api.php'
 
     # curl
@@ -25,5 +25,5 @@
 
 
 #
-#   curl - test - ajax - msg - create - 200
+#   curl - test - ajax - url - create - 200
 #
