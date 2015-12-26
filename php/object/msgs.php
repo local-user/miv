@@ -15,7 +15,7 @@
 /** require | **/
 ?>
 <?php
-class msg {
+class msgs {
 
 
 

@@ -18,7 +18,6 @@ var msgs = {
 
     // global(s)
     identity:       'js/jquery/object/msgs.js',
-    messages:       'fuck',
 
 
     // identity
@@ -45,16 +44,17 @@ var msgs = {
             $.ajax({
                         type:       method,
                         url:        action,
-                        data:       {
-                                        request_method: 'read-msgs'
-                                    },
+                        beforeSend: function (request) {
+                            request.setRequestHeader("Miv-Object", "msgs");
+                            request.setRequestHeader("Miv-Method", "read_list");
+                        },
                         success:    function(data) {
 
                             // debug
                             if( debug ){ console.log(data); }
 
                             // messages - update - html
-                            $( ".msgs-count" ).html( data[0]['msgs'].length );
+                            $( ".msgs-count" ).html( data[0].length );
 
                         },
                         context:    this,

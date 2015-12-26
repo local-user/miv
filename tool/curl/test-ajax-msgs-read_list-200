@@ -8,7 +8,7 @@
 
     # variable(s)
     miv_curl="--verbose"
-    miv_object='msg'
+    miv_object='msgs'
     miv_method='read_list'
     miv_data=""
     miv_url='miv/dev/api.php'
