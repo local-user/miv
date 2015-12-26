@@ -1,0 +1,29 @@
+#!/bin/bash
+#
+#   curl - test - ajax - read - msgs - 200
+#
+
+
+
+
+    # variable(s)
+    miv_curl="--verbose"
+    miv_object='msg'
+    miv_method='create'
+    miv_data="code=000&msg=This is just a test of the emergency broadcast system."
+    miv_url='miv/dev/api.php'
+
+    # curl
+    curl "$miv_curl"                                \
+        --header "Miv-Object: $miv_object"          \
+        --header "Miv-Method: $miv_method"          \
+        --data "$miv_data"                          \
+        "$miv_url"                                  \
+        $@
+
+
+
+
+#
+#   curl - test - ajax - read - urls - 200
+#

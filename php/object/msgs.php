@@ -1,7 +1,7 @@
 <?php namespace miv\object; ?>
 <?php
 /*
- *  php - object - msg
+ *  php - object - msgs
  *
  */
 ?>
@@ -29,13 +29,8 @@ class msgs {
     /** | magic **/
 
         public function __construct() {
-
-            // database - db - init
             $this->db = new \miv\system\database();
-
-            // return
             return true;
-
         }
 
     /** magic | **/
@@ -45,15 +40,17 @@ class msgs {
 
         public function read_list() {
 
-                    // db - query
-                    $query = 'SELECT id FROM msg';
-
-                    // db - get - set - read(s)
-                    $this->db->set_query($query);
+                    // db - read_list - msgs
+                    $this->db->set_query("
+                        SELECT id FROM msg
+                    ");
                     $this->db->set_query_data($data = $this->get_data());
                     $this->db->prepare();
                     $this->db->query();
-             return $this->db->read_list();
+            $msgs = $this->db->read_list();
+
+            // return - [ msgs -> { ... } ]
+            return array( "msgs" => $msgs );
 
         }
 
@@ -71,7 +68,7 @@ class msgs {
 
     /** | set **/
 
-        public function set_data($data) {
+        public function set_data($data = array()) {
             return true;
         }
 
@@ -82,7 +79,7 @@ class msgs {
 
 }
 /*
- *  php - object - msg
+ *  php - object - msgs
  *
  */
 ?>

@@ -6,7 +6,7 @@
 //
 //  Function(s)
 //
-//      -- create( msg )
+//      -- create( code, msg )
 //
 //
 //
@@ -20,10 +20,12 @@ var msg = {
     identity:       'js/jquery/object/msg.js',
 
 
+
+
     // identity
     identify : function() {
 
-        // console - log
+        // console - log - identity
         console.log(' I ' + this.identity);
 
         // return
@@ -36,25 +38,25 @@ var msg = {
 
         create : function( code, msg ){
 
-            // var  - http
-            var method = "POST";
-            var action = "api.php";
-
-            // ajax - http
+            // ajax
             $.ajax({
-                        type:       method,
-                        url:        action,
-                        data:       {
-                                        request_method: 'create-msg',
-                                                  code: code,
-                                                   msg: msg
-                                    },
-                        error:      function() {
 
-                            // error - display - show
-                            error.display_show('Unable to create message.');
+                        type:           "POST",
+                        url:            "api.php",
 
-                        }
+                        beforeSend:     function (request) {
+                                            request.setRequestHeader("Miv-Object", "msg");
+                                            request.setRequestHeader("Miv-Method", "create");
+                                        },
+
+                        data:           {
+                                            code:   code,
+                                            msg:    msg
+                                        },
+
+                        error:          function() {
+                                            error.display_show('Unable to create message.');
+                                        }
             });
 
             // return
@@ -70,7 +72,7 @@ var msg = {
 }
 //
 //
-//  reference @ http://stackoverflow.com/questions/1960240/jquery-ajax-submit-form
+//
 //
 // js - jquery - toggle - msg |
 //
