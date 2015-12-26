@@ -1,23 +1,23 @@
 //
-// | javascript - jquey - object - msgs
+// | javascript - jquey - object - urls
 //
 //
 //
 //
 //  Function(s)
 //
-//      -- create( msgs )
+//      -- refresh_count()
 //
 //
 //
 //
-var msgs = {
+var urls = {
 
 
 
 
     // global(s)
-    identity:       'js/jquery/object/msgs.js',
+    identity:       'js/jquery/object/urls.js',
 
 
     // identity
@@ -34,7 +34,7 @@ var msgs = {
 
     // | function(s)
 
-        refresh : function(){
+        refresh_count : function(){
 
             // var  - http
             var method = "POST";
@@ -45,26 +45,23 @@ var msgs = {
                         type:       method,
                         url:        action,
                         beforeSend: function (request) {
-                            request.setRequestHeader("Miv-Object", "msgs");
-                            request.setRequestHeader("Miv-Method", "read_list");
+                            request.setRequestHeader("Miv-Object", "urls");
+                            request.setRequestHeader("Miv-Method", "read_count");
                         },
                         success:    function(data) {
 
                             // debug
                             if( debug ){ console.log(data); }
 
-                            // messages - length
-                            var length = data["msgs"].length;
-
                             // messages - update - html
-                            $( ".msgs-count" ).html( length );
+                            //$( ".urls-count" ).html( length );
 
                         },
                         context:    this,
                         error:      function() {
 
                             //  error - display
-                            error.display_show('Unable to retrieve msg count.');
+                            error.display_show('Unable to retrieve URLs count.');
 
                         }
             });
@@ -82,6 +79,6 @@ var msgs = {
 }
 //
 //
-// js - jquery - toggle - msgs |
+// js - jquery - toggle - urls |
 //
-if( debug ){ console.log(' . js/jquery/object/msgs.js'); }
+if( debug ){ console.log(' . js/jquery/object/urls.js'); }

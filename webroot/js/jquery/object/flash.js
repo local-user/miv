@@ -12,6 +12,7 @@ console.log(' . js/jquery/object/flash.js');
 //      display_body
 //      display_hide
 //      display_show
+//      display_text
 //
 //
 //
@@ -104,8 +105,8 @@ var flash = {
         // function - flash - display - show
         display_show : function() {
 
-            // msgs - refresh
-            msgs.refresh();
+            // urls - refresh - count
+            urls.refresh_count();
 
             // flash - remove - class - hidden - wait 0.5
             $( '#flash' ).removeClass( "hidden" );

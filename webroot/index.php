@@ -92,6 +92,7 @@
                 <script src='js/jquery/object/msgs.js'                              ></script>
                 <script src='js/jquery/object/overlay.js'                           ></script>
                 <script src='js/jquery/object/url.js'                               ></script>
+                <script src='js/jquery/object/urls.js'                              ></script>
 
             <!-- js - jquery | -->
 
