@@ -19,8 +19,8 @@
 
     /** | require **/
 
-        require_once('../../php/system/router.php');
-        require_once('../../php/display/json.php');
+        require_once('../php/system/router.php');
+        require_once('../php/display/json.php');
 
     /** require | **/
 
