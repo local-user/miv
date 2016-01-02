@@ -14,15 +14,20 @@
         height: 0px;
     }
 
+    #input .spacer {
+        width:      100%;
+        height:     120px;
+        transition: 1s;
+    }
+
+    #input.hidden .spacer {
+        height:     0;
+    }
+
     #input form {
         width:      80%;
         min-width:  400px;
-        margin:     100px auto;
-        overflow-x: hidden;
-    }
-
-    #input.hidden form {
-        margin:     0px auto;
+        margin:     auto;
     }
 
     #input form input {

@@ -1,0 +1,30 @@
+/** | css - content - urls **/
+
+
+
+
+    #urls {
+        margin:             40px auto;
+        padding:            0px;
+        text-align:         center;
+    }
+
+    #urls .url {
+        min-width:          400px;
+        margin:             0px;
+        padding:            0px;
+        height:             30%;
+        width:              40%;
+        display:            inline-block;
+        transition:         1s;
+        background-color:   rgb(34, 34, 34);
+        opacity:            0.1;
+    }
+
+    #urls .url:hover {
+        opacity:            1;
+    }
+
+
+
+/** css - content - urls | **/

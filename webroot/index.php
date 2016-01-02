@@ -26,8 +26,9 @@
         <link rel="stylesheet" type="text/css" href="css/content/flash.css"     >
         <link rel="stylesheet" type="text/css" href="css/content/header.css"    >
         <link rel="stylesheet" type="text/css" href="css/content/input.css"     >
-        <link rel="stylesheet" type="text/css" href="css/content/welcome.css"   >
         <link rel="stylesheet" type="text/css" href="css/content/error.css"     >
+        <link rel="stylesheet" type="text/css" href="css/content/urls.css"      >
+        <link rel="stylesheet" type="text/css" href="css/content/welcome.css"   >
 
         <!-- css - z - animation -->
         <link rel="stylesheet" type="text/css" href="css/animation/welcome.css" >

@@ -51,6 +51,9 @@ var input = {
         // function - input - display
         display : function() {
 
+            // input - display - reset
+            this.display_reset();
+
             // input - display - toggle
             if ( this.visibility === 0 ){
 

@@ -34,6 +34,43 @@ var urls = {
 
     // | function(s)
 
+        refresh : function(){
+
+            // var  - http
+            var method = "POST";
+            var action = "api.php";
+
+            // ajax - http
+            $.ajax({
+                        type:       method,
+                        url:        action,
+                        beforeSend: function (request) {
+                            request.setRequestHeader("Miv-Object", "urls");
+                            request.setRequestHeader("Miv-Method", "read");
+                        },
+                        success:    function(data) {
+
+                            // debug
+                            if( debug ){ console.log(data); }
+
+                            // dev
+                            console.log('Under Development.');
+
+                        },
+                        context:    this,
+                        error:      function() {
+
+                            //  error - display
+                            error.display_show('Unable to retrieve URLs.');
+
+                        }
+            });
+
+            // return
+            return true;
+
+        },
+
         refresh_count : function(){
 
             // var  - http
