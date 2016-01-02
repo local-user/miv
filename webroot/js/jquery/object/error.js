@@ -72,7 +72,7 @@ var error = {
             // body - remove - class - overlay
             setTimeout(function () {
                 $( '#body' ).removeClass( "overlay" );
-            }, 1100);
+            }, 1050);
 
             // return
             return true;
@@ -83,7 +83,9 @@ var error = {
         display_show : function(message) {
 
             // body - add - class - overlay
-            $( '#body' ).addClass( "overlay" );
+            setTimeout(function () {
+                $( '#body' ).addClass( "overlay" );
+            }, 1100);
 
             // error - set - text - message
             $( '#error-message' ).text(message);
