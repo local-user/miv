@@ -18,6 +18,7 @@
         width:      80%;
         min-width:  400px;
         margin:     100px auto;
+        overflow-x: hidden;
     }
 
     #input.hidden form {
@@ -43,12 +44,12 @@
     }
 
     #input form .submit {
-        height:             46%;
-        min-height:         116px;
+        height:             40%;
+        min-height:         100px;
         width:              0;
         float:              right;
         color:              #6CCD6C;
-        background-color:   #6CCD6C;
+        background-color:   rgb(34, 34, 34);
         cursor:             pointer;
         user-select:        none;
         overflow:           hidden;
@@ -57,9 +58,9 @@
 
     #input form .submit i {
         font-size;          0px;
-        display:            inline-block;
         transition:         0.5s;
         padding:            70px 0 70px 0;
+        opacity:            0;
     }
 
     #input form .submit.s2 {
@@ -67,7 +68,6 @@
         min-height:         108px;
         width:              20%;
         background-color:   #6CCD6C;
-        display:            inline-block;
         text-align:         center;
         transition:         1s;
     }
@@ -76,6 +76,7 @@
         color:              white;
         font-size:          40px;
         padding:            70px 0 70px 0;
+        opacity:            1;
     }
 
     #input form .submit.s2:hover i {
@@ -88,9 +89,9 @@
     }
 
     #input form .indicator {
-        min-height:             16px;
-        height:                 6%;
-        width:                  0%;
+        min-height:             0;
+        height:                 0%;
+        width:                  100%;
         transition:             1s;
     }
 
