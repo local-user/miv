@@ -54,6 +54,22 @@ class urls {
 
         }
 
+        public function read_list() {
+
+                    // db - read - count - list
+                    $this->db->set_query("
+                        SELECT id FROM url
+                    ");
+                    $this->db->set_query_data($this->get_data());
+                    $this->db->prepare();
+                    $this->db->query();
+            $urls = $this->db->read_list();
+
+            // return - [ urls -> { ... } ]
+            return array( "urls" => array( "count" => $urls ));
+
+        }
+
     /** reads | **/
 
 

@@ -1,0 +1,29 @@
+#!/bin/bash
+#
+#   curl - test - ajax - read_list - urls - 200
+#
+
+
+
+
+    # variable(s)
+    miv_curl="--verbose"
+    miv_object='urls'
+    miv_method='read_list'
+    miv_data=""
+    miv_url='miv/api.php'
+
+    # curl
+    curl "$miv_curl"                                \
+        --header "Miv-Object: $miv_object"          \
+        --header "Miv-Method: $miv_method"          \
+        --data "$miv_data"                          \
+        "$miv_url"                                  \
+        $@
+
+
+
+
+#
+#   curl - test - ajax - read_list - urls - 200
+#
