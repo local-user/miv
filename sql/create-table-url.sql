@@ -29,6 +29,7 @@
 
     CREATE TABLE IF NOT EXISTS `miv`.`url` (
       `id` INT NOT NULL AUTO_INCREMENT,
+      `letter` VARCHAR(1) NOT NULL,
       `url` VARCHAR(2083) NOT NULL,
       `date_created` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
       PRIMARY KEY (`id`))

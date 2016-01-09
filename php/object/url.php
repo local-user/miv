@@ -40,13 +40,14 @@ class url {
 
                         // query
                         $query = '
-                            INSERT INTO url (  url )
-                            VALUES          ( :url )
+                            INSERT INTO url (  letter,  url )
+                            VALUES          ( :letter, :url )
                         ';
 
                         // data
                         $data = array(
-                            'url' => $this->get_data_url()
+                            'letter'    => $this->get_data_letter(),
+                            'url'       => $this->get_data_url()
                         );
 
                         // db
@@ -116,6 +117,15 @@ class url {
             private function get_data_id() {
                 if( $this->id !== null ){
                     return $this->id;
+                } else {
+                    throw new \miv\exception\e400();
+                }
+            }
+
+            private function get_data_letter() {
+                if( $this->url !== null ){
+                                  $url = parse_url($this->url);
+                    return substr($url['host'], 0, 1);
                 } else {
                     throw new \miv\exception\e400();
                 }
