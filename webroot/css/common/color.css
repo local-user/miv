@@ -4,7 +4,7 @@
 
 
     .color-edit-background                  {   background-color: #F44336;          }
-    .color-edit-text                        {              color: #F44336;          }
+    .color-edit-text                        {              color: #FFFFFF;          }
     .color-edit-text-active                 {              color: #F44336;          }
     .color-edit-text-active:hover           {              color: #F44336;          }
     .color-edit-text-hover:hover            {              color: #F44336;          }

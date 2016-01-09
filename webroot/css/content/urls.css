@@ -26,6 +26,31 @@
         border:             2px solid rgb(34,34,34);
     }
 
+    #urls .url .edit {
+        height:             25px;
+        background-color:   rgb(34, 34, 34);
+        overflow:           hidden;
+        transition:         0.75s;
+    }
+
+    #urls .url .edit.hidden {
+        height:             0px;
+    }
+
+    #urls .url .icon {
+        cursor:             pointer;
+    }
+
+    #urls .url .edit .left {
+        float:              left;
+        padding:            5px 5px 5px 10px;
+    }
+
+    #urls .url .edit .right {
+        float:              right;
+        padding:            5px 10px 5px 5px;
+    }
+
     #urls .url .letter {
         text-align:         right;
         font-size:          150px;

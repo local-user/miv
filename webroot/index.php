@@ -76,6 +76,7 @@
                 <script src='js/jquery/listener/element/flash-toggle-hide.js'       ></script>
                 <script src='js/jquery/listener/element/flash-toggle-love.js'       ></script>
                 <script src='js/jquery/listener/element/header-title.js'            ></script>
+                <script src='js/jquery/listener/element/header-toggle-edit.js'      ></script>
                 <script src='js/jquery/listener/element/header-toggle-input.js'     ></script>
                 <script src='js/jquery/listener/element/header-toggle-overlay.js'   ></script>
                 <script src='js/jquery/listener/element/header-toggle-refresh.js'   ></script>
@@ -89,6 +90,7 @@
 
                 <!-- js - jquery - object(s) -->
                 <script src='js/jquery/object/error.js'                             ></script>
+                <script src='js/jquery/object/edit.js'                             ></script>
                 <script src='js/jquery/object/flash.js'                             ></script>
                 <script src='js/jquery/object/header.js'                            ></script>
                 <script src='js/jquery/object/input.js'                             ></script>

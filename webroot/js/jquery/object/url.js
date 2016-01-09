@@ -37,7 +37,22 @@ var url = {
         append : function( id ){
 
             // append - urls - url[ id ]
-            $("#urls").append("<a id='url-" + id + "' class='url animate-appear'></a>");
+            $("#urls").append("<div id='url-" + id + "' class='url animate-appear'></div>");
+
+            // append - urls - url[ id ] - edit
+            $("#url-" + id).append("<div class='edit hidden color-edit-text'></div>");
+
+            // append - urls - url[ id ] - edit - left / right
+            $("#url-" + id + " .edit").append("<div class='left'></div>");
+            $("#url-" + id + " .edit").append("<div class='right'></div>");
+
+            // append - urls - url[ id ] - edit - left
+            $("#url-" + id + " .edit .left").append("<span class='icon fa fa-chevron-left color-edit-text-hover'></span>");
+            $("#url-" + id + " .edit .left").append("<span class='icon fa fa-chevron-right color-edit-text-hover'></span>");
+
+            // append - urls - url[ id ] - edit - right
+            $("#url-" + id + " .edit .right").append("<span class='icon fa fa-close color-edit-text-hover'></span>");
+
 
             // refresh
             url.refresh(id);
