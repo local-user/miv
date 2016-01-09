@@ -16,9 +16,6 @@ console.log(' . js/jquery/listener/element/welcome.js');
         // overlay - display - hide
         overlay.display_hide();
 
-        // urls - refresh
-        urls.refresh();
-
         // return
         return true;
 

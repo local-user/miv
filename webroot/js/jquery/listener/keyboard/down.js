@@ -23,6 +23,9 @@ console.log(' . js/jquery/listener/keybord/down.js');
                     // overlay - input - hide
                     input.display_hide();
 
+                    // urls - refresh
+                    urls.refresh();
+
                 }
 
                 // return

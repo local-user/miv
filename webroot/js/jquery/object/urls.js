@@ -34,7 +34,20 @@ var urls = {
 
     // | function(s)
 
+        reset : function() {
+
+            // reset/empty
+            $( "#urls" ).empty();
+
+            // return
+            return true;
+
+        },
+
         refresh : function(){
+
+            // reset
+            this.reset();
 
             // var  - http
             var method = "POST";
@@ -55,8 +68,7 @@ var urls = {
 
                             // urls
                             for( id in data['urls'] ){
-                                $("#urls").append("<a id='url-" + data['urls'][id] + "' class='url'></a>");
-                                url.refresh(data['urls'][id]);
+                                url.append(data['urls'][id]);
                             }
 
                             // dev
@@ -120,6 +132,9 @@ var urls = {
 
 
 }
+$( document ).ready( function() {
+    urls.refresh();
+});
 //
 //
 // js - jquery - toggle - urls |

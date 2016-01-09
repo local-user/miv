@@ -34,7 +34,23 @@ var url = {
 
     // | function(s)
 
+        append : function( id ){
+
+            // append - urls - url[ id ]
+            $("#urls").append("<a id='url-" + id + "' class='url'></a>");
+
+            // refresh
+            url.refresh(id);
+
+            // return
+            return true;
+
+        },
+
         create : function( url ){
+
+            // this
+            var thi = this;
 
             // ajax
             $.ajax({
@@ -49,6 +65,7 @@ var url = {
                                         },
                         success:        function(data) {
                                             if( debug ){ console.log(data); }
+                                            thi.append( data['url']['id'] );
                                             msg.create( 200, 'Created URL[' + data['url']['id'] + ']' );
                                         },
                         error:          function() {
