@@ -17,6 +17,7 @@
         <link rel="stylesheet" type="text/css" href="css/common/reset.css"      >
 
         <!-- css - common -->
+        <link rel="stylesheet" type="text/css" href="css/common/alphabet.css"   >
         <link rel="stylesheet" type="text/css" href="css/common/color.css"      >
         <link rel="stylesheet" type="text/css" href="css/common/container.css"  >
         <link rel="stylesheet" type="text/css" href="css/common/font.css"       >

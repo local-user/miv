@@ -25,71 +25,148 @@ class url {
     private $db = null;
 
     // var - data
+    private $id     = null;
     private $url    = null;
 
 
 
 
-    /** | magic **/
-
-        public function __construct() {
-            $this->db = new \miv\system\database();
-            return true;
-        }
-
-    /** magic | **/
+    /** | main **/
 
 
-    /** | create **/
+        /** | create **/
 
-        public function create() {
+            public function create() {
 
-                    // db - create - url
-                    $this->db->set_query("
-                        INSERT INTO url (  url )
-                        VALUES          ( :url )
-                    ");
-                    $this->db->set_query_data($this->get_data());
-                    $this->db->prepare();
-                    $this->db->query();
-            $id  =  $this->db->get_last_insert_id();
+                        // query
+                        $query = '
+                            INSERT INTO url (  url )
+                            VALUES          ( :url )
+                        ';
 
-            // return - [ url -> id -> { . } ]
-            return array( "url" => array( "id" => $id ) );
+                        // data
+                        $data = array(
+                            'url' => $this->get_data_url()
+                        );
 
-        }
+                        // db
+                        $this->db->set_query($query);
+                        $this->db->set_query_data($data);
+                        $this->db->prepare();
+                        $this->db->query();
+                $id  =  $this->db->get_last_insert_id();
 
-    /** create | **/
+                // return - [ url -> id -> { . } ]
+                return array( "url" => array( "id" => $id ) );
 
-
-    /** | get **/
-
-        private function get_data() {
-                    $data           = array();
-                    $data['url']    = $this->url;
-           return   $data;
-        }
-
-    /** get | **/
-
-
-    /** | set **/
-
-        public function set_data($data) {
-            if( ! $this->set_data_url($data['url'])   ){ return false; }
-                                                         return true;
-        }
-
-        public function set_data_url($url) {
-            if( filter_var($url, FILTER_VALIDATE_URL) !== false ){
-                $this->url = $url;
-                return true;
-            } else {
-                throw new \miv\exception\e400();
             }
-        }
 
-    /** set | **/
+        /** create | **/
+
+
+        /** | read **/
+
+            public function read() {
+
+                        // query
+                        $query = '
+                            SELECT * FROM url WHERE id = :id
+                        ';
+
+                        // data
+                        $data = array(
+                            'id' => $this->get_data_id()
+                        );
+
+                        // db
+                        $this->db->set_query($query);
+                        $this->db->set_query_data($data);
+                        $this->db->prepare();
+                        $this->db->query();
+                $url =  $this->db->read_single();
+
+                // return - [ url -> id -> { . } ]
+                return array( "url" => $url );
+
+            }
+
+        /** read | **/
+
+
+    /** main | **/
+
+
+
+
+    /** | util **/
+
+
+        /** | magic **/
+
+            public function __construct() {
+                $this->db = new \miv\system\database();
+                return true;
+            }
+
+        /** magic | **/
+
+
+        /** | get **/
+
+            private function get_data_id() {
+                if( $this->id !== null ){
+                    return $this->id;
+                } else {
+                    throw new \miv\exception\e400();
+                }
+            }
+
+            private function get_data_url() {
+                if( $this->url !== null ){
+                    return $this->url;
+                } else {
+                    throw new \miv\exception\e400();
+                }
+            }
+
+        /** get | **/
+
+
+        /** | set **/
+
+            public function set_data($data) {
+                foreach( $data as $key => $value ){
+                                             $method = "set_data_$key";
+                    if( method_exists($this, $method) ){
+                        $this->$method($value);
+                    } else {
+                        return false;
+                    }
+                }
+            }
+
+            public function set_data_id($id) {
+                if( is_numeric($id) ){
+                    $this->id = $id;
+                    return true;
+                } else {
+                    throw new \miv\exception\e400();
+                }
+            }
+
+            public function set_data_url($url) {
+                if( filter_var($url, FILTER_VALIDATE_URL) !== false ){
+                    $this->url = $url;
+                    return true;
+                } else {
+                    throw new \miv\exception\e400();
+                }
+            }
+
+        /** set | **/
+
+
+    /** util | **/
 
 
 

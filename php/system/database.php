@@ -80,6 +80,13 @@ class database {
 
         }
 
+        public function read_single() {
+
+            // return - fetch - single
+            return $this->dbh->fetch(\PDO::FETCH_ASSOC);;
+
+        }
+
     /** read | **/
 
 

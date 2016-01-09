@@ -66,7 +66,7 @@ class urls {
             $urls = $this->db->read_list();
 
             // return - [ urls -> { ... } ]
-            return array( "urls" => array( "count" => $urls ));
+            return array( "urls" => $urls );
 
         }
 

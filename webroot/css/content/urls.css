@@ -17,13 +17,13 @@
         width:              40%;
         display:            inline-block;
         transition:         1s;
-        background-color:   rgb(34, 34, 34);
-        opacity:            0.1;
+        border:             1px solid rgb(34,34,34);
     }
 
     #urls .url:hover {
-        opacity:            1;
+        border:             1px solid white;
     }
+
 
 
 

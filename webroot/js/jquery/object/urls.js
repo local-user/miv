@@ -46,12 +46,18 @@ var urls = {
                         url:        action,
                         beforeSend: function (request) {
                             request.setRequestHeader("Miv-Object", "urls");
-                            request.setRequestHeader("Miv-Method", "read");
+                            request.setRequestHeader("Miv-Method", "read_list");
                         },
                         success:    function(data) {
 
                             // debug
                             if( debug ){ console.log(data); }
+
+                            // urls
+                            for( id in data['urls'] ){
+                                $("#urls").append("<div id='url-" + id + "' class='url color-alphabet-b'>[" + id + "]</div>");
+                                url.refresh(id);
+                            }
 
                             // dev
                             console.log('Under Development.');

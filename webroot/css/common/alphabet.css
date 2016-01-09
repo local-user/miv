@@ -1,0 +1,46 @@
+/*
+ *
+ *    -- CSS -- Alphabet -- Colors
+ *  ( all the colors of the alphabet )
+ *
+ */
+
+
+
+
+    .color-alphabet-a   { background-color: #FFC107;   }   /** amber       **/
+    .color-alphabet-b   { background-color: #2196F3;   }   /** blue        **/
+    .color-alphabet-c   { background-color: #00BCD4;   }   /** cyan        **/
+    .color-alphabet-d   { background-color: #FF5722;   }   /** deep orange **/
+    .color-alphabet-e   { background-color: #F0EAD6;   }   /** eggshell    **/
+    .color-alphabet-f   { background-color: #B22222;   }   /** firebrick   **/
+    .color-alphabet-g   { background-color: #9E9E9E;   }   /** grey        **/
+    .color-alphabet-h   { background-color: #F0FFF0;   }   /** honeydew    **/
+    .color-alphabet-i   { background-color: #3F51B5;   }   /** indigo      **/
+    .color-alphabet-j   { background-color: #FFCDD2;   }   /** j-joy       **/
+    .color-alphabet-k   { background-color: #F0E68C;   }   /** khaki       **/
+    .color-alphabet-l   { background-color: #E6E6FA;   }   /** lavender    **/
+    .color-alphabet-m   { background-color: #FFE4B5;   }   /** moccasin    **/
+    .color-alphabet-n   { background-color: #0D47A1;   }   /** navy        **/
+    .color-alphabet-o   { background-color: #FF9800;   }   /** orange      **/
+    .color-alphabet-p   { background-color: #E91E63;   }   /** pink        **/
+    .color-alphabet-q   { background-color: #673AB7;   }   /** q-urple     **/
+    .color-alphabet-r   { background-color: #F44336;   }   /** red         **/
+    .color-alphabet-s   { background-color: #708090;   }   /** slate       **/
+    .color-alphabet-t   { background-color: #009688;   }   /** teal        **/
+    .color-alphabet-u   { background-color: #4CAF50;   }   /** u-green     **/
+    .color-alphabet-v   { background-color: #8BC34A;   }   /** v-green-l   **/
+    .color-alphabet-w   { background-color: whitesmoke;}   /** whitesmoke  **/
+    .color-alphabet-x   { background-color: #795548;   }   /** x-brown     **/
+    .color-alphabet-y   { background-color: #FFEB3B;   }   /** yellow      **/
+    .color-alphabet-z   { background-color: #607D8B;   }   /** x-blue-grey **/
+
+
+
+
+/*
+ *  Reference   @   https://www.google.com/design/spec/style/color.html#color-color-palettea
+ *  Reference   @   http://colornames.facts.co/eggshellcolorcode/eggshellcolor.php
+ *  Reference   @   http://www.w3schools.com/cssref/css_colornames.asp
+ *
+ */
