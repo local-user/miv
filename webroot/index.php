@@ -78,6 +78,7 @@
                 <script src='js/jquery/listener/element/header-title.js'            ></script>
                 <script src='js/jquery/listener/element/header-toggle-input.js'     ></script>
                 <script src='js/jquery/listener/element/header-toggle-overlay.js'   ></script>
+                <script src='js/jquery/listener/element/header-toggle-refresh.js'   ></script>
                 <script src='js/jquery/listener/element/input-form-input-url.js'    ></script>
                 <script src='js/jquery/listener/element/welcome.js'                 ></script>
 
