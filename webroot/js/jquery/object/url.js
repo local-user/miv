@@ -66,6 +66,7 @@ var url = {
                         success:        function(data) {
                                             if( debug ){ console.log(data); }
                                             thi.append( data['url']['id'] );
+                                            $("html, body").animate({ scrollTop: $(document).height() }, 1500);
                                             msg.create( 200, 'Created URL[' + data['url']['id'] + ']' );
                                         },
                         error:          function() {

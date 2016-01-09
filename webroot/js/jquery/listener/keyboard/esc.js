@@ -30,6 +30,7 @@ console.log(' . js/jquery/listener/keybord/escape.js');
                     if( $("body").hasClass('overlay') ){
                         setTimeout( function() { input.display(); }, 1000);
                     } else {
+                        $("html, body").animate({ scrollTop: 0 }, 1500);
                         input.display();
                     }
 
