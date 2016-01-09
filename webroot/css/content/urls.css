@@ -13,15 +13,30 @@
         min-width:          400px;
         margin:             0px;
         padding:            0px;
-        height:             30%;
+        height:             300px;
         width:              40%;
         display:            inline-block;
-        transition:         1s;
-        border:             1px solid rgb(34,34,34);
+        transition:         0.5s;
+        border:             2px solid white;
     }
 
     #urls .url:hover {
-        border:             1px solid white;
+        border:             2px solid rgb(34,34,34);
+    }
+
+    #urls .url .letter {
+        text-align:         right;
+        font-size:          150px;
+        padding:            25px 50px 25px 25px;
+    }
+
+    #urls .url .title {
+        padding:            25px 25px 25px 50px;
+        color:              rgb(34, 34, 34);
+        height:             50px;
+        text-align:         left;
+        overflow:           hidden;
+        font-size:          14px;
     }
 
 

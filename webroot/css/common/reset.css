@@ -93,3 +93,10 @@ input[type="text"].focus {
 }
 
 
+/*
+ *  a
+ *
+ */
+a { text-decoration: none; }
+a:not(.default):link    { color: rgb(34,34,34); }
+a:not(.default):visited { color: rgb(34,34,34); }

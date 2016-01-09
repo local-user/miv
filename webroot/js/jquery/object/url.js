@@ -73,8 +73,15 @@ var url = {
                                             request.setRequestHeader("Miv-Object", "url");
                                             request.setRequestHeader("Miv-Method", "read");
                                         },
+                        data:           {
+                                            id:   id
+                                        },
                         success:        function(data) {
                                             if( debug ){ console.log(data); }
+                                            $("#url-" + id).addClass("color-alphabet-"    + data['url']['letter']);
+                                            $("#url-" + id).append("<div class='letter'>" + data['url']['letter'] + "</div>");
+                                            $("#url-" + id).append("<div class='title'>"  + data['url']['url']    + "</div>");
+                                            $("#url-" + id).attr('href', data['url']['url']);
                                         },
                         error:          function() {
                                             msg.create( 400, 'Read URL[' + id + ']' );

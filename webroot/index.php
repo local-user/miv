@@ -66,7 +66,7 @@
         <!-- | js -->
 
             <!-- js - function(s) -->
-            <script src='js/function/valid/url.js'></script>
+            <script src='js/function/valid_url.js'></script>
 
             <!-- | js - jquery -->
 

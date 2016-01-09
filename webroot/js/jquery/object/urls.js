@@ -55,8 +55,8 @@ var urls = {
 
                             // urls
                             for( id in data['urls'] ){
-                                $("#urls").append("<div id='url-" + id + "' class='url color-alphabet-b'>[" + id + "]</div>");
-                                url.refresh(id);
+                                $("#urls").append("<a id='url-" + data['urls'][id] + "' class='url'></a>");
+                                url.refresh(data['urls'][id]);
                             }
 
                             // dev

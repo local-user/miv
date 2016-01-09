@@ -10,7 +10,7 @@
     miv_curl="--verbose"
     miv_object='url'
     miv_method='create'
-    miv_data="url=http://example.com.au/"
+    miv_data="url=http://youtube.com.au/"
     miv_url='miv/api.php'
 
     # curl
