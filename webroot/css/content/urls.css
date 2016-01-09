@@ -18,6 +18,7 @@
         display:            inline-block;
         transition:         0.5s;
         border:             2px solid white;
+        overflow:           hidden;
     }
 
     #urls .url:hover {
@@ -39,6 +40,19 @@
         font-size:          14px;
     }
 
+
+
+
+
+    #urls .animate-appear {
+        animation-name: animate-appear;
+        animation-duration: 2.5s;
+    }
+
+    @keyframes animate-appear {
+        from    { height: 0px;   }
+        to      { height: 300px; }
+    }
 
 
 
