@@ -27,7 +27,11 @@ console.log(' . js/jquery/listener/keybord/escape.js');
                     header.display_hide();
 
                     // input - display
-                    input.display();
+                    if( $("body").hasClass('overlay') ){
+                        setTimeout( function() { input.display(); }, 1000);
+                    } else {
+                        input.display();
+                    }
 
                 }
 
