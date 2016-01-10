@@ -59,6 +59,22 @@ var edit = {
 
         },
 
+        toggle_off : function() {
+
+            // toggle - off
+            if( this.toggled == 1 ){ this.toggled = 0; }
+
+            // toggle - edit - remove - class - 'color-edit-text-active'
+            $( "#header-toggle-edit" ).removeClass( "color-edit-text-active" );
+
+            // toggle - edit - remove - class - edit - hidden
+            $( '.url .edit' ).removeClass('hidden');
+
+            // return
+            return true;
+
+        }
+
     // function(s) |
 
 
