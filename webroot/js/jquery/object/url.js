@@ -47,9 +47,9 @@ var url = {
             $("#url-" + id + " .edit").append("<div class='right'></div>");
 
             // append - urls - url[ id ] - edit - left
-            $("#url-" + id + " .edit .left").append("<span class='url-trigger-priority-down icon fa fa-chevron-left   color-edit-text-hover'></span>");
-            $("#url-" + id + " .edit .left").append("<span class='                          icon priority                                  '></span>");
-            $("#url-" + id + " .edit .left").append("<span class='url-trigger-priority-up   icon fa fa-chevron-right  color-edit-text-hover'></span>");
+            $("#url-" + id + " .edit .left").append("<span class='                          icon priority                           ' ></span>");
+            $("#url-" + id + " .edit .left").append("<span class='url-trigger-priority-up   icon fa fa-plus    color-edit-text-hover' ></span>");
+            $("#url-" + id + " .edit .left").append("<span class='url-trigger-priority-down icon fa fa-minus   color-edit-text-hover' ></span>");
 
             // append - urls - url[ id ] - edit - right
             $("#url-" + id + " .edit .right").append("<span class='url-trigger-delete       icon fa fa-close color-edit-text-hover'></span>");
@@ -136,6 +136,39 @@ var url = {
 
         },
 
+        priority : function( id, priority ) {
+
+            // this
+            var thi = this;
+
+            // ajax
+            $.ajax({
+
+                        type:           "POST",
+                        url:            "api.php",
+                        data:           {
+                                            id:         id,
+                                            priority:   priority
+                                        },
+                        beforeSend:     function(request) {
+                                            request.setRequestHeader("Miv-Object", "url");
+                                            request.setRequestHeader("Miv-Method", "priority");
+                                        },
+                        success:        function(data) {
+                                            if( debug ){ console.log(data); }
+                                            msg.create( 200, 'Priority URL[' + id + '][' + priority + ']');
+                                            $("#url-" + id + " .priority").text(priority);
+                                        },
+                        error:          function() {
+                                            msg.create( 400, 'Priority URL[' + id + '][' + priority + ']');
+                                        }
+            });
+
+            // return
+            return true;
+
+        },
+
         refresh : function( id ) {
 
             // ajax
@@ -156,7 +189,7 @@ var url = {
                                             $("#url-" + id).append("<div class='letter'>" + data['url']['letter'] + "</div>");
                                             $("#url-" + id).append("<div class='title'>"  + data['url']['url']    + "</div>");
                                             $("#url-" + id).attr('href', data['url']['url']);
-                                            $("#url-" + id + " .priority").text(" " + data['url']['priority'] + " ");
+                                            $("#url-" + id + " .priority").text(data['url']['priority']);
                                         },
                         error:          function() {
                                             msg.create( 400, 'Read URL[' + id + ']' );

@@ -58,7 +58,7 @@ class urls {
 
                     // db - read - count - list
                     $this->db->set_query("
-                        SELECT id FROM url
+                        SELECT id FROM url ORDER BY priority DESC
                     ");
                     $this->db->set_query_data($this->get_data());
                     $this->db->prepare();

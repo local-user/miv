@@ -25,8 +25,9 @@ class url {
     private $db = null;
 
     // var - data
-    private $id     = null;
-    private $url    = null;
+    private $id         = null;
+    private $priority   = null;
+    private $url        = null;
 
 
 
@@ -63,6 +64,37 @@ class url {
             }
 
         /** create | **/
+
+
+        /** | read **/
+
+            public function priority() {
+
+                        // query
+                        $query = '
+                            UPDATE  url
+                            SET     url.priority = :priority
+                            WHERE   url.id       = :id
+                        ';
+
+                        // data
+                        $data = array(
+                            'id'        => $this->get_data_id(),
+                            'priority'  => $this->get_data_priority()
+                        );
+
+                        // db
+                        $this->db->set_query($query);
+                        $this->db->set_query_data($data);
+                        $this->db->prepare();
+                        $this->db->query();
+
+                // return - [ url -> id -> { . } ]
+                return array();
+
+            }
+
+        /** read | **/
 
 
         /** | read **/
@@ -115,7 +147,7 @@ class url {
                         $this->db->query();
 
                 // return - [ url -> id -> { . } ]
-                return array( "url" => array( 'id' => $this->get_data_id() ));
+                return array();
 
 
             }
@@ -146,6 +178,14 @@ class url {
             private function get_data_id() {
                 if( $this->id !== null ){
                     return $this->id;
+                } else {
+                    throw new \miv\exception\e400();
+                }
+            }
+
+            private function get_data_priority() {
+                if( $this->priority !== null ){
+                    return $this->priority;
                 } else {
                     throw new \miv\exception\e400();
                 }
@@ -187,6 +227,15 @@ class url {
             public function set_data_id($id) {
                 if( is_numeric($id) ){
                     $this->id = $id;
+                    return true;
+                } else {
+                    throw new \miv\exception\e400();
+                }
+            }
+
+            public function set_data_priority($priority) {
+                if( is_numeric($priority) ){
+                    $this->priority = $priority;
                     return true;
                 } else {
                     throw new \miv\exception\e400();

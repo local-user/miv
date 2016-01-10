@@ -39,6 +39,7 @@
 
     #urls .url .icon {
         cursor:             pointer;
+        padding:            0 2px 0 2px;
     }
 
     #urls .url .edit .left {
