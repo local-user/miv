@@ -24,16 +24,16 @@
             if ( debug ){ console.log(' L js/jquery/listener/element/input-form-input-url.js::change'); }
 
             // var - url
-            var url = $(this).val();
+            var iu = $(this).val();
 
             // reset - form - create
             input.display_reset();
 
             // ? length - url
-            if( url.length > 0 ){
+            if( iu.length > 0 ){
 
                 // ? valid - url
-                if( valid_url(url) ){
+                if( valid_url(iu) ){
 
                     // input - display - lock
                     input.display_unlock();

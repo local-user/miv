@@ -94,6 +94,35 @@ class url {
         /** read | **/
 
 
+        /** | delete **/
+
+            public function delete() {
+
+                        // query
+                        $query = '
+                            DELETE FROM url WHERE id = :id
+                        ';
+
+                        // data
+                        $data = array(
+                            'id' => $this->get_data_id()
+                        );
+
+                        // db
+                        $this->db->set_query($query);
+                        $this->db->set_query_data($data);
+                        $this->db->prepare();
+                        $this->db->query();
+
+                // return - [ url -> id -> { . } ]
+                return array( "url" => array( 'id' => $this->get_data_id() ));
+
+
+            }
+
+        /** delete | **/
+
+
     /** main | **/
 
 

@@ -81,6 +81,7 @@
                 <script src='js/jquery/listener/element/header-toggle-overlay.js'   ></script>
                 <script src='js/jquery/listener/element/header-toggle-refresh.js'   ></script>
                 <script src='js/jquery/listener/element/input-form-input-url.js'    ></script>
+                <script src='js/jquery/listener/element/url-trigger-delete.js'      ></script>
                 <script src='js/jquery/listener/element/welcome.js'                 ></script>
 
                 <!-- js - jquery - listener(s) - keyboard -->

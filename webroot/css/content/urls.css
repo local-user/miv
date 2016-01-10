@@ -69,7 +69,6 @@
 
 
 
-
     #urls .animate-appear {
         animation-name: animate-appear;
         animation-duration: 2.5s;
@@ -78,6 +77,28 @@
     @keyframes animate-appear {
         from    { height: 0px;   }
         to      { height: 300px; }
+    }
+
+    #urls .animate-disappear {
+        animation-name: animate-disappear;
+        animation-duration: 3s ease-out;
+        animation-fill-mode: forwards;
+    }
+
+    @keyframes animate-disappear {
+        0%      {
+                    height:     300px;
+                }
+        80%     {
+                    height:     0px;
+                    min-width:  400px;
+                    width:      40%;
+                }
+        100%    {
+                    height:     0px;
+                    width:      0px;
+                    min-width:  0px;
+                }
     }
 
 

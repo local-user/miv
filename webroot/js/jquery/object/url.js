@@ -37,7 +37,7 @@ var url = {
         append : function( id ){
 
             // append - urls - url[ id ]
-            $("#urls").append("<div id='url-" + id + "' class='url animate-appear'></div>");
+            $("#urls").append("<div id='url-" + id + "' class='url animate-appear' data-url-id='" + id + "'></div>");
 
             // append - urls - url[ id ] - edit
             $("#url-" + id).append("<div class='edit hidden color-edit-text'></div>");
@@ -47,12 +47,12 @@ var url = {
             $("#url-" + id + " .edit").append("<div class='right'></div>");
 
             // append - urls - url[ id ] - edit - left
-            $("#url-" + id + " .edit .left").append("<span class='icon fa fa-chevron-left color-edit-text-hover'></span>");
-            $("#url-" + id + " .edit .left").append("<span class='icon fa fa-chevron-right color-edit-text-hover'></span>");
+            $("#url-" + id + " .edit .left").append("<span class='url-trigger-priority-down icon fa fa-chevron-left   color-edit-text-hover'></span>");
+            $("#url-" + id + " .edit .left").append("<span class='                          icon priority                                  '></span>");
+            $("#url-" + id + " .edit .left").append("<span class='url-trigger-priority-up   icon fa fa-chevron-right  color-edit-text-hover'></span>");
 
             // append - urls - url[ id ] - edit - right
-            $("#url-" + id + " .edit .right").append("<span class='icon fa fa-close color-edit-text-hover'></span>");
-
+            $("#url-" + id + " .edit .right").append("<span class='url-trigger-delete       icon fa fa-close color-edit-text-hover'></span>");
 
             // refresh
             url.refresh(id);
@@ -82,12 +82,54 @@ var url = {
                                             if( debug ){ console.log(data); }
                                             thi.append( data['url']['id'] );
                                             $("html, body").animate({ scrollTop: $(document).height() }, 1500);
-                                            msg.create( 200, 'Created URL[' + data['url']['id'] + ']' );
+                                            msg.create( 200, 'Create URL[' + data['url']['id'] + ']' );
                                         },
                         error:          function() {
                                             msg.create( 400, 'Create URL' );
                                         }
             });
+
+            // return
+            return true;
+
+        },
+
+        delete : function( id ){
+
+            // this
+            var thi = this;
+
+            // ajax
+            $.ajax({
+
+                        type:           "POST",
+                        url:            "api.php",
+                        data:           {
+                                            id:   id
+                                        },
+                        beforeSend:     function(request) {
+                                            request.setRequestHeader("Miv-Object", "url");
+                                            request.setRequestHeader("Miv-Method", "delete");
+                                        },
+                        success:        function(data) {
+                                            if( debug ){ console.log(data); }
+                                            msg.create( 200, 'Delete URL[' + id + ']' );
+                                            thi.deppend(id);
+                                        },
+                        error:          function() {
+                                            msg.create( 400, 'Delete URL[' + id + ']' );
+                                        }
+            });
+
+            // return
+            return true;
+
+        },
+
+        deppend : function( id ) {
+
+            // url - [ id ] - class - animate - disspear
+            $("#url-" + id).addClass('animate-disappear');
 
             // return
             return true;
@@ -101,13 +143,12 @@ var url = {
 
                         type:           "POST",
                         url:            "api.php",
-
+                        data:           {
+                                            id:   id
+                                        },
                         beforeSend:     function(request) {
                                             request.setRequestHeader("Miv-Object", "url");
                                             request.setRequestHeader("Miv-Method", "read");
-                                        },
-                        data:           {
-                                            id:   id
                                         },
                         success:        function(data) {
                                             if( debug ){ console.log(data); }
@@ -115,6 +156,7 @@ var url = {
                                             $("#url-" + id).append("<div class='letter'>" + data['url']['letter'] + "</div>");
                                             $("#url-" + id).append("<div class='title'>"  + data['url']['url']    + "</div>");
                                             $("#url-" + id).attr('href', data['url']['url']);
+                                            $("#url-" + id + " .priority").text(" " + data['url']['priority'] + " ");
                                         },
                         error:          function() {
                                             msg.create( 400, 'Read URL[' + id + ']' );
