@@ -26,9 +26,10 @@ console.log(' . js/jquery/listener/keybord/escape.js');
                     // header - display - hide
                     header.display_hide();
 
-                    // input - display
+                    // input - display - overlay ?
                     if( $("body").hasClass('overlay') ){
                         setTimeout( function() { input.display(); }, 1000);
+                        urls.refresh();
                     } else {
                         $("html, body").animate({ scrollTop: 0 }, 1500);
                         input.display();

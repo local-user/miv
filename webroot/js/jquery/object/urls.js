@@ -132,9 +132,6 @@ var urls = {
 
 
 }
-$( document ).ready( function() {
-    urls.refresh();
-});
 //
 //
 // js - jquery - toggle - urls |

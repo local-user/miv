@@ -13,7 +13,13 @@ console.log(' . js/jquery/listener/element/header-toggle-overlay.js');
         //  'header-toggle-overlay' - click - input - display
         $( '#header-toggle-overlay' ).click(function() {
 
-            // input - display
+            // header - display - hide
+            header.display_hide();
+
+            // input - display - hdie
+            input.display_hide();
+
+            // overlay - display
             overlay.display();
 
             // return
