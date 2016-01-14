@@ -21,7 +21,7 @@ class router {
 
 
     /** flag(s) **/
-    private $flag_debug         = false;
+    private $flag_debug         = null;
 
     /** request **/
     private $request_code       = null;
@@ -70,6 +70,7 @@ class router {
                 }
             } catch( \exception $e ){
                 $this->set_response(501, array('error' => $e->getMessage()));
+                if ($this->flag_debug) { print_r($e); }
                 return false;
             }
         }
@@ -80,6 +81,7 @@ class router {
                 return true;
             } catch( \miv\exception\e400 $e ){
                 $this->set_response(400, array('error' => $e->getMessage()));
+                if ($this->flag_debug) { print_r($e); }
                 return false;
             }
         }
@@ -95,6 +97,7 @@ class router {
                 return true;
             } catch( \exception $e ){
                 $this->set_response(400, array('error' => $e->getMessage()));
+                if ($this->flag_debug) { print_r($e); }
                 return false;
             }
         }
@@ -105,6 +108,7 @@ class router {
                 $this->set_response_data($this->route_data);
             } catch( \exception $e ){
                 $this->set_response(500, array('error' => $e->getMessage()));
+                if ($this->flag_debug) { print_r($e); }
                 return false;
             }
         }
