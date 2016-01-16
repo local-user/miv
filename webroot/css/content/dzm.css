@@ -1,0 +1,27 @@
+/** | css - content - dzm **/
+
+
+
+        #dzm {
+            overflow:       hidden;
+            transition:     0.75s;
+            height:         196px;
+            width:          100%;
+        }
+
+        #dzm .dropzone {
+            height:         196px;
+        }
+
+        #dzm.hidden {
+            height:         0px;
+        }
+
+        #dzm.hidden .dropzone {
+            height:         0px;
+            opacity:        0;
+        }
+
+
+
+/** css - content - dzm:x | **/

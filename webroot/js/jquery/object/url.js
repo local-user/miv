@@ -185,11 +185,19 @@ var url = {
                                         },
                         success:        function(data) {
                                             if( debug ){ console.log(data); }
+
+                                            // url - add - color - alphabet
                                             $("#url-" + id).addClass("color-alphabet-"    + data['url']['letter']);
-                                            $("#url-" + id).append("<div class='letter'>" + data['url']['letter'] + "</div>");
-                                            $("#url-" + id).append("<div class='title'>"  + data['url']['url']    + "</div>");
-                                            $("#url-" + id).attr('href', data['url']['url']);
+
+                                            // url - add - link
+                                            $("#url-" + id).append("<a class='link'></a>");
+                                            $("#url-" + id + " .link").append("<div class='letter'>" + data['url']['letter'] + "</div>");
+                                            $("#url-" + id + " .link").append("<div class='title'>"  + data['url']['url']    + "</div>");
+                                            $("#url-" + id + " .link").attr('href', data['url']['url']);
+
+                                            // url - update - prirority
                                             $("#url-" + id + " .priority").text(data['url']['priority']);
+
                                         },
                         error:          function() {
                                             msg.create( 400, 'Read URL[' + id + ']' );

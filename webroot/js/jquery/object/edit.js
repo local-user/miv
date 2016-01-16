@@ -51,6 +51,9 @@ var edit = {
             // toggle - edit - toggle - class - 'color-edit-text-active'
             $( "#header-toggle-edit" ).toggleClass( "color-edit-text-active" );
 
+            // toggle - edit - toggle - class - mode-edit
+            $( '.url' ).toggleClass('mode-edit');
+
             // toggle - edit - toggle - class - edit - hidden
             $( '.url .edit' ).toggleClass('hidden');
 
@@ -66,6 +69,9 @@ var edit = {
 
             // toggle - edit - remove - class - 'color-edit-text-active'
             $( "#header-toggle-edit" ).removeClass( "color-edit-text-active" );
+
+            // toggle - edit - remove - class - mode-edit
+            $( '.url' ).removeClass('mode-edit');
 
             // toggle - edit - remove - class - edit - hidden
             $( '.url .edit' ).removeClass('hidden');
