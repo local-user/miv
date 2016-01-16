@@ -83,6 +83,40 @@ class img {
         /** create | **/
 
 
+        /** | read **/
+
+            public function read() {
+
+                // | db - create - img
+
+                            $query = "
+                                SELECT  *
+                                FROM    url_has_img,
+                                        img
+                                WHERE   id_url = 164
+                                AND     url_has_img.id_img  =   img.id
+                            ";
+
+                            $data = array(
+                                'id_url' => $this->get_id_url()
+                            );
+
+                            $this->db->set_query($query);
+                            $this->db->set_query_data($data);
+                            $this->db->prepare();
+                            $this->db->query();
+                    $img =  $this->db->read_single();
+
+                // db - create - img |
+
+                // return - [ img -> { . } ]
+                return array( "img" => $img );
+
+            }
+
+        /** read | **/
+
+
     /** main | **/
 
 
@@ -130,6 +164,14 @@ class img {
 
         /** | get **/
 
+            private function get_id_url() {
+                if( $this->id_url !== null ){
+                    return $this->id_url;
+                } else {
+                    throw new \miv\exception\e400();
+                }
+            }
+
             private function get_path_img_upload() {
                 return __DIR__.'/../../'.$this->dir_img_upload;
             }
@@ -147,6 +189,14 @@ class img {
                     } else {
                         return false;
                     }
+                }
+            }
+
+            private function set_data_id_url($id_url) {
+                if( is_numeric($id_url) ){
+                    $this->id_url = $id_url;
+                } else {
+                    return false;
                 }
             }
 
