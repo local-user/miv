@@ -11,7 +11,7 @@
     }
 
     #urls .url {
-        height:             300px;
+        height:             400px;
         width:              40%;
         min-width:          400px;
         margin:             0px;
@@ -69,7 +69,7 @@
     }
 
     #urls .url .dzm {
-        height:             300px;
+        height:             400px;
         width:              100%;
         overflow:           hidden;
     }
@@ -79,7 +79,7 @@
     }
 
     #urls .url .dzm .dropzone {
-        min-height:         300px;
+        min-height:         400px;
         width:              100%;
     }
 
@@ -107,14 +107,9 @@
     }
 
     #urls .url .img {
-        height:             300px;
-        width:              100%;
-        min-width:          400px;
-        background-color:           green;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
+        height:             400px;
+        background-size:    cover;
+        background-position:center top;
     }
 
     #urls .animate-appear {
@@ -124,7 +119,7 @@
 
     @keyframes animate-appear {
         from    { height: 0px;   }
-        to      { height: 300px; }
+        to      { height: 400px; }
     }
 
     #urls .animate-disappear {
@@ -135,7 +130,7 @@
 
     @keyframes animate-disappear {
         0%      {
-                    height:     300px;
+                    height:     400px;
                 }
         80%     {
                     height:     0px;
