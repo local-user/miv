@@ -110,9 +110,6 @@
                         flash.display_show();
                     }, 0500);
 
-                    // header - display - hide
-                    header.display_hide();
-
                     // input - display - hide
                     input.display_hide();
 
@@ -153,9 +150,6 @@
                 setTimeout(function() {
                     flash.display_show();
                 }, 0500);
-
-                // header - display - hide
-                header.display_hide();
 
                 // input - display - hide
                 input.display_hide();
