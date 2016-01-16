@@ -47,7 +47,7 @@
         <link rel="shortcut icon" href="img/icon/favicon.ico">
 
         <!-- js - min - config -->
-        <script> var debug = 1; </script>
+        <script> var debug = 0; </script>
 
         <!-- title -->
         <title>miv.</title>
