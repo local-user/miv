@@ -1,10 +1,6 @@
 //
 // | javascript - jquey - object - overlay
 //
-console.log(' . js/jquery/object/overlay.js');
-//
-//
-//
 //
 //  Function(s)
 //
@@ -130,3 +126,4 @@ var overlay = {
 //
 // js - jquery - toggle - overlay |
 //
+if (debug) { console.log(' . js/jquery/object/overlay.js'); }

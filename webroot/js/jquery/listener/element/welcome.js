@@ -1,10 +1,6 @@
 //
 // | js - jquery - listener - element - 'welcome'
 //
-console.log(' . js/jquery/listener/element/welcome.js');
-//
-//
-//
 //
 
 
@@ -31,3 +27,4 @@ console.log(' . js/jquery/listener/element/welcome.js');
 //
 // js - jquery - listener - element - 'welcome' |
 //
+if (debug) { console.log(' . js/jquery/listener/element/welcome.js'); }

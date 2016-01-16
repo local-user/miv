@@ -1,10 +1,6 @@
 //
 // | js - jquery - listener - element - 'flash-toggle-hide'
 //
-console.log(' . js/jquery/listener/element/flash-toggle-hide.js');
-//
-//
-//
 //
 
 
@@ -28,3 +24,4 @@ console.log(' . js/jquery/listener/element/flash-toggle-hide.js');
 //
 // js - jquery - listener - element - 'flash-toggle-hide' |
 //
+if (debug) { console.log(' . js/jquery/listener/element/flash-toggle-hide.js'); }

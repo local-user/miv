@@ -1,7 +1,6 @@
 //
 // | js - jquery - listener - keyboard - escape
 //
-console.log(' . js/jquery/listener/keybord/escape.js');
 //
 //
 
@@ -49,5 +48,7 @@ console.log(' . js/jquery/listener/keybord/escape.js');
 
 
 //
+//
 // js - jquery - listener - keyboard - escape |
 //
+if (debug) { console.log(' . js/jquery/listener/keybord/escape.js'); }

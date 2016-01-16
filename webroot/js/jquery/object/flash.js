@@ -1,10 +1,6 @@
 //
 // | javascript - jquey - object - flash
 //
-console.log(' . js/jquery/object/flash.js');
-//
-//
-//
 //
 //  Function(s)
 //
@@ -157,3 +153,4 @@ var flash = {
 //
 // js - jquery - toggle - flash |
 //
+if (debug) { console.log(' . js/jquery/object/flash.js'); }

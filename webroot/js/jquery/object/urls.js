@@ -63,9 +63,6 @@ var urls = {
                                 url.append(data['urls'][id]);
                             }
 
-                            // dev
-                            console.log('Under Development.');
-
                         },
                         context:    this,
                         error:      function() {

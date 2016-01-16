@@ -1,8 +1,6 @@
 //
 // | js - jquery - listener - keyboard - ctrl
 //
-console.log(' . js/jquery/listener/keybord/ctrl.js');
-//
 //
 
 
@@ -56,5 +54,7 @@ console.log(' . js/jquery/listener/keybord/ctrl.js');
 
 
 //
+//
 // js - jquery - listener - keyboard - ctrl |
 //
+if (debug) { console.log(' . js/jquery/listener/keybord/ctrl.js'); }

@@ -98,7 +98,6 @@
                 <script src='js/jquery/listener/keyboard/esc.js'                    ></script>
 
                 <!-- js - jquery - object(s) -->
-                <script src='js/jquery/object/dzm.js'                               ></script>
                 <script src='js/jquery/object/error.js'                             ></script>
                 <script src='js/jquery/object/edit.js'                              ></script>
                 <script src='js/jquery/object/flash.js'                             ></script>
@@ -112,6 +111,9 @@
                 <script src='js/jquery/object/urls.js'                              ></script>
 
             <!-- js - jquery | -->
+
+            <!-- js - load - complete -->
+            <script>console.log('miv.')</script>
 
         <!-- js | -->
 

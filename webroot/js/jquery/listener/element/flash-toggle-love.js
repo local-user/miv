@@ -1,10 +1,6 @@
 //
 // | js - jquery - listener - element - 'flash-toggle-love'
 //
-console.log(' . js/jquery/listener/element/flash-toggle-love.js');
-//
-//
-//
 //
 
 
@@ -28,3 +24,4 @@ console.log(' . js/jquery/listener/element/flash-toggle-love.js');
 //
 // js - jquery - listener - element - 'flash-toggle-love' |
 //
+if (debug) { console.log(' . js/jquery/listener/element/flash-toggle-love.js'); }

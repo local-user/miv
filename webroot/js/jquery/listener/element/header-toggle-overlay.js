@@ -1,10 +1,6 @@
 //
 // | js - jquery - listener - element - 'header-toggle-overlay'
 //
-console.log(' . js/jquery/listener/element/header-toggle-overlay.js');
-//
-//
-//
 //
 
 
@@ -37,3 +33,4 @@ console.log(' . js/jquery/listener/element/header-toggle-overlay.js');
 //
 // js - jquery - listener - element - 'header-toggle-overlay' |
 //
+if (debug) { console.log(' . js/jquery/listener/element/header-toggle-overlay.js'); }

@@ -2,8 +2,6 @@
 // | js - jquery - listener - element - 'error'
 //
 //
-//
-//
 
 
 

@@ -1,9 +1,6 @@
 //
 // | js - jquery - listener - element - 'header-toggle-edit'
 //
-console.log(' . js/jquery/listener/element/header-toggle-edit.js');
-//
-//
 //
 //
 
@@ -28,3 +25,4 @@ console.log(' . js/jquery/listener/element/header-toggle-edit.js');
 //
 // js - jquery - listener - element - 'header-toggle-edit' |
 //
+if (debug) { console.log(' . js/jquery/listener/element/header-toggle-edit.js'); }

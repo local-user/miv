@@ -1,9 +1,6 @@
 //
 // | js - jquery - listener - element - 'header-toggle-refresh'
 //
-console.log(' . js/jquery/listener/element/header-toggle-refresh.js');
-//
-//
 //
 //
 
@@ -31,3 +28,4 @@ console.log(' . js/jquery/listener/element/header-toggle-refresh.js');
 //
 // js - jquery - listener - element - 'header-toggle-refresh' |
 //
+if (debug) { console.log(' . js/jquery/listener/element/header-toggle-refresh.js'); }

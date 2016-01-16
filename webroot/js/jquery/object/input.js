@@ -1,10 +1,6 @@
 //
 // | javascript - jquey - object - input
 //
-console.log(' . js/jquery/object/input.js');
-//
-//
-//
 //
 //  Global(s):
 //
@@ -186,3 +182,4 @@ var input = {
 //
 // javascript - jquey - object - input |
 //
+if (debug) { console.log(' . js/jquery/object/input.js'); }

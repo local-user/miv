@@ -1,10 +1,6 @@
 //
 // | javascript - jquey - object - edit
 //
-console.log(' . js/jquery/object/edit.js');
-//
-//
-//
 //
 //  Global(s):
 //
@@ -89,7 +85,6 @@ var edit = {
 };
 //
 //
-//
-//
 // javascript - jquey - object - edit |
 //
+if (debug) { console.log(' . js/jquery/object/edit.js'); }

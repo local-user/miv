@@ -1,7 +1,6 @@
 //
 // | js - jquery - listener - element - 'flash-toggle-body'
 //
-console.log(' . js/jquery/listener/element/flash-toggle-body.js');
 //
 //
 //
@@ -28,3 +27,4 @@ console.log(' . js/jquery/listener/element/flash-toggle-body.js');
 //
 // js - jquery - listener - element - 'flash-toggle-body' |
 //
+if (debug) { console.log(' . js/jquery/listener/element/flash-toggle-body.js'); }

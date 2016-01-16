@@ -1,8 +1,6 @@
 //
 // | js - jquery - listener - keyboard - down
 //
-console.log(' . js/jquery/listener/keybord/down.js');
-//
 //
 
 
@@ -40,3 +38,4 @@ console.log(' . js/jquery/listener/keybord/down.js');
 //
 // js - jquery - listener - keyboard - down |
 //
+if (debug) { console.log(' . js/jquery/listener/keybord/down.js'); }

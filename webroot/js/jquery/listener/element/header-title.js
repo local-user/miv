@@ -1,9 +1,6 @@
 //
 // | js - jquery - listener - element - 'header-title'
 //
-console.log(' . js/jquery/listener/element/header-title.js');
-//
-//
 //
 //
 
@@ -28,3 +25,4 @@ console.log(' . js/jquery/listener/element/header-title.js');
 //
 // js - jquery - listener - element - 'header-title' |
 //
+if (debug) { console.log(' . js/jquery/listener/element/header-title.js'); }

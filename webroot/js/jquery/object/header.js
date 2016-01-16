@@ -1,10 +1,6 @@
 //
 // | javascript - jquey - object - header
 //
-console.log(' . js/jquery/object/header.js');
-//
-//
-//
 //
 //  Function(s)
 //
@@ -110,3 +106,4 @@ var header = {
 //
 // js - jquery - toggle - header |
 //
+if (debug) { console.log(' . js/jquery/object/header.js'); }

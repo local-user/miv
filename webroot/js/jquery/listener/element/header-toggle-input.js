@@ -1,9 +1,6 @@
 //
 // | js - jquery - listener - element - 'header-toggle-input'
 //
-console.log(' . js/jquery/listener/element/header-toggle-input.js');
-//
-//
 //
 //
 
@@ -28,3 +25,4 @@ console.log(' . js/jquery/listener/element/header-toggle-input.js');
 //
 // js - jquery - listener - element - 'header-toggle-input' |
 //
+if (debug) { console.log(' . js/jquery/listener/element/header-toggle-input.js'); }
