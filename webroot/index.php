@@ -103,6 +103,7 @@
                 <script src='js/jquery/object/edit.js'                              ></script>
                 <script src='js/jquery/object/flash.js'                             ></script>
                 <script src='js/jquery/object/header.js'                            ></script>
+                <script src='js/jquery/object/img.js'                               ></script>
                 <script src='js/jquery/object/input.js'                             ></script>
                 <script src='js/jquery/object/msg.js'                               ></script>
                 <script src='js/jquery/object/msgs.js'                              ></script>

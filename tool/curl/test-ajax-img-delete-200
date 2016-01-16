@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-#   curl - test - ajax - url - read - 200
+#   curl - test - ajax - img - delete - 200
 #
 
 
@@ -8,9 +8,9 @@
 
     # variable(s)
     miv_curl="--verbose"
-    miv_object='url'
+    miv_object='img'
     miv_method='delete'
-    miv_data="id=0"
+    miv_data="id_url=0"
     miv_url="miv/api.php?object=$miv_object&method=$miv_method"
 
     # curl
@@ -23,5 +23,5 @@
 
 
 #
-#   curl - test - ajax - url - read - 200
+#   curl - test - ajax - img - delete - 200
 #

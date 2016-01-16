@@ -15,6 +15,9 @@
             // this - url - id
             var id = $(this).parent().parent().parent().attr("data-url-id");
 
+            // img - delete - by - id_url
+            img.delete(id);
+
             // url - delete
             url.delete(id);
 

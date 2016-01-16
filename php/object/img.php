@@ -46,7 +46,7 @@ class img {
 
         /** | delete **/
 
-            private function delete() {
+            public function delete() {
 
                 // ? exists
                 try {
