@@ -96,7 +96,7 @@ class router {
                 $this->route_data = $this->route_object->$method();
                 return true;
             } catch( \exception $e ){
-                $this->set_response(400, array('error' => $e->getMessage()));
+                $this->set_response($e->getCode(), array('error' => $e->getMessage()));
                 if ($this->flag_debug) { print_r($e); }
                 return false;
             }

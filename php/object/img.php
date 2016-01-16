@@ -10,6 +10,7 @@
 
 
     require_once(__DIR__.'/../exception/e400.php');
+    require_once(__DIR__.'/../exception/e404.php');
     require_once(__DIR__.'/../system/database.php');
 
 
@@ -93,7 +94,7 @@ class img {
                                 SELECT  *
                                 FROM    url_has_img,
                                         img
-                                WHERE   id_url = 164
+                                WHERE   id_url              =   :id_url
                                 AND     url_has_img.id_img  =   img.id
                             ";
 
@@ -108,6 +109,9 @@ class img {
                     $img =  $this->db->read_single();
 
                 // db - create - img |
+
+                // check
+                if( ! $img ){ throw new \miv\exception\e404(); }
 
                 // return - [ img -> { . } ]
                 return array( "img" => $img );

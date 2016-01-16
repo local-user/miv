@@ -12,7 +12,7 @@
 
 
     // global(s)
-    $debug = true;
+    $debug = false;
 
 
 

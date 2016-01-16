@@ -184,9 +184,10 @@ var url = {
 
                                             // url - add - link
                                             $("#url-" + id).append("<a class='link'></a>");
-                                            $("#url-" + id + " .link").append("<div class='letter'>" + data['url']['letter'] + "</div>");
-                                            $("#url-" + id + " .link").append("<div class='title'>"  + data['url']['url']    + "</div>");
+                                            $("#url-" + id + " .link").append("<div class='default'></div>");
                                             $("#url-" + id + " .link").attr('href', data['url']['url']);
+                                            $("#url-" + id + " .default").append("<div class='letter'>" + data['url']['letter'] + "</div>");
+                                            $("#url-" + id + " .default").append("<div class='title'>"  + data['url']['url']    + "</div>");
 
                                             // url - update - prirority
                                             $("#url-" + id + " .priority").text(data['url']['priority']);
@@ -205,9 +206,42 @@ var url = {
 
         },
 
-        refresh_img : function( id ){
+        refresh_img : function( id_url ){
 
-            console.log('Refresh IMG: ' + id);
+            console.log('Refresh Image: ' + id_url);
+
+            // this
+            var thi = this;
+
+            // ajax
+            $.ajax({
+
+                        type:           "POST",
+                        url:            "api.php?object=img&method=read",
+                        data:           {
+                                            id_url:   id_url
+                                        },
+                        success:        function(data) {
+                                            if( debug ){ console.log(data); }
+
+                                            // url - default - add - class - hidden
+                                            $("#url-" + id_url + " .default").addClass("hidden");
+
+                                            // url - append - img - container
+                                            $("#url-" + id_url + " .link").append("<div class='img'></div>");
+
+                                            // url - append - img
+                                            $("#url-" + id_url + " .img").css('background-image', 'url(img/upload/' + data['img']['filename'] + ')');
+
+
+                                        },
+                        error:          function() {
+                                            msg.create( 400, 'Read IMG[id_url::' + id_url + ']' );
+                                        }
+            });
+
+            // return
+            return true;
 
         }
 

@@ -11,11 +11,11 @@
     }
 
     #urls .url {
+        height:             300px;
+        width:              40%;
         min-width:          400px;
         margin:             0px;
         padding:            0px;
-        height:             300px;
-        width:              40%;
         display:            inline-block;
         transition:         0.5s;
         border:             2px solid white;
@@ -65,13 +65,21 @@
         float:              right;
     }
 
-    #urls .url .letter {
+    #urls .url .default {
+        overflow:           hidden;
+    }
+
+    #urls .url .default.hidden {
+        height:             0px;
+    }
+
+    #urls .url .default .letter {
         text-align:         right;
         font-size:          150px;
         padding:            25px 50px 25px 25px;
     }
 
-    #urls .url .title {
+    #urls .url .default .title {
         padding:            25px 25px 25px 50px;
         color:              rgb(34, 34, 34);
         height:             50px;
@@ -80,6 +88,16 @@
         font-size:          14px;
     }
 
+    #urls .url .img {
+        height:             300px;
+        width:              100%;
+        min-width:          400px;
+        background-color:           green;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
 
     #urls .animate-appear {
         animation-name: animate-appear;

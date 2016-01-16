@@ -10,7 +10,7 @@
     miv_curl="--verbose"
     miv_object='img'
     miv_method='read'
-    miv_data="id_url=164"
+    miv_data="id_url=1"
     miv_url="miv/api.php?object=$miv_object&method=$miv_method"
 
     # curl

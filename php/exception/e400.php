@@ -9,8 +9,9 @@ class e400 extends \exception {
 
 
 
-    // var - message
-    protected $message = 'bad request';
+    // var
+    protected $code     = 400;
+    protected $message  = 'bad request';
 
 
 
