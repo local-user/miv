@@ -44,20 +44,90 @@ class img {
     /** | main **/
 
 
-        /** | create **/
+        /** | delete **/
 
-            private function flush() {
-                echo "Flushing existing image.";
-                exit;
+            private function delete() {
+
+                // ? exists
+                try {
+
+                    // read - existing - img
+                    $data = $this->read();
+
+                    // fs - delete - image
+                    unlink($data['img']['path']);
+
+                    // | db - delete - img
+
+                            $query = "
+                                DELETE FROM img WHERE id = :id
+                            ";
+
+                            $data = array(
+                                'id' => $data['img']['id']
+                            );
+
+                            $this->db->set_query($query);
+                            $this->db->set_query_data($data);
+                            $this->db->prepare();
+                            $this->db->query();
+
+                    // db - delete - img |
+
+                } catch( \miv\exception\e404 $e ){}
+
+                // return
+                return true;
+
             }
+
+        /** delete | **/
+
+
+        /** | read **/
+
+            public function read() {
+
+                // | db - create - img
+
+                            $query = "
+                                SELECT  *
+                                FROM    img
+                                WHERE   id_url = :id_url
+                            ";
+
+                            $data = array(
+                                'id_url' => $this->get_id_url()
+                            );
+
+                            $this->db->set_query($query);
+                            $this->db->set_query_data($data);
+                            $this->db->prepare();
+                            $this->db->query();
+                    $img =  $this->db->read_single();
+
+                // db - create - img |
+
+                // check
+                if( ! $img ){ throw new \miv\exception\e404(); }
+
+                // return - [ img -> { . } ]
+                return array( "img" => $img );
+
+            }
+
+        /** read | **/
+
+
+        /** | upload **/
 
             public function upload() {
 
                 // check - _files
                 $this->check_files();
 
-                // flush - existing
-                //$this->flush();
+                // delete - existing
+                $this->delete();
 
                 // | system - store - img
 
@@ -94,44 +164,7 @@ class img {
 
             }
 
-        /** create | **/
-
-
-        /** | read **/
-
-            public function read_url_img() {
-
-                // | db - create - img
-
-                            $query = "
-                                SELECT  *
-                                FROM    url_has_img,
-                                        img
-                                WHERE   id_url              =   :id_url
-                                AND     url_has_img.id_img  =   img.id
-                            ";
-
-                            $data = array(
-                                'id_url' => $this->get_id_url()
-                            );
-
-                            $this->db->set_query($query);
-                            $this->db->set_query_data($data);
-                            $this->db->prepare();
-                            $this->db->query();
-                    $img =  $this->db->read_single();
-
-                // db - create - img |
-
-                // check
-                if( ! $img ){ throw new \miv\exception\e404(); }
-
-                // return - [ img -> { . } ]
-                return array( "img" => $img );
-
-            }
-
-        /** read | **/
+        /** upload | **/
 
 
     /** main | **/
