@@ -11,7 +11,7 @@
     miv_object='urls'
     miv_method='read_count'
     miv_data=""
-    miv_url='miv/api.php'
+    miv_url="miv/api.php?object=$miv_object&method=$miv_method"
 
     # curl
     curl "$miv_curl"                                \

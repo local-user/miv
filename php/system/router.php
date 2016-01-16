@@ -163,9 +163,6 @@ class router {
             }
 
             public function set_request_method($request_method = null) {
-                if( $request_method === null && isset($_SERVER['HTTP_MIV_METHOD']) ){
-                    $request_method = $_SERVER['HTTP_MIV_METHOD'];
-                }
                 if( $this->valid_method($request_method) ){
                     $this->request_method = $request_method;
                 } else {
@@ -175,9 +172,6 @@ class router {
             }
 
             public function set_request_object($request_object = null) {
-                if( $request_object === null && isset($_SERVER['HTTP_MIV_OBJECT']) ){
-                    $request_object = $_SERVER['HTTP_MIV_OBJECT'];
-                }
                 if( $this->valid_object($request_object) ){
                     $this->request_object = $request_object;
                 } else {

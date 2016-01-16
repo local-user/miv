@@ -11,7 +11,8 @@
     miv_object='msg'
     miv_method='invalid'
     miv_data=""
-    miv_url='miv/api.php'
+    miv_url="miv/api.php?object=$miv_object&method=$miv_method"
+
 
     # curl
     curl "$miv_curl"                                \

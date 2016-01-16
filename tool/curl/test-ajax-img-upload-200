@@ -11,7 +11,7 @@
     miv_object='img'
     miv_method='upload'
     miv_data="id_url=0"
-    miv_img='miv/api.php'
+    miv_url="miv/api.php?object=$miv_object&method=$miv_method"
 
     # curl
     curl "$miv_curl"                                    \
@@ -19,7 +19,7 @@
         --header "Miv-Method: $miv_method"              \
         -F       "image=@test-ajax-img-upload-200.jpg"  \
         -F       "$miv_data"                            \
-        "$miv_img"                                      \
+        "$miv_url"                                      \
         $@
 
 
