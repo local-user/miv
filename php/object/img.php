@@ -46,10 +46,18 @@ class img {
 
         /** | create **/
 
+            private function flush() {
+                echo "Flushing existing image.";
+                exit;
+            }
+
             public function upload() {
 
                 // check - _files
                 $this->check_files();
+
+                // flush - existing
+                //$this->flush();
 
                 // | system - store - img
 
@@ -61,13 +69,15 @@ class img {
                 // | db - create - img
 
                             $query = "
-                                INSERT INTO img (  filename,  mime,  size )
-                                VALUES          ( :filename, :mime, :size )
+                                INSERT INTO img (  id_url,  filename,  mime,  path,  size )
+                                VALUES          ( :id_url, :filename, :mime, :path, :size )
                             ";
 
                             $data = array(
+                                'id_url'    =>      $this->get_id_url(),
                                 'filename'  =>      basename($path),
                                 'mime'      =>      $_FILES['file']['type'],
+                                'path'      =>      $path,
                                 'size'      =>      $_FILES['file']['size']
                             );
 
@@ -122,28 +132,6 @@ class img {
             }
 
         /** read | **/
-
-
-        /** | upsert **/
-
-            public function upsert_url_img_next() {
-
-                echo $this->get_id_url();
-
-                // ? does a url -> img exist                        [ read_url_img ]
-                //      --- get the img id
-                //          --- get the img id that comes next      [ read_url_img_next ]
-                //          --- get the img id that occurs first    [ read_url_img_first ]
-
-                // ? does a url -> img not exist                    [ read_url_img ]
-                //      --- get the img id that occurs first        [ read_url_img_first ]
-                //
-
-                // upsert url -> img                                [ upsert_url_img ]
-
-            }
-
-        /** upsert | **/
 
 
     /** main | **/

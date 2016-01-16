@@ -70,8 +70,7 @@
 
     #urls .url .dzm {
         height:             300px;
-        width:              40%;
-        min-width:          400px;
+        width:              100%;
         overflow:           hidden;
     }
 
@@ -81,8 +80,7 @@
 
     #urls .url .dzm .dropzone {
         min-height:         300px;
-        width:              40%;
-        min-width:          400px;
+        width:              100%;
     }
 
     #urls .url .default {

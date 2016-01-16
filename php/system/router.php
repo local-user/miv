@@ -96,7 +96,11 @@ class router {
                 $this->route_data = $this->route_object->$method();
                 return true;
             } catch( \exception $e ){
-                $this->set_response($e->getCode(), array('error' => $e->getMessage()));
+                if( is_numeric($e->getCode()) ){
+                    $this->set_response($e->getCode(), array('error' => $e->getMessage()));
+                } else {
+                    $this->set_response(500, array('error' => $e->getMessage()));
+                }
                 if ($this->flag_debug) { print_r($e); }
                 return false;
             }
@@ -223,7 +227,7 @@ class router {
         }
 
         private function valid_code($code) {
-            if( is_numeric($code) && strlen($code) == 3 ){
+            if( is_numeric($code) && strlen($code) < 10 ){
                 return true;
             }
             return false;
