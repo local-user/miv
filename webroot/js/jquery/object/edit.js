@@ -64,8 +64,6 @@ var edit = {
 
         toggle_off : function() {
 
-            console.log('hey');
-
             // toggle - off
             if( this.toggled == 1 ){ this.toggled = 0; }
 

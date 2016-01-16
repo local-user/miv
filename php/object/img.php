@@ -22,8 +22,11 @@ class img {
 
 
 
-    // var -- db
+    // var - db
     private $db = null;
+
+    // var - data
+    private $id_url = null;
 
     // var - paths
     private $dir_img_upload = 'webroot/img/upload';
@@ -86,7 +89,7 @@ class img {
 
         /** | read **/
 
-            public function read() {
+            public function read_url_img() {
 
                 // | db - create - img
 
@@ -119,6 +122,28 @@ class img {
             }
 
         /** read | **/
+
+
+        /** | upsert **/
+
+            public function upsert_url_img_next() {
+
+                echo $this->get_id_url();
+
+                // ? does a url -> img exist                        [ read_url_img ]
+                //      --- get the img id
+                //          --- get the img id that comes next      [ read_url_img_next ]
+                //          --- get the img id that occurs first    [ read_url_img_first ]
+
+                // ? does a url -> img not exist                    [ read_url_img ]
+                //      --- get the img id that occurs first        [ read_url_img_first ]
+                //
+
+                // upsert url -> img                                [ upsert_url_img ]
+
+            }
+
+        /** upsert | **/
 
 
     /** main | **/

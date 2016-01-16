@@ -13,9 +13,6 @@ console.log(' . js/jquery/listener/element/header-toggle-overlay.js');
         //  'header-toggle-overlay' - click - input - display
         $( '#header-toggle-overlay' ).click(function() {
 
-            // dzm - display - hide
-            dzm.display_hide();
-
             // edit - toggle - off
             edit.toggle_off();
 

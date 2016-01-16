@@ -17,9 +17,6 @@ console.log(' . js/jquery/listener/keybord/escape.js');
                     // debug - console
                     if ( debug ){ console.log(' D js/jquery/listener/keybord/escape.js'); }
 
-                    // dzn - display - hide
-                    dzm.display_hide();
-
                     // edit - toggle - off
                     edit.toggle_off();
 

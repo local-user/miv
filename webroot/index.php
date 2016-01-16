@@ -33,7 +33,6 @@
         <link rel="stylesheet" type="text/css" href="css/common/overlay.css"    >
 
         <!-- css - content -->
-        <link rel="stylesheet" type="text/css" href="css/content/dzm.css"       >
         <link rel="stylesheet" type="text/css" href="css/content/error.css"     >
         <link rel="stylesheet" type="text/css" href="css/content/flash.css"     >
         <link rel="stylesheet" type="text/css" href="css/content/header.css"    >
@@ -66,7 +65,6 @@
             <?php require_once('html/content/header.html');     ?>
             <?php require_once('html/content/message.html');    ?>
             <?php require_once('html/content/urls.html');       ?>
-            <?php require_once('html/content/dzm.html');        ?> <!-- dzm // dropzone miv -->
             <!-- note - [ order affects visual(s) ] -->
 
         <!-- html | -->
@@ -90,6 +88,7 @@
                 <script src='js/jquery/listener/element/header-toggle-refresh.js'   ></script>
                 <script src='js/jquery/listener/element/input-form-input-url.js'    ></script>
                 <script src='js/jquery/listener/element/url-trigger-delete.js'      ></script>
+                <script src='js/jquery/listener/element/url-trigger-dropzone.js'    ></script>
                 <script src='js/jquery/listener/element/url-trigger-priority.js'    ></script>
                 <script src='js/jquery/listener/element/welcome.js'                 ></script>
 

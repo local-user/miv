@@ -36,6 +36,9 @@ var url = {
 
         append : function( id ){
 
+            // this
+            var thi = this;
+
             // append - urls - url[ id ]
             $("#urls").append("<div id='url-" + id + "' class='url animate-appear' data-url-id='" + id + "'></div>");
 
@@ -49,9 +52,7 @@ var url = {
             $("#url-" + id + " .edit").append("<div class='right r2'></div>");
 
             // append - urls - url[ id ] - edit - image
-            $("#url-" + id + " .edit .l1").append("<span class='url-trigger-image-next      icon fa fa-chevron-left   color-edit-text-hover' ></span>");
-            $("#url-" + id + " .edit .l1").append("<span class='                            void fa fa-picture-o                           ' ></span>");
-            $("#url-" + id + " .edit .l1").append("<span class='url-trigger-image-previous  icon fa fa-chevron-right  color-edit-text-hover' ></span>");
+            $("#url-" + id + " .edit .l1").append("<span class='url-trigger-dropzone     icon fa fa-picture-o color-edit-text-hover' ></span>");
 
             // append - urls - url[ id ] - edit - delete
             $("#url-" + id + " .edit .r1").append("<span class='url-trigger-delete       icon fa fa-close color-edit-text-hover'></span>");
@@ -60,6 +61,21 @@ var url = {
             $("#url-" + id + " .edit .r2").append("<span class='url-trigger-priority-up   icon fa fa-chevron-up    color-edit-text-hover' ></span>");
             $("#url-" + id + " .edit .r2").append("<span class='                          void priority                                 ' ></span>");
             $("#url-" + id + " .edit .r2").append("<span class='url-trigger-priority-down icon fa fa-chevron-down  color-edit-text-hover' ></span>");
+
+            // append - urls - url[ id ] - edit - dzm - dropzone
+            $("#url-" + id).append("<div class='dzm hidden'></div>");
+            $("#url-" + id + " .dzm").append("<form class='dropzone'></form>");
+            $("#url-" + id + " .dzm .dropzone").dropzone({
+                dictDefaultMessage:     "Drag or click to upload image.",
+                init:                   function () {
+                                            this.on("complete", function (file) {
+                                                thi.dropzone(id);
+                                                thi.refresh_img(id);
+                                            });
+                                        },
+                maxFiles:               1,
+                url:                    "api.php?object=img&method=upload"
+            });
 
             // refresh
             url.refresh(id);
@@ -128,6 +144,16 @@ var url = {
 
             // url - [ id ] - class - animate - disspear
             $("#url-" + id).addClass('animate-disappear');
+
+            // return
+            return true;
+
+        },
+
+        dropzone : function( id ){
+
+            // url - [ id ] - dzm/dropzone - class - toggle - hidden
+            $("#url-" + id + " .dzm").toggleClass("hidden");
 
             // return
             return true;
@@ -206,9 +232,7 @@ var url = {
 
         },
 
-        refresh_img : function( id_url ){
-
-            console.log('Refresh Image: ' + id_url);
+        refresh_img : function( id ){
 
             // this
             var thi = this;
@@ -217,26 +241,26 @@ var url = {
             $.ajax({
 
                         type:           "POST",
-                        url:            "api.php?object=img&method=read",
+                        url:            "api.php?object=img&method=read_url_img",
                         data:           {
-                                            id_url:   id_url
+                                            id_url:   id
                                         },
                         success:        function(data) {
                                             if( debug ){ console.log(data); }
 
                                             // url - default - add - class - hidden
-                                            $("#url-" + id_url + " .default").addClass("hidden");
+                                            $("#url-" + id + " .default").addClass("hidden");
 
                                             // url - append - img - container
-                                            $("#url-" + id_url + " .link").append("<div class='img'></div>");
+                                            $("#url-" + id + " .link").append("<div class='img'></div>");
 
                                             // url - append - img
-                                            $("#url-" + id_url + " .img").css('background-image', 'url(img/upload/' + data['img']['filename'] + ')');
+                                            $("#url-" + id + " .img").css('background-image', 'url(img/upload/' + data['img']['filename'] + ')');
 
 
                                         },
                         error:          function() {
-                                            msg.create( 400, 'Read IMG[id_url::' + id_url + ']' );
+                                            msg.create( 400, 'Read IMG[id_url::' + id + ']' );
                                         }
             });
 

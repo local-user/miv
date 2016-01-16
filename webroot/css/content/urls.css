@@ -26,7 +26,6 @@
         border:             2px solid rgb(34,34,34);
     }
 
-
     #urls .url .edit {
         height:             25px;
         background-color:   rgb(34, 34, 34);
@@ -36,6 +35,10 @@
 
     #urls .url .edit.hidden {
         height:             0px;
+    }
+
+    #urls .url .void {
+        padding:            0 5px 0 5px;
     }
 
     #urls .url .icon {
@@ -63,6 +66,23 @@
     #urls .url .edit .right {
         margin:             5px;
         float:              right;
+    }
+
+    #urls .url .dzm {
+        height:             300px;
+        width:              40%;
+        min-width:          400px;
+        overflow:           hidden;
+    }
+
+    #urls .url .dzm.hidden {
+        height:             0px;
+    }
+
+    #urls .url .dzm .dropzone {
+        min-height:         300px;
+        width:              40%;
+        min-width:          400px;
     }
 
     #urls .url .default {
@@ -132,6 +152,7 @@
                     border:     0px;
                 }
     }
+
 
 
 
