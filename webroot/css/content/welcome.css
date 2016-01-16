@@ -15,6 +15,10 @@
         transition:         1s;
     }
 
+    #welcome span {
+        transition:         1.0s;
+    }
+
     #welcome .title {
         position:           absolute;
         top:                45%;
