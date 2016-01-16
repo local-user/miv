@@ -63,10 +63,10 @@
             <?php require_once('html/content/welcome.html');    ?>
             <?php require_once('html/content/flash.html');      ?>
             <?php require_once('html/content/input.html');      ?>
-            <?php require_once('html/content/dzm.html');        ?> <!-- dzm // dropzone miv -->
             <?php require_once('html/content/header.html');     ?>
             <?php require_once('html/content/message.html');    ?>
             <?php require_once('html/content/urls.html');       ?>
+            <?php require_once('html/content/dzm.html');        ?> <!-- dzm // dropzone miv -->
             <!-- note - [ order affects visual(s) ] -->
 
         <!-- html | -->

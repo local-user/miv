@@ -24,15 +24,15 @@ class img {
     // var -- db
     private $db = null;
 
-    // var -- data
-    private $id_url = null;
-
     // var - paths
     private $dir_img_upload = 'webroot/img/upload';
 
     // var - valid
-    private $valid_file_size_max    = 1048576;                  // 1MB
-    private $valid_file_types       = array('image/jpeg');
+    private $valid_file_size_max    = 1048576; // 1MB
+    private $valid_file_types       = array (
+                                                'image/jpeg',
+                                                'image/png'
+                                            );
 
 
 
@@ -50,22 +50,21 @@ class img {
                 // | system - store - img
 
                     $path = tempnam($this->get_path_img_upload(), "IMG-");
-                    move_uploaded_file($_FILES['image']['tmp_name'], $path);
+                    move_uploaded_file($_FILES['file']['tmp_name'], $path);
 
                 // system - store - img |
 
                 // | db - create - img
 
                             $query = "
-                                INSERT INTO img (  id_url,  path,  mime,  size )
-                                VALUES          ( :id_url, :path, :mime, :size )
+                                INSERT INTO img (  path,  mime,  size )
+                                VALUES          ( :path, :mime, :size )
                             ";
 
                             $data = array(
-                                'id_url'    =>      $this->get_id_url(),
                                 'path'      =>      $path,
-                                'mime'      =>      $_FILES['image']['type'],
-                                'size'      =>      $_FILES['image']['size']
+                                'mime'      =>      $_FILES['file']['type'],
+                                'size'      =>      $_FILES['file']['size']
                             );
 
                             $this->db->set_query($query);
@@ -106,13 +105,18 @@ class img {
 
             private function check_files() {
 
+                // files - valid - index
+                if( ! isset($_FILES['file'])) {
+                    throw new \miv\exception\e400();
+                }
+
                 // files - valid - file - size
-                if( ! $this->valid_file_size($_FILES['image']['size']) ){
+                if( ! $this->valid_file_size($_FILES['file']['size']) ){
                     throw new \miv\exception\e400();
                 }
 
                 // files - valid - file - type
-                if( ! $this->valid_file_type($_FILES['image']['tmp_name']) ){
+                if( ! $this->valid_file_type($_FILES['file']['tmp_name']) ){
                     throw new \miv\exception\e400();
                 }
 
@@ -125,14 +129,6 @@ class img {
 
 
         /** | get **/
-
-            private function get_id_url() {
-                if( $this->id_url !== null ){
-                    return $this->id_url;
-                } else {
-                    throw new \miv\exception\e400();
-                }
-            }
 
             private function get_path_img_upload() {
                 return __DIR__.'/../../'.$this->dir_img_upload;
@@ -151,15 +147,6 @@ class img {
                     } else {
                         return false;
                     }
-                }
-            }
-
-            private function set_data_id_url($id_url) {
-                if( is_numeric($id_url) ){
-                    $this->id_url = $id_url;
-                    return true;
-                } else {
-                    return false;
                 }
             }
 

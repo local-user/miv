@@ -4,17 +4,16 @@
 
         #dzm {
             overflow:       hidden;
-            transition:     0.75s;
-            height:         196px;
+            transition:     1s;
             width:          100%;
         }
 
         #dzm .dropzone {
-            height:         196px;
+            transition:     1s;
         }
 
         #dzm.hidden {
-            height:         0px;
+            height:         0%;
         }
 
         #dzm.hidden .dropzone {

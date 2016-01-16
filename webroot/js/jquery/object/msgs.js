@@ -36,18 +36,10 @@ var msgs = {
 
         refresh : function(){
 
-            // var  - http
-            var method = "POST";
-            var action = "api.php";
-
             // ajax - http
             $.ajax({
-                        type:       method,
-                        url:        action,
-                        beforeSend: function (request) {
-                            request.setRequestHeader("Miv-Object", "msgs");
-                            request.setRequestHeader("Miv-Method", "read_list");
-                        },
+                        type:       "POST",
+                        url:        "api.php?object=msgs&method=read_list",
                         success:    function(data) {
 
                             // debug

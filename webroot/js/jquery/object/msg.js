@@ -42,12 +42,7 @@ var msg = {
             $.ajax({
 
                         type:           "POST",
-                        url:            "api.php",
-
-                        beforeSend:     function (request) {
-                                            request.setRequestHeader("Miv-Object", "msg");
-                                            request.setRequestHeader("Miv-Method", "create");
-                                        },
+                        url:            "api.php?object=msg&method=create",
                         data:           {
                                             code:   code,
                                             msg:    msg

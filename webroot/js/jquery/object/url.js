@@ -71,13 +71,8 @@ var url = {
             $.ajax({
 
                         type:           "POST",
-                        url:            "api.php",
+                        url:            "api.php?object=url&method=create",
                         data:           $("#input-form").serialize(),
-
-                        beforeSend:     function(request) {
-                                            request.setRequestHeader("Miv-Object", "url");
-                                            request.setRequestHeader("Miv-Method", "create");
-                                        },
                         success:        function(data) {
                                             if( debug ){ console.log(data); }
                                             thi.append( data['url']['id'] );
@@ -103,13 +98,9 @@ var url = {
             $.ajax({
 
                         type:           "POST",
-                        url:            "api.php",
+                        url:            "api.php?object=url&method=delete",
                         data:           {
                                             id:   id
-                                        },
-                        beforeSend:     function(request) {
-                                            request.setRequestHeader("Miv-Object", "url");
-                                            request.setRequestHeader("Miv-Method", "delete");
                                         },
                         success:        function(data) {
                                             if( debug ){ console.log(data); }
@@ -145,14 +136,10 @@ var url = {
             $.ajax({
 
                         type:           "POST",
-                        url:            "api.php",
+                        url:            "api.php?object=url&method=priority",
                         data:           {
                                             id:         id,
                                             priority:   priority
-                                        },
-                        beforeSend:     function(request) {
-                                            request.setRequestHeader("Miv-Object", "url");
-                                            request.setRequestHeader("Miv-Method", "priority");
                                         },
                         success:        function(data) {
                                             if( debug ){ console.log(data); }
@@ -175,13 +162,9 @@ var url = {
             $.ajax({
 
                         type:           "POST",
-                        url:            "api.php",
+                        url:            "api.php?object=url&method=read",
                         data:           {
                                             id:   id
-                                        },
-                        beforeSend:     function(request) {
-                                            request.setRequestHeader("Miv-Object", "url");
-                                            request.setRequestHeader("Miv-Method", "read");
                                         },
                         success:        function(data) {
                                             if( debug ){ console.log(data); }

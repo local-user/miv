@@ -64,6 +64,8 @@ var edit = {
 
         toggle_off : function() {
 
+            console.log('hey');
+
             // toggle - off
             if( this.toggled == 1 ){ this.toggled = 0; }
 
@@ -73,8 +75,8 @@ var edit = {
             // toggle - edit - remove - class - mode-edit
             $( '.url' ).removeClass('mode-edit');
 
-            // toggle - edit - remove - class - edit - hidden
-            $( '.url .edit' ).removeClass('hidden');
+            // toggle - edit - add - class - edit - hidden
+            $( '.url .edit' ).addClass('hidden');
 
             // return
             return true;

@@ -49,18 +49,10 @@ var urls = {
             // reset
             this.reset();
 
-            // var  - http
-            var method = "POST";
-            var action = "api.php";
-
             // ajax - http
             $.ajax({
-                        type:       method,
-                        url:        action,
-                        beforeSend: function (request) {
-                            request.setRequestHeader("Miv-Object", "urls");
-                            request.setRequestHeader("Miv-Method", "read_list");
-                        },
+                        type:       "POST",
+                        url:        "api.php?object=urls&method=read_list",
                         success:    function(data) {
 
                             // debug
@@ -91,18 +83,10 @@ var urls = {
 
         refresh_count : function(){
 
-            // var  - http
-            var method = "POST";
-            var action = "api.php";
-
             // ajax - http
             $.ajax({
-                        type:       method,
-                        url:        action,
-                        beforeSend: function (request) {
-                            request.setRequestHeader("Miv-Object", "urls");
-                            request.setRequestHeader("Miv-Method", "read_count");
-                        },
+                        type:       "POST",
+                        url:        "api.php?object=urls&method=read_count",
                         success:    function(data) {
 
                             // debug
