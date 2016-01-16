@@ -38,39 +38,31 @@
         height:             0px;
     }
 
-    #urls .url .dropzone {
-        overflow:           hidden;
-        height:             0px;
-        width:              100%;
-        background-color:   blue;
-        transition:         0.75s;
-    }
-
-    #urls .url.mode-edit .dropzone {
-        height:             300px;
-        width:              100%;
-    }
-
-    #urls .url.mode-edit .dropzone input {
-        width:              100%;
-        height:             300px;
-        background-color:   green;
-    }
-    /** DEVELOPMENT CONTINUIES HERE... STYLING FILE INPUT TO NOT LOOK SO UGLY... **/
-
     #urls .url .icon {
         cursor:             pointer;
         padding:            0 2px 0 2px;
     }
 
+    #urls .url .edit .priority {
+                      width:    30px;
+        -webkit-user-select:    none; /* webkit (safari, chrome) browsers */
+           -moz-user-select:    none; /* mozilla browsers */
+         -khtml-user-select:    none; /* webkit (konqueror) browsers */
+            -ms-user-select:    none; /* IE10+ */
+    }
+
     #urls .url .edit .left {
+        margin:             5px;
         float:              left;
-        padding:            5px 5px 5px 10px;
+    }
+
+    #urls .url .edit .left span {
+        display:            inline-block;
     }
 
     #urls .url .edit .right {
+        margin:             5px;
         float:              right;
-        padding:            5px 10px 5px 5px;
     }
 
     #urls .url .letter {

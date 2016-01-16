@@ -43,16 +43,23 @@ var url = {
             $("#url-" + id).append("<div class='edit hidden color-edit-text'></div>");
 
             // append - urls - url[ id ] - edit - left / right
-            $("#url-" + id + " .edit").append("<div class='left'></div>");
-            $("#url-" + id + " .edit").append("<div class='right'></div>");
+            $("#url-" + id + " .edit").append("<div class='left  l1'></div>");
+            $("#url-" + id + " .edit").append("<div class='left  l2'></div>");
+            $("#url-" + id + " .edit").append("<div class='right r1'></div>");
+            $("#url-" + id + " .edit").append("<div class='right r2'></div>");
 
-            // append - urls - url[ id ] - edit - left
-            $("#url-" + id + " .edit .left").append("<span class='                          icon priority                           ' ></span>");
-            $("#url-" + id + " .edit .left").append("<span class='url-trigger-priority-up   icon fa fa-plus    color-edit-text-hover' ></span>");
-            $("#url-" + id + " .edit .left").append("<span class='url-trigger-priority-down icon fa fa-minus   color-edit-text-hover' ></span>");
+            // append - urls - url[ id ] - edit - image
+            $("#url-" + id + " .edit .l1").append("<span class='url-trigger-image-next      icon fa fa-chevron-left   color-edit-text-hover' ></span>");
+            $("#url-" + id + " .edit .l1").append("<span class='                            void fa fa-picture-o                           ' ></span>");
+            $("#url-" + id + " .edit .l1").append("<span class='url-trigger-image-previous  icon fa fa-chevron-right  color-edit-text-hover' ></span>");
 
-            // append - urls - url[ id ] - edit - right
-            $("#url-" + id + " .edit .right").append("<span class='url-trigger-delete       icon fa fa-close color-edit-text-hover'></span>");
+            // append - urls - url[ id ] - edit - delete
+            $("#url-" + id + " .edit .r1").append("<span class='url-trigger-delete       icon fa fa-close color-edit-text-hover'></span>");
+
+            // append - urls - url[ id ] - edit - priority
+            $("#url-" + id + " .edit .r2").append("<span class='url-trigger-priority-up   icon fa fa-chevron-up    color-edit-text-hover' ></span>");
+            $("#url-" + id + " .edit .r2").append("<span class='                          void priority                                 ' ></span>");
+            $("#url-" + id + " .edit .r2").append("<span class='url-trigger-priority-down icon fa fa-chevron-down  color-edit-text-hover' ></span>");
 
             // refresh
             url.refresh(id);
@@ -158,6 +165,9 @@ var url = {
 
         refresh : function( id ) {
 
+            // this
+            var thi = this;
+
             // ajax
             $.ajax({
 
@@ -181,6 +191,9 @@ var url = {
                                             // url - update - prirority
                                             $("#url-" + id + " .priority").text(data['url']['priority']);
 
+                                            // url - image - refresh
+                                            thi.refresh_img( id );
+
                                         },
                         error:          function() {
                                             msg.create( 400, 'Read URL[' + id + ']' );
@@ -189,6 +202,12 @@ var url = {
 
             // return
             return true;
+
+        },
+
+        refresh_img : function( id ){
+
+            console.log('Refresh IMG: ' + id);
 
         }
 

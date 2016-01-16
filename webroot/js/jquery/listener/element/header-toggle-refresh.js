@@ -13,6 +13,9 @@ console.log(' . js/jquery/listener/element/header-toggle-refresh.js');
         //  'header-toggle-refresh' - click - input - display
         $( '#header-toggle-refresh' ).click(function() {
 
+            // dzm - display - hide
+            dzm.display_hide();
+
             // edit - toggle - off
             edit.toggle_off();
 
