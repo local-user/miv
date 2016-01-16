@@ -17,7 +17,7 @@
     curl "$miv_curl"                                    \
         --header "Miv-Object: $miv_object"              \
         --header "Miv-Method: $miv_method"              \
-        -F       "image=@test-ajax-img-upload-200.jpg"  \
+        -F       "file=@test-ajax-img-upload-200.jpg"   \
         "$miv_url"                                      \
         $@
 

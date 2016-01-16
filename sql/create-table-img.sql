@@ -29,7 +29,7 @@
 
     CREATE TABLE IF NOT EXISTS `miv`.`img` (
       `id` INT NOT NULL AUTO_INCREMENT,
-      `path` VARCHAR(4096) NOT NULL,
+      `filename` VARCHAR(4096) NOT NULL,
       `mime` VARCHAR(255) NOT NULL,
       `size` INT NOT NULL,
       `date_created` TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP,

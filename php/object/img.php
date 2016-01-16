@@ -57,12 +57,12 @@ class img {
                 // | db - create - img
 
                             $query = "
-                                INSERT INTO img (  path,  mime,  size )
-                                VALUES          ( :path, :mime, :size )
+                                INSERT INTO img (  filename,  mime,  size )
+                                VALUES          ( :filename, :mime, :size )
                             ";
 
                             $data = array(
-                                'path'      =>      $path,
+                                'filename'  =>      basename($path),
                                 'mime'      =>      $_FILES['file']['type'],
                                 'size'      =>      $_FILES['file']['size']
                             );
