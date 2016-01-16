@@ -36,9 +36,6 @@ var url = {
 
         append : function( id ){
 
-            // this
-            var thi = this;
-
             // append - urls - url[ id ]
             $("#urls").append("<div id='url-" + id + "' class='url animate-appear' data-url-id='" + id + "'></div>");
 
@@ -64,18 +61,6 @@ var url = {
 
             // append - urls - url[ id ] - edit - dzm - dropzone
             $("#url-" + id).append("<div class='dzm hidden'></div>");
-            $("#url-" + id + " .dzm").append("<form class='dropzone'></form>");
-            $("#url-" + id + " .dzm .dropzone").dropzone({
-                dictDefaultMessage:     "Drag or click to upload image.",
-                init:                   function () {
-                                            this.on("complete", function (file) {
-                                                thi.dropzone(id);
-                                                thi.refresh_img(id);
-                                            });
-                                        },
-                maxFiles:               1,
-                url:                    "api.php?object=img&method=upload"
-            });
 
             // refresh
             url.refresh(id);
@@ -152,8 +137,31 @@ var url = {
 
         dropzone : function( id ){
 
+            // this
+            var thi = this;
+
             // url - [ id ] - dzm/dropzone - class - toggle - hidden
             $("#url-" + id + " .dzm").toggleClass("hidden");
+
+            // url - [ id ] - dzm/dropzone - class - toggle - remove
+            $("#url-" + id + " .dzm").empty();
+
+            // url - [ id ] - dzm/dropzone - class - toggle - set
+            $("#url-" + id + " .dzm").append("<form class='dropzone'></form>");
+            $("#url-" + id + " .dzm .dropzone").dropzone({
+                dictDefaultMessage:     "Drag or click to upload image.",
+                init:                   function () {
+                                            this.on("complete", function (file) {
+                                                thi.dropzone(id);
+                                                thi.refresh_img(id);
+                                            });
+                                            this.on('sending', function(file, xhr, formData){
+                                                formData.append('id_url', id);
+                                            });
+                                        },
+                maxFiles:               1,
+                url:                    "api.php?object=img&method=upload"
+            });
 
             // return
             return true;
@@ -241,7 +249,7 @@ var url = {
             $.ajax({
 
                         type:           "POST",
-                        url:            "api.php?object=img&method=read_url_img",
+                        url:            "api.php?object=img&method=read",
                         data:           {
                                             id_url:   id
                                         },
