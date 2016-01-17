@@ -3,12 +3,14 @@
 
 
 
-    <div id='welcome' class='body color-welcome-background'>
-        <div class='title'>
-            <h1 id='welcome-title' class='hidden color-welcome-text'>
-                Goodbye <span class='color-welcome-text fixed m'>m</span><span class='m'>arijuana</span><span>,</span><span class='nw'> you stupid perfect girl</span><span>, <span><span class='color-welcome-text fixed uppercase'>i</span> <span class='red'>lo<span class='fixed'>v</span>e</span> you<span class='color-welcome-text fixed'>.</span>
-            </h1>
-        </div>
+    <div id='welcome' class='body bg color-welcome-background'>
+        <?php if( ! file_exists('img/bg/welcome') ){ ?>
+            <div class='title'>
+                <h1 id='welcome-title' class='hidden color-welcome-text'>
+                    Goodbye <span class='color-welcome-text fixed m'>m</span><span class='m'>arijuana</span><span>,</span><span class='nw'> you stupid perfect girl</span><span>, <span><span class='color-welcome-text fixed uppercase'>i</span> <span class='red'>lo<span class='fixed'>v</span>e</span> you<span class='color-welcome-text fixed'>.</span>
+                </h1>
+            </div>
+        <?php } ?>
     </div>
 
 

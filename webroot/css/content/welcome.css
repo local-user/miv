@@ -10,6 +10,12 @@
         transition:         1.5s;
     }
 
+    #welcome.bg {
+        background:             url(../../img/bg/welcome) no-repeat center center fixed;
+        background-size:        cover;
+        background-color:       rgb(34, 34, 34);
+    }
+
     #welcome.hidden {
         height:             0;
         transition:         1s;
