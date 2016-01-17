@@ -9,6 +9,17 @@ A user friendly system for quick access, storage & customization of URLs.
 ## Installation
 Clone the repository and point your webserver to the webroot.
 
+## ToDo
+- Arrow key navigation.
+    - Arrow keys to select a URL.
+    - Enter to go to a URL.
+    - Navigate children of urls.
+- URLs Search
+    - As you type into input box, refine urls.
+    - Arrow keys or mouse to select from limited list.
+- Google search intergration
+    - Enter input data, hold enter for 3 seconds, search.
+
 ## History
 - Mable, its a movable, magical, table.
 - Mable, it no longer involves table(s), but its still able!
