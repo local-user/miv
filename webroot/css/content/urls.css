@@ -4,7 +4,7 @@
 
 
     #urls {
-        margin:             40px auto;
+        margin:             10px auto;
         padding:            0px;
         text-align:         center;
         transition:         2s;
@@ -109,7 +109,7 @@
     #urls .url .img {
         height:             400px;
         background-size:    cover;
-        background-position:center top;
+        background-position:    50% 50%;
     }
 
     #urls .animate-appear {

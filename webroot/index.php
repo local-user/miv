@@ -34,6 +34,7 @@
 
         <!-- css - content -->
         <link rel="stylesheet" type="text/css" href="css/content/error.css"     >
+        <link rel="stylesheet" type="text/css" href="css/content/footer.css"    >
         <link rel="stylesheet" type="text/css" href="css/content/flash.css"     >
         <link rel="stylesheet" type="text/css" href="css/content/header.css"    >
         <link rel="stylesheet" type="text/css" href="css/content/input.css"     >
@@ -65,6 +66,7 @@
             <?php require_once('html/content/header.html');     ?>
             <?php require_once('html/content/message.html');    ?>
             <?php require_once('html/content/urls.html');       ?>
+            <?php require_once('html/content/footer.html');     ?>
             <!-- note - [ order affects visual(s) ] -->
 
         <!-- html | -->
@@ -101,6 +103,7 @@
                 <script src='js/jquery/object/error.js'                             ></script>
                 <script src='js/jquery/object/edit.js'                              ></script>
                 <script src='js/jquery/object/flash.js'                             ></script>
+                <script src='js/jquery/object/footer.js'                            ></script>
                 <script src='js/jquery/object/header.js'                            ></script>
                 <script src='js/jquery/object/img.js'                               ></script>
                 <script src='js/jquery/object/input.js'                             ></script>

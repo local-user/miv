@@ -15,11 +15,14 @@
                     // debug - console
                     if ( debug ){ console.log(' D js/jquery/listener/keybord/ctrl.js'); }
 
-                    // overlay - display - text
-                    overlay.display_text();
-
                     // flash - display - text
                     flash.display_text();
+
+                    // footer - display - text
+                    footer.display_text();
+
+                    // overlay - display - text
+                    overlay.display_text();
 
                 }
 
@@ -37,11 +40,14 @@
                     // debug - console
                     if ( debug ){ console.log(' D js/jquery/listener/keybord/ctrl.js'); }
 
-                    // overlay - display - text
-                    overlay.display_text();
-
                     // flash - display - text
                     flash.display_text();
+
+                    // footer - display - text
+                    footer.display_text();
+
+                    // overlay - display - text
+                    overlay.display_text();
 
                 }
 
