@@ -53,6 +53,9 @@
         <!-- title -->
         <title>miv.</title>
 
+        <!-- meta - viewport -->
+        <meta name="viewport" content="width=420, initial-scale=0.85">
+
     </head>
     <body id='body' class='overlay'>
 
