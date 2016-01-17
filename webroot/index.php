@@ -6,6 +6,12 @@
  *
  */
 ?>
+<?php
+
+    /** require - config - locked **/
+    require_once('../config/locked.php');
+
+?>
 <html>
     <head>
 
@@ -62,14 +68,20 @@
         <!-- | html -->
 
             <!-- html - content -->
-            <?php require_once('html/content/error.html');      ?>
-            <?php require_once('html/content/welcome.html');    ?>
-            <?php require_once('html/content/flash.html');      ?>
-            <?php require_once('html/content/input.html');      ?>
-            <?php require_once('html/content/header.html');     ?>
-            <?php require_once('html/content/message.html');    ?>
-            <?php require_once('html/content/urls.html');       ?>
-            <?php require_once('html/content/footer.html');     ?>
+            <?php
+                require_once('html/content/error.html');
+                require_once('html/content/welcome.html');
+                if( ! $locked ) { 
+                    require_once('html/content/flash.html');
+                    require_once('html/content/input.html');
+                    require_once('html/content/header.html');
+                }
+                require_once('html/content/message.html');
+                require_once('html/content/urls.html');
+                if( ! $locked ) {
+                    require_once('html/content/footer.html');
+                }
+            ?>
             <!-- note - [ order affects visual(s) ] -->
 
         <!-- html | -->
