@@ -86,6 +86,22 @@
     }
 
 
+    #welcome.animate-welcome {
+        animation-name:         animate-welcome;
+        animation-duration:     1s;
+    }
+    @keyframes animate-welcome {
+        from    {
+                    height:       0%;
+                    width:      100%;
+                }
+        to      {
+                    height:     100%;
+                    width:      100%;
+                }
+    }
+
+
 
 
 /**| css - content - welcome **/

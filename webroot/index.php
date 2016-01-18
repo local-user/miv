@@ -47,9 +47,6 @@
         <link rel="stylesheet" type="text/css" href="css/content/urls.css"      >
         <link rel="stylesheet" type="text/css" href="css/content/welcome.css"   >
 
-        <!-- css - z - animation -->
-        <link rel="stylesheet" type="text/css" href="css/animation/welcome.css" >
-
         <!-- icon - fav -->
         <link rel="shortcut icon" href="img/icon/favicon.ico">
 
@@ -63,7 +60,7 @@
         <meta name="viewport" content="width=420, initial-scale=0.85">
 
     </head>
-    <body id='body' class='overlay'>
+    <body id='body' class=''>
 
         <!-- | html -->
 
@@ -127,6 +124,15 @@
                 <script src='js/jquery/object/overlay.js'                           ></script>
                 <script src='js/jquery/object/url.js'                               ></script>
                 <script src='js/jquery/object/urls.js'                              ></script>
+
+                <!-- js - jquery - start -->
+                <script>
+                    $(document).ready( function() {
+                        setTimeout( function() {
+                            overlay.display();
+                        }, 100);
+                    });
+                </script>
 
             <!-- js - jquery | -->
 
