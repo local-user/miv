@@ -66,18 +66,24 @@
 
             <!-- html - content -->
             <?php
-                require_once('html/content/error.html');
-                require_once('html/content/welcome.html');
-                if( ! $locked ) { 
+
+                if( $locked ){
+                    require_once('html/content/error.html');
+                    require_once('html/content/welcome.html');
+                    require_once('html/content/urls.html');
+                }
+
+                if( ! $locked ){
+                    require_once('html/content/error.html');
+                    require_once('html/content/welcome.html');
                     require_once('html/content/flash.html');
                     require_once('html/content/input.html');
                     require_once('html/content/header.html');
-                }
-                require_once('html/content/message.html');
-                require_once('html/content/urls.html');
-                if( ! $locked ) {
+                    require_once('html/content/message.html');
+                    require_once('html/content/urls.html');
                     require_once('html/content/footer.html');
                 }
+
             ?>
             <!-- note - [ order affects visual(s) ] -->
 
