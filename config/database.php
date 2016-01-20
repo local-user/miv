@@ -7,8 +7,8 @@
     $db_name  = 'miv';
     $db_type  = 'mysql';
 
-    $db_user  = 'miv';
-    $db_pass  = 'password'
+    $db_user  = 'root';
+    $db_pass  = ''
 
 
 
