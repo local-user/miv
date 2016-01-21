@@ -1,0 +1,20 @@
+/**| css - content - padding **/
+
+
+
+
+    #padding {
+        height:             100%;
+        width:              100%;
+        transition:         1.5s;
+        background-color:   rgb(34,34,34);
+    }
+
+    #padding.hidden {
+        height:             0.1%;
+    }
+
+
+
+
+/**| css - content - padding **/

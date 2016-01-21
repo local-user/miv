@@ -44,6 +44,7 @@
         <link rel="stylesheet" type="text/css" href="css/content/flash.css"     >
         <link rel="stylesheet" type="text/css" href="css/content/header.css"    >
         <link rel="stylesheet" type="text/css" href="css/content/input.css"     >
+        <link rel="stylesheet" type="text/css" href="css/content/padding.css"   >
         <link rel="stylesheet" type="text/css" href="css/content/urls.css"      >
         <link rel="stylesheet" type="text/css" href="css/content/welcome.css"   >
 
@@ -70,12 +71,14 @@
                 if( $locked ){
                     require_once('html/content/error.html');
                     require_once('html/content/welcome.html');
+                    require_once('html/content/padding.html');
                     require_once('html/content/urls.html');
                 }
 
                 if( ! $locked ){
                     require_once('html/content/error.html');
                     require_once('html/content/welcome.html');
+                    require_once('html/content/padding.html');
                     require_once('html/content/flash.html');
                     require_once('html/content/input.html');
                     require_once('html/content/header.html');
@@ -128,6 +131,7 @@
                 <script src='js/jquery/object/msg.js'                               ></script>
                 <script src='js/jquery/object/msgs.js'                              ></script>
                 <script src='js/jquery/object/overlay.js'                           ></script>
+                <script src='js/jquery/object/padding.js'                           ></script>
                 <script src='js/jquery/object/url.js'                               ></script>
                 <script src='js/jquery/object/urls.js'                              ></script>
 
@@ -136,6 +140,7 @@
                     $(document).ready( function() {
                         setTimeout( function() {
                             overlay.display();
+                            padding.display();
                         }, 100);
                     });
                 </script>

@@ -8,6 +8,7 @@
         width:              100%;
         overflow:           hidden;
         transition:         1.5s;
+        cursor:             pointer;
     }
 
     #welcome.bg {
@@ -83,22 +84,6 @@
 
     #welcome .title h1 .red {
         color:              #F44336;
-    }
-
-
-    #welcome.animate-welcome {
-        animation-name:         animate-welcome;
-        animation-duration:     1s;
-    }
-    @keyframes animate-welcome {
-        from    {
-                    height:       0%;
-                    width:      100%;
-                }
-        to      {
-                    height:     100%;
-                    width:      100%;
-                }
     }
 
 
