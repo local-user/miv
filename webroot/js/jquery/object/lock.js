@@ -93,7 +93,7 @@ var lock = {
             $( '#footer' ).addClass('lock');
 
             // usert - key_flagged - true
-            this.usert("key_flagged", "true");
+            this.usert("flag_locked", "true");
 
             // return
             return true;
@@ -112,7 +112,7 @@ var lock = {
             $( '#footer' ).removeClass('lock');
 
             // usert - key_flagged - false
-            this.usert("key_flagged", "false");
+            this.usert("flag_locked", "false");
 
             // return
             return true;
