@@ -15,22 +15,28 @@ A user friendly system for quick access, storage & customization of URLs.
     - Update 'DocumentRoot' path to 'webroot/'.
 
 ## Extra
+- Favicon
+    - Image
+        - Create 'webroot/img/icon/favicon.ico'
 - Locking.
-    - Hide [ Header/Input/Footer ]
+    - Soft Lock
+        - Key press 'shift + l'
+    - Hard Lock
         - Update 'config/locked.php'.
 - Welcome background.
-    - Place image at 'webroot/img/bg/welcome'
+    - Image
+        - Create 'webroot/img/bg/welcome'
 
 ## ToDo
 - Arrow key navigation.
     - Arrow keys to select a URL.
     - Enter to go to a URL.
     - Navigate children of urls.
+- Google search intergration.
+    - Enter input data, hold enter for 3 seconds, search.
 - URLs Search.
     - As you type into input box, refine urls.
     - Arrow keys or mouse to select from limited list.
-- Google search intergration.
-    - Enter input data, hold enter for 3 seconds, search.
 
 ## History
 - Mable, its a movable, magical, table.
