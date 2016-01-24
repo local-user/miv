@@ -55,7 +55,7 @@
         <script> var debug = 1; </script>
 
         <!-- title -->
-        <title>miv.</title>
+        <title><?php echo gethostname(); ?> </title>
 
         <!-- meta -->
         <meta name="viewport" content="width=420, initial-scale=0.85">
