@@ -14,6 +14,16 @@ A user friendly system for quick access, storage & customization of URLs.
 - Configure webserver.
     - Update 'DocumentRoot' path to 'webroot/'.
 
+## Hotkey(s)
+- Edit
+    - 'Shift + E'
+- Input
+    - 'ESC'
+- Lock
+    - 'Shift + L'
+- Refresh
+    - 'Shift + R'
+
 ## Extra
 - Favicon
     - Image
