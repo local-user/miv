@@ -4,7 +4,7 @@
 //
 //  Global(s):
 //
-//      toggled          --{ 0 = False, 1 = True }
+//      locked          --{ 0 = False, 1 = True }
 //
 //
 //  Function(s):
@@ -19,7 +19,7 @@ var lock = {
 
 
     // global(s)
-    toggled: 0,
+    locked: 0,
 
 
     // identify
@@ -39,37 +39,61 @@ var lock = {
 
         load : function() {
 
-            // perform ajax setting state check here
+            // this
+            var thi = this;
+
+            // ajax
+            $.ajax({
+
+                        type:           "POST",
+                        url:            "api.php?object=config&method=read",
+                        data:           {
+                                            key:   "flag_locked"
+                                        },
+                        success:        function(data) {
+                                            if( data['config']['flag_locked'] == "true" ){
+                                                thi.toggle_on();
+                                            } else {
+                                                thi.toggle_off();
+                                            }
+                                        },
+                        error:          function() {}
+            });
+
+
 
         },
 
         toggle : function() {
 
-            // toggle - toggled
-            if( this.toggled == 0 ){ this.toggled = 1; }
-            if( this.toggled == 1 ){ this.toggled = 0; }
+            // toggle - unlocked -> locked
+            if( this.locked == 0 ){
+                return this.toggle_on();
+            }
 
-            // toggle - header - class - lock
-            $( '#header' ).toggleClass('lock');
-
-            // toggle - footer - class - lock
-            $( '#footer' ).toggleClass('lock');
+            // toggle - locked -> unlocked
+            if( this.locked == 1 ){
+                return this.toggle_off();
+            }
 
             // return
-            return true;
+            return false;
 
         },
 
         toggle_on : function() {
 
             // toggle - on
-            if( this.toggled == 0 ){ this.toggled = 1; }
+            this.locked = 1;
 
             // add - header - class - lock
             $( '#header' ).addClass('lock');
 
             // add - footer - class - lock
             $( '#footer' ).addClass('lock');
+
+            // usert - key_flagged - true
+            this.usert("key_flagged", "true");
 
             // return
             return true;
@@ -79,7 +103,7 @@ var lock = {
         toggle_off : function() {
 
             // toggle - off
-            if( this.toggled == 1 ){ this.toggled = 0; }
+            this.locked = 0;
 
             // remove - header - class - lock
             $( '#header' ).removeClass('lock');
@@ -87,8 +111,32 @@ var lock = {
             // remove - footer - class - lock
             $( '#footer' ).removeClass('lock');
 
+            // usert - key_flagged - false
+            this.usert("key_flagged", "false");
+
             // return
             return true;
+
+        },
+
+        usert : function(key, value) {
+
+            // ajax
+            $.ajax({
+
+                        type:           "POST",
+                        url:            "api.php?object=config&method=usert",
+                        data:           {
+                                            key:    key,
+                                            value:  value
+                                        },
+                        success:        function(data) {
+                                            console.log(data);
+                                        },
+                        error:          function() {
+                                           error.display_show('Unable to update or insert config.');
+                                        }
+            });
 
         }
 
