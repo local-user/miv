@@ -52,7 +52,7 @@
         <link rel="shortcut icon" href="img/icon/favicon.ico">
 
         <!-- js - min - config -->
-        <script> var debug = 0; </script>
+        <script> var debug = 1; </script>
 
         <!-- title -->
         <title>miv.</title>
@@ -120,6 +120,7 @@
                 <script src='js/jquery/listener/keyboard/ctrl.js'                   ></script>
                 <script src='js/jquery/listener/keyboard/down.js'                   ></script>
                 <script src='js/jquery/listener/keyboard/esc.js'                    ></script>
+                <script src='js/jquery/listener/keyboard/shift-l.js'                ></script>
 
                 <!-- js - jquery - object(s) -->
                 <script src='js/jquery/object/error.js'                             ></script>
@@ -129,6 +130,7 @@
                 <script src='js/jquery/object/header.js'                            ></script>
                 <script src='js/jquery/object/img.js'                               ></script>
                 <script src='js/jquery/object/input.js'                             ></script>
+                <script src='js/jquery/object/lock.js'                              ></script>
                 <script src='js/jquery/object/msg.js'                               ></script>
                 <script src='js/jquery/object/msgs.js'                              ></script>
                 <script src='js/jquery/object/overlay.js'                           ></script>

@@ -30,6 +30,7 @@
                         opacity:        0.25;
                     }
 
+
     #header .title  {
                         padding:        20px 80px 20px 80px;
                         float:          left;
@@ -76,6 +77,14 @@
                                         font-size:      2px;
                                     }
 
+
+    #header.lock {
+        height:         0px;
+        width:          0px;
+        min-width:      0px;
+        min-height:     0px;
+        transition:     0.75s;
+    }
 
 
 
