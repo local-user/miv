@@ -1,0 +1,27 @@
+#!/bin/bash
+#
+#   curl - test - ajax - usert - config - 200
+#
+
+
+
+
+    # variable(s)
+    miv_curl="--verbose"
+    miv_object='config'
+    miv_method='usert'
+    miv_data="key=flag_locked&value=false"
+    miv_url="build-miv/api.php?object=$miv_object&method=$miv_method"
+
+    # curl
+    curl "$miv_curl"                                \
+        --data "$miv_data"                          \
+        "$miv_url"                                  \
+        $@
+
+
+
+
+#
+#   curl - test - ajax - usert - config - 200
+#

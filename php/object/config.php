@@ -26,6 +26,7 @@ class config {
 
     // var - data
     private $key    = null;
+    private $value  = null;
 
     // var - valid
     private $valid_keys = array(
@@ -43,7 +44,7 @@ class config {
 
                         // query
                         $query = '
-                            SELECT * FROM config WHERE config.key = :key
+                            SELECT value FROM config WHERE config.key = :key
                         ';
 
                         // data
@@ -59,11 +60,44 @@ class config {
                 $data = $this->db->read_single();
 
                 // return - [ config -> { key } -> { . } ]
-                return array( "config" => array( $this->get_data_key() => $data ));
+                return array( "config" => array( $this->get_data_key() => $data["value"] ));
 
             }
 
         /** read | **/
+
+
+        /** | usert **/
+
+            public function usert() {
+
+                // query
+                $query = '
+                    INSERT INTO config  (  config.key,  config.value )
+                    VALUES              (        :key,        :value )
+                    ON DUPLICATE KEY UPDATE
+                        config.key     =   :key,
+                        config.value   =   :value
+                ';
+
+                // data
+                $data = array(
+                    'key'    => $this->get_data_key(),
+                    'value'  => $this->get_data_value()
+                );
+
+                // db
+                $this->db->set_query($query);
+                $this->db->set_query_data($data);
+                $this->db->prepare();
+                $this->db->query();
+
+                // return
+                return array();
+
+            }
+
+        /** usert | **/
 
 
     /** main | **/
@@ -94,6 +128,14 @@ class config {
                 }
             }
 
+            private function get_data_value() {
+                if( $this->value !== null ){
+                    return $this->value;
+                } else {
+                    throw new \miv\exception\e400();
+                }
+            }
+
         /** get | **/
 
 
@@ -118,6 +160,20 @@ class config {
                     throw new \miv\exception\e400();
                 }
             }
+
+            public function set_data_value($value) {
+                if( strlen($value) <= 100 ){
+                    $this->value = $value;
+                    return true;
+                } else {
+                    throw new \miv\exception\e400();
+                }
+            }
+
+        /** set | **/
+
+
+    /** util | **/
 
         /** set | **/
 
