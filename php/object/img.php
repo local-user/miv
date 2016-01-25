@@ -35,8 +35,10 @@ class img {
     private $dir_img_upload         = 'webroot/img/upload';
 
     // var - valid
-    private $valid_file_size_max    = 262144; // = 250kb
+    private $valid_file_size_max    = 200000;
     private $valid_file_types       = array (
+                                                'image/jpeg',
+                                                'image/jpg',
                                                 'image/png'
                                             );
 
