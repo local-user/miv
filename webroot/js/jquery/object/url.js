@@ -237,7 +237,7 @@ var url = {
                                             // url - image - refresh
                                             setTimeout( function() {
                                                 thi.refresh_img( id );
-                                            }, 1050);
+                                            }, 450);
 
                                         },
                         error:          function() {
