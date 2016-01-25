@@ -63,8 +63,10 @@ var urls = {
                                 url.append(data['urls'][id]);
                             }
 
-                            // turl
-                            turl.load();
+                            // urls - turl
+                            setTimeout( function() {
+                                turl.load();
+                            }, 1000);
 
                         },
                         context:    this,

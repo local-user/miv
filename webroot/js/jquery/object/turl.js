@@ -103,7 +103,7 @@ var turl = {
             this.turled = 0;
 
             // urls - display - turl
-            $( "#urls .url .turl" ).removeClass("hidden");
+            $( "#urls .url .turl" ).addClass("hidden");
 
             // usert - key_flagged - false
             this.usert("flag_turled", "false");
@@ -125,8 +125,6 @@ var turl = {
                                             value:  value
                                         },
                         success:        function(data) {
-                                            console.log('TURL:USERT');
-                                            console.log(data);
                                             console.log(data);
                                         },
                         error:          function() {
