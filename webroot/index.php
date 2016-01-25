@@ -121,8 +121,9 @@
                 <script src='js/jquery/listener/keyboard/down.js'                   ></script>
                 <script src='js/jquery/listener/keyboard/esc.js'                    ></script>
                 <script src='js/jquery/listener/keyboard/shift-e.js'                ></script>
-                <script src='js/jquery/listener/keyboard/shift-r.js'                ></script>
                 <script src='js/jquery/listener/keyboard/shift-l.js'                ></script>
+                <script src='js/jquery/listener/keyboard/shift-r.js'                ></script>
+                <script src='js/jquery/listener/keyboard/shift-t.js'                ></script>
 
                 <!-- js - jquery - object(s) -->
                 <script src='js/jquery/object/error.js'                             ></script>
