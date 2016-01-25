@@ -50,12 +50,12 @@ var urls = {
 
                        var width = $(window).width();
 
-                       if( width > 4000 ){
+                       if( width > 3000 ){
                     $( "#urls .url" ).css( "width", "25%" );
-                } else if( width > 3000 ){
+                } else if( width > 2250 ){
                     $( "#urls .url" ).css( "width", "33%" );
                 } else if( width > 1500 ){
-                    $( "#urls .url" ).css( "width", "33%" );
+                    $( "#urls .url" ).css( "width", "49%" );
                 } else if( width > 840 ){
                     $( "#urls .url" ).css( "width", "98%" );
                 } else if( width > 420  ){
