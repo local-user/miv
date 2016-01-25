@@ -30,7 +30,8 @@ class config {
 
     // var - valid
     private $valid_keys = array(
-        'flag_locked'
+        'flag_locked',
+        'flag_turled'
     );
 
 
@@ -93,7 +94,7 @@ class config {
                 $this->db->query();
 
                 // return
-                return array();
+                return $this->read();
 
             }
 
