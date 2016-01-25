@@ -225,7 +225,7 @@ class img {
             }
 
             private function compress_jpg($path) {
-                throw new \miv\exception\e404("PHP::ImageCompression")
+                throw new \miv\exception\e404("PHP::ImageCompression");
             }
 
         /** compress | **/
