@@ -23,6 +23,9 @@ A user friendly system for quick access, storage & customization of URLs.
     - 'Shift + L'
 - Refresh
     - 'Shift + R'
+- Title URL
+    - 'Shift + T'
+
 
 ## Extra
 - Favicon
