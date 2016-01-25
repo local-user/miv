@@ -125,7 +125,6 @@ var turl = {
                                             value:  value
                                         },
                         success:        function(data) {
-                                            console.log(data);
                                         },
                         error:          function() {
                                            error.display_show('Unable to update or insert config.');

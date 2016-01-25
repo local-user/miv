@@ -12,11 +12,16 @@
                 // key - shift - l
                 if(e.keyCode == 76){
 
-                    // debug - console
-                    if ( debug ){ console.log(' D js/jquery/listener/keybord/shift-l.js'); }
+                    // input - hidden
+                    if( $("#input").hasClass("hidden") ){
 
-                    // toggle - lock
-                    lock.toggle();
+                        // debug - console
+                        if ( debug ){ console.log(' D js/jquery/listener/keybord/shift-l.js'); }
+
+                        // toggle - lock
+                        lock.toggle();
+
+                    }
 
                 }
 

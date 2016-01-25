@@ -116,6 +116,9 @@
                 <script src='js/jquery/listener/element/url-trigger-priority.js'    ></script>
                 <script src='js/jquery/listener/element/welcome.js'                 ></script>
 
+                <!-- js - jquery - listener(s) - event -->
+                <script src='js/jquery/listener/event/resize.js'                    ></script>
+
                 <!-- js - jquery - listener(s) - keyboard -->
                 <script src='js/jquery/listener/keyboard/ctrl.js'                   ></script>
                 <script src='js/jquery/listener/keyboard/down.js'                   ></script>

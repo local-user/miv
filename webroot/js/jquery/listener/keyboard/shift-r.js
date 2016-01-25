@@ -12,11 +12,16 @@
                 // key - shift - r
                 if(e.keyCode == 82){
 
-                    // debug - console
-                    if ( debug ){ console.log(' D js/jquery/listener/keybord/shift-r.js'); }
+                    // input - hidden
+                    if( $("#input").hasClass("hidden") ){
 
-                    // urls - refresh
-                    urls.refresh();
+                        // debug - console
+                        if ( debug ){ console.log(' D js/jquery/listener/keybord/shift-r.js'); }
+
+                        // urls - refresh
+                        urls.refresh();
+
+                    }
 
                 }
 

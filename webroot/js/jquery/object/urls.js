@@ -44,6 +44,31 @@ var urls = {
 
         },
 
+        resize : function() {
+
+            // |  resize - by - width
+
+                       var width = $(window).width();
+
+                       if( width > 4000 ){
+                    $( "#urls .url" ).css( "width", "25%" );
+                } else if( width > 3000 ){
+                    $( "#urls .url" ).css( "width", "33%" );
+                } else if( width > 1500 ){
+                    $( "#urls .url" ).css( "width", "33%" );
+                } else if( width > 840 ){
+                    $( "#urls .url" ).css( "width", "98%" );
+                } else if( width > 420  ){
+                    $( "#urls .url" ).css( "width", "98%" );
+                }
+
+            // resize - by - width |
+
+            // return
+            return true;
+
+        },
+
         refresh : function(){
 
             // reset
@@ -62,6 +87,11 @@ var urls = {
                             for( id in data['urls'] ){
                                 url.append(data['urls'][id]);
                             }
+
+                            // urls - turl
+                            setTimeout( function() {
+                                urls.resize();
+                            }, 1000);
 
                             // urls - turl
                             setTimeout( function() {

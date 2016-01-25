@@ -16,7 +16,7 @@
         margin:             0px;
         padding:            0px;
         display:            inline-block;
-        transition:         0.5s;
+        transition:         1s;
         border:             2px solid white;
         overflow:           hidden;
     }

@@ -4,7 +4,7 @@
 //
 //  Global(s):
 //
-//      visibility          --{ 0 = Hidden, 1 = Visibile }
+//      active          --{ 0 = Hidden, 1 = Visibile }
 //
 //
 //  Function(s):
@@ -25,7 +25,7 @@ var input = {
 
 
     // global(s)
-    visibility: 0,
+    active: 0,
 
 
     // identify
@@ -43,6 +43,14 @@ var input = {
 
     // | function(s)
 
+        // function - active
+        active : function() {
+            if( this.active == 1 ) {
+                return true;
+            } else {
+                return false;
+            }
+        },
 
         // function - input - display
         display : function() {
@@ -51,7 +59,7 @@ var input = {
             this.display_reset();
 
             // input - display - toggle
-            if ( this.visibility === 0 ){
+            if ( this.active === 0 ){
 
                 // header - display - show
                 header.display_show();
@@ -59,16 +67,10 @@ var input = {
                 // input - display - show
                 this.display_show();
 
-                // update - visibility
-                this.visibility = 1;
-
             } else {
 
                 // input - display - hide
                 this.display_hide();
-
-                // input - update - visibility
-                this.visibility = 0;
 
             }
 
@@ -89,6 +91,9 @@ var input = {
 
             // toggle - input - remove - class - 'color-input-text-active'
             $( "#header-toggle-input" ).removeClass( "color-input-text-active" );
+
+            // input - update - active
+            this.active = 0;
 
             // return
             return true;
@@ -146,6 +151,9 @@ var input = {
 
             // input - form - input - url -  empty
             $( "#input-form-input-url" ).val('');
+
+            // update - active
+            this.active = 1;
 
             // return
             return true;
