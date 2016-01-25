@@ -11,7 +11,7 @@
     miv_object='msgs'
     miv_method='read_list'
     miv_data=""
-    miv_url="miv/api.php?object=$miv_object&method=$miv_method"
+    miv_url="build-miv/api.php?object=$miv_object&method=$miv_method"
 
     # curl
     curl "$miv_curl"                                \

@@ -11,7 +11,7 @@
     miv_object='msg'
     miv_method='create'
     miv_data="code=000&msg=This is just a test of the emergency broadcast system."
-    miv_url="miv/api.php?object=$miv_object&method=$miv_method"
+    miv_url="build-miv/api.php?object=$miv_object&method=$miv_method"
 
 
     # curl
