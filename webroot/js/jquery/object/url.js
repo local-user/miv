@@ -236,7 +236,9 @@ var url = {
                                             $("#url-" + id + " .turl").text(data['url']['url']);
 
                                             // url - image - refresh
-                                            thi.refresh_img( id );
+                                            setTimeout( function() {
+                                                thi.refresh_img( id );
+                                            }, 750);
 
                                         },
                         error:          function() {

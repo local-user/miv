@@ -91,12 +91,12 @@ var urls = {
                             // urls - turl
                             setTimeout( function() {
                                 urls.resize();
-                            }, 1000);
+                            }, 1500);
 
                             // urls - turl
                             setTimeout( function() {
                                 turl.load();
-                            }, 1000);
+                            }, 2000);
 
                         },
                         context:    this,
