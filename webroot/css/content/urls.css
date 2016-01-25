@@ -11,9 +11,8 @@
     }
 
     #urls .url {
-        height:             300px;
-        width:              33%;
-        min-width:          420px;
+        min-height:         350px;
+        width:              98%;
         margin:             0px;
         padding:            0px;
         display:            inline-block;
@@ -21,6 +20,7 @@
         border:             2px solid white;
         overflow:           hidden;
     }
+
 
     #urls .url:hover {
         border:             2px solid rgb(34,34,34);
@@ -86,7 +86,7 @@
     }
 
     #urls .url .dzm {
-        height:             300px;
+        height:             400px;
         width:              100%;
         overflow:           hidden;
     }
@@ -101,6 +101,7 @@
     }
 
     #urls .url .default {
+        height:             350px;
         overflow:           hidden;
     }
 
@@ -124,7 +125,7 @@
     }
 
     #urls .url .img {
-        height:                 300px;
+        height:                 350px;
         background-size:        cover;
         background-position:    50% 50%;
     }
@@ -136,7 +137,7 @@
 
     @keyframes animate-appear {
         from    { height: 0px;   }
-        to      { height: 300px; }
+        to      { height: 350px; }
     }
 
     #urls .animate-disappear {
@@ -147,12 +148,11 @@
 
     @keyframes animate-disappear {
         0%      {
-                    height:     300px;
+                    height:     350px;
                 }
         80%     {
                     height:     0px;
-                    min-width:  420px;
-                    width:      33%;
+                    width:      95%;
                     border:     0px;
                 }
         100%    {
