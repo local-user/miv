@@ -227,7 +227,6 @@ var url = {
                                             $("#url-" + id + " .link").append("<div class='default'></div>");
                                             $("#url-" + id + " .link").attr('href', data['url']['url']);
                                             $("#url-" + id + " .default").append("<div class='letter'>" + data['url']['letter'] + "</div>");
-                                            $("#url-" + id + " .default").append("<div class='title'>"  + data['url']['url']    + "</div>");
 
                                             // url - update - prirority
                                             $("#url-" + id + " .priority").text(data['url']['priority']);
