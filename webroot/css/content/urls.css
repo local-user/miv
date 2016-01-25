@@ -30,7 +30,7 @@
         height:             25px;
         background-color:   rgb(34, 34, 34);
         overflow:           hidden;
-        transition:         0.75s;
+        transition:         0.5s;
     }
 
     #urls .url .edit.hidden {
@@ -86,7 +86,7 @@
     }
 
     #urls .url .dzm {
-        height:             400px;
+        height:             300px;
         width:              100%;
         overflow:           hidden;
     }
@@ -132,7 +132,7 @@
 
     #urls .animate-appear {
         animation-name: animate-appear;
-        animation-duration: 2.5s;
+        animation-duration: 1.0s;
     }
 
     @keyframes animate-appear {
