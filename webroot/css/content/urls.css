@@ -11,7 +11,7 @@
     }
 
     #urls .url {
-        min-height:         350px;
+        height:             375px;
         width:              98%;
         margin:             0px;
         padding:            0px;
@@ -96,12 +96,12 @@
     }
 
     #urls .url .dzm .dropzone {
-        min-height:         300px;
+        height:             300px;
         width:              100%;
     }
 
     #urls .url .default {
-        height:             350px;
+        height:             375px;
         overflow:           hidden;
     }
 
@@ -125,7 +125,7 @@
     }
 
     #urls .url .img {
-        height:                 350px;
+        height:                 375px;
         background-size:        cover;
         background-position:    50% 50%;
     }
@@ -141,8 +141,8 @@
                     min-height:     0px;
                 }
         to      {
-                    height:         350px;
-                    min-height:     350px;
+                    height:         375px;
+                    min-height:     375px;
                 }
     }
 
@@ -155,7 +155,7 @@
     @keyframes animate-disappear {
         0%      {
                     width:      95%;
-                    height:     350px;
+                    height:     375px;
                 }
         100%    {
                     height:     0px;

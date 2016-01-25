@@ -34,16 +34,6 @@ var urls = {
 
     // | function(s)
 
-        display_turl : function() {
-
-            // urls - display - turl
-            $( "#urls .url .turl" ).toggleClass("hidden");
-
-            // return
-            return true;
-
-        },
-
         reset : function() {
 
             // reset/empty
@@ -72,6 +62,9 @@ var urls = {
                             for( id in data['urls'] ){
                                 url.append(data['urls'][id]);
                             }
+
+                            // turl
+                            turl.load();
 
                         },
                         context:    this,

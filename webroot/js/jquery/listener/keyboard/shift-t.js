@@ -16,7 +16,7 @@
                     if ( debug ){ console.log(' D js/jquery/listener/keybord/shift-r.js'); }
 
                     // urls - display - title [turl]
-                    urls.display_turl();
+                    turl.toggle();
 
                 }
 
