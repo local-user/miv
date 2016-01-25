@@ -62,6 +62,9 @@ var url = {
             // append - urls - url[ id ] - edit - dzm - dropzone
             $("#url-" + id).append("<div class='dzm hidden'></div>");
 
+            // append - urls - url[ id ] - title-url
+            $("#url-" + id).append("<div class='turl hidden'></div>");
+
             // refresh
             url.refresh(id);
 
@@ -228,6 +231,9 @@ var url = {
 
                                             // url - update - prirority
                                             $("#url-" + id + " .priority").text(data['url']['priority']);
+
+                                            // url - update - title [turl]
+                                            $("#url-" + id + " .turl").text(data['url']['url']);
 
                                             // url - image - refresh
                                             thi.refresh_img( id );
