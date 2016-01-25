@@ -23,18 +23,20 @@ class img {
 
 
     // var - db
-    private $db = null;
+    private $db                     = null;
+
+    // var - compress
+    private $compress_jpg_quality   = 85;
 
     // var - data
-    private $id_url = null;
+    private $id_url                 = null;
 
     // var - paths
-    private $dir_img_upload = 'webroot/img/upload';
+    private $dir_img_upload         = 'webroot/img/upload';
 
     // var - valid
-    private $valid_file_size_max    = 1048576; // 1MB
+    private $valid_file_size_max    = 262144; // = 250kb
     private $valid_file_types       = array (
-                                                'image/jpeg',
                                                 'image/png'
                                             );
 
@@ -210,6 +212,23 @@ class img {
             }
 
         /** check | **/
+
+
+        /** | compress **/
+
+            private function compress($path, $type) {
+                switch($type) {
+                    case 'jpg' || 'jpeg':
+                        return $this->compress_jpg($path);
+                }
+                return false;
+            }
+
+            private function compress_jpg($path) {
+                throw new \miv\exception\e404("PHP::ImageCompression")
+            }
+
+        /** compress | **/
 
 
         /** | get **/
