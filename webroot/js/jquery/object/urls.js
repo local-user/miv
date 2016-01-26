@@ -88,15 +88,15 @@ var urls = {
                                 url.append(data['urls'][id]);
                             }
 
-                            // urls - turl
+                            // urls - resize
                             setTimeout( function() {
                                 urls.resize();
-                            }, 1000);
+                            }, 50);
 
                             // urls - turl
                             setTimeout( function() {
                                 turl.load();
-                            }, 1500);
+                            }, 1100);
 
                         },
                         context:    this,
