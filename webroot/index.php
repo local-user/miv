@@ -118,6 +118,7 @@
 
                 <!-- js - jquery - listener(s) - event -->
                 <script src='js/jquery/listener/event/resize.js'                    ></script>
+                <script src='js/jquery/listener/event/ready.js'                     ></script>
 
                 <!-- js - jquery - listener(s) - keyboard -->
                 <script src='js/jquery/listener/keyboard/ctrl.js'                   ></script>
@@ -144,16 +145,6 @@
                 <script src='js/jquery/object/turl.js'                              ></script>
                 <script src='js/jquery/object/url.js'                               ></script>
                 <script src='js/jquery/object/urls.js'                              ></script>
-
-                <!-- js - jquery - start -->
-                <script>
-                    $(document).ready( function() {
-                        setTimeout( function() {
-                            overlay.display();
-                            padding.display();
-                        }, 100);
-                    });
-                </script>
 
             <!-- js - jquery | -->
 
