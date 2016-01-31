@@ -52,6 +52,7 @@ var urls = {
 
                        if( width > 2200 ){
                     $( "#urls .url" ).css( "width", "24.25%" );
+                    $( "#urls .url" ).css( "transition", "1s" );
                 } else if( width > 1500 ){
                     $( "#urls .url" ).css( "width", "32.5%" );
                     $( "#urls .url" ).css( "transition", "1s" );
