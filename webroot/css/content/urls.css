@@ -89,7 +89,7 @@
     }
 
     #urls .url .dzm {
-        height:             300px;
+        height:             375px;
         width:              100%;
         overflow:           hidden;
     }
@@ -99,7 +99,7 @@
     }
 
     #urls .url .dzm .dropzone {
-        height:             300px;
+        height:             375px;
         width:              100%;
     }
 
