@@ -50,16 +50,15 @@ var urls = {
 
                        var width = $(window).width();
 
-                       if( width > 3000 ){
-                    $( "#urls .url" ).css( "width", "25%" );
-                } else if( width > 2250 ){
-                    $( "#urls .url" ).css( "width", "33%" );
+                       if( width > 2200 ){
+                    $( "#urls .url" ).css( "width", "24.25%" );
                 } else if( width > 1500 ){
-                    $( "#urls .url" ).css( "width", "49%" );
+                    $( "#urls .url" ).css( "width", "32.5%" );
+                    $( "#urls .url" ).css( "transition", "1s" );
                 } else if( width > 840 ){
-                    $( "#urls .url" ).css( "width", "98%" );
+                    $( "#urls .url" ).css( "width", "49.5%" );
                 } else if( width > 420  ){
-                    $( "#urls .url" ).css( "width", "98%" );
+                    $( "#urls .url" ).css( "width", "99%" );
                 }
 
             // resize - by - width |
