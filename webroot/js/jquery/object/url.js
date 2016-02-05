@@ -235,9 +235,9 @@ var url = {
                                             $("#url-" + id + " .turl").text(data['url']['url']);
 
                                             // url - image - refresh
-                                            setTimeout( function() {
+                                            setTimeout(function() {
                                                 thi.refresh_img( id );
-                                            }, 50);
+                                            }, Math.floor((Math.random() * 1000) + 50));
 
                                         },
                         error:          function() {
@@ -270,11 +270,7 @@ var url = {
                                             $("#url-" + id + " .default").addClass("hidden");
 
                                             // url - append - img - container
-                                            $("#url-" + id + " .link").append("<div class='img'></div>");
-
-                                            // url - append - img
-                                            $("#url-" + id + " .img").css('background-image', 'url(img/upload/' + data['img']['filename'] + ')');
-
+                                            $("#url-" + id + " .link").append("<div class='img' style='background-image: url(img/upload/" + data['img']['filename'] + ")'></div>");
 
                                         },
                         error:          function() {
