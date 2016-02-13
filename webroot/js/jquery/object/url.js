@@ -220,7 +220,7 @@ var url = {
                                             if( debug ){ console.log(data); }
 
                                             // url - add - color - alphabet
-                                            $("#url-" + id).addClass("color-alphabet-"    + data['url']['letter']);
+                                            $("#url-" + id).addClass("color-alphabet-" + data['url']['letter']);
 
                                             // url - add - link
                                             $("#url-" + id).append("<a class='link'></a>");
@@ -237,7 +237,7 @@ var url = {
                                             // url - image - refresh
                                             setTimeout(function() {
                                                 thi.refresh_img( id );
-                                            }, Math.floor((Math.random() * 1000) + 50));
+                                            }, ( id * 10 ) + 200 );
 
                                         },
                         error:          function() {
@@ -270,7 +270,9 @@ var url = {
                                             $("#url-" + id + " .default").addClass("hidden");
 
                                             // url - append - img - container
-                                            $("#url-" + id + " .link").append("<div class='img' style='background-image: url(img/upload/" + data['img']['filename'] + ")'></div>");
+                                            setTimeout(function() {
+                                                $("#url-" + id + " .link").append("<div class='img' style='background-image: url(img/upload/" + data['img']['filename'] + ")'></div>");
+                                            }, 100 );
 
                                         },
                         error:          function() {

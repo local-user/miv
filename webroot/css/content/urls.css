@@ -11,7 +11,7 @@
     }
 
     #urls .url {
-        height:             375px;
+        height:             100%;
         width:              98%;
         padding:            0px;
         transition:         0.25s;
@@ -21,7 +21,7 @@
     }
 
     #urls .url img {
-        transition:         none;
+        transition:         2s;
     }
 
     #urls .url:hover {
@@ -72,43 +72,42 @@
 
     #urls .url .turl {
         text-align:         left;
-        height:             20px;
         background-color:   rgb(34, 34, 34);
         color:              white;
         padding:            15px;
         text-overflow:      ellipsis;
+        font-size:          20px;
     }
 
     #urls .url .turl.hidden {
-        min-height:         0px;
-        height:             0px;
+        height:             0;
         overflow:           hidden;
         text-overflow:      clip;
-        padding:            0px;
+        padding:            0;
     }
 
     #urls .url .dzm {
-        height:             375px;
+        height:             100%;
         width:              100%;
         overflow:           hidden;
     }
 
     #urls .url .dzm.hidden {
-        height:             0px;
+        height:             0;
     }
 
     #urls .url .dzm .dropzone {
-        height:             375px;
+        height:             100%;
         width:              100%;
     }
 
     #urls .url .default {
-        height:             375px;
+        height:             100%;
         overflow:           hidden;
     }
 
     #urls .url .default.hidden {
-        height:             0px;
+        height:             0;
     }
 
     #urls .url .default .letter {
@@ -126,8 +125,14 @@
         font-size:          14px;
     }
 
+    #urls .url .default.hidden .title {
+        font-size:          0;
+        height:             0;
+        padding:            0;
+    }
+
     #urls .url .img {
-        height:                 375px;
+        height:                 100%;
         background-size:        cover;
         background-position:    50% 50%;
     }
@@ -139,12 +144,10 @@
 
     @keyframes animate-appear {
         from    {
-                    height:         0px;
-                    min-height:     0px;
+                    height:         0;
                 }
         to      {
-                    height:         375px;
-                    min-height:     375px;
+                    height:         100%;
                 }
     }
 
@@ -156,14 +159,13 @@
 
     @keyframes animate-disappear {
         0%      {
-                    width:      95%;
-                    height:     375px;
+                    width:      98%;
+                    height:     100%;
                 }
         100%    {
-                    height:     0px;
-                    min-height: 0px;
-                    width:      0px;
-                    border:     0px;
+                    height:     0;
+                    width:      0;
+                    border:     0;
                 }
     }
 

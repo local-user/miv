@@ -46,19 +46,6 @@ var urls = {
 
         resize : function() {
 
-            // |  resize - by - width
-
-                       var width = $(window).width();
-
-                       if( width > 1000 ){
-                    $( "#urls .url" ).css( "width", "70.5%" );
-                    $( "#urls .url" ).css( "transition", "1s" );
-                } else if( width > 420  ){
-                    $( "#urls .url" ).css( "width", "99%" );
-                }
-
-            // resize - by - width |
-
             // return
             return true;
 
