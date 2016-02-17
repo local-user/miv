@@ -12,17 +12,22 @@
                 // key - down
                 if(e.keyCode == 40){
 
-                    // debug - console
-                    if ( debug ){ console.log(' D js/jquery/listener/keybord/down.js'); }
+                    // ? - overlay
+                    if( $("body").hasClass("overlay") ){
 
-                    // overlay - display - hide
-                    overlay.display_hide();
+                        // debug - console
+                        if ( debug ){ console.log(' D js/jquery/listener/keybord/down.js'); }
 
-                    // overlay - input - hide
-                    input.display_hide();
+                        // overlay - display - hide
+                        overlay.display_hide();
 
-                    // urls - refresh
-                    urls.refresh();
+                        // overlay - input - hide
+                        input.display_hide();
+
+                        // urls - refresh
+                        urls.refresh();
+
+                    }
 
                 }
 
