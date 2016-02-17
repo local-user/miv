@@ -114,6 +114,7 @@
         text-align:         right;
         font-size:          150px;
         padding:            25px 50px 25px 25px;
+        height:             100%;
     }
 
     #urls .url .default .title {
