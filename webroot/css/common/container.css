@@ -5,6 +5,8 @@
 
     body {
         min-width:  420px;
+        max-width:  1260px;
+        margin:     auto;
     }
 
 
