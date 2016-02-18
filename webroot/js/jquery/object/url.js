@@ -164,7 +164,7 @@ var url = {
                                         },
                 maxFiles:               1,
                 error:                  function(file, response){
-                                            error.display_show("Image upload failed. [ JPG, PNG <= 200kb ]");
+                                            error.display_show("Image upload failed.");
                                         },
                 url:                    "api.php?object=img&method=upload"
             });
