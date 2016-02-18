@@ -7,37 +7,30 @@
 
 
         // mouse - scroll - welcome
-        $(document).ready(function(){
-            $('#welcome').bind('mousewheel', function(e){
+        $( window ).scroll(function() {
 
-                // wheel - up/down
-                if(e.originalEvent.wheelDelta /120 > 0) {
-                    // wheel - up
-                } else {
-                    // wheel - down
-                }
+            // ? - overlay
+            if( $("body").hasClass("overlay") ){
 
-                // ? - overlay
-                if( $("body").hasClass("overlay") ){
+                // debug - console
+                if ( debug ){ console.log(' D js/jquery/listener/keybord/scroll.js'); }
 
-                    // debug - console
-                    if ( debug ){ console.log(' D js/jquery/listener/keybord/scroll.js'); }
+                // overlay - display - hide
+                overlay.display_hide();
 
-                    // overlay - display - hide
-                    overlay.display_hide();
+                // overlay - input - hide
+                input.display_hide();
 
-                    // overlay - input - hide
-                    input.display_hide();
+                // urls - refresh
+                urls.refresh();
 
-                    // urls - refresh
-                    urls.refresh();
+                // unbind
+                $( window ).off('scroll');
 
-                    // unbind
-                    $("#welcome").unbind('mousewheel');
+                // scroll - top
+                $("#urls").scroll();
 
-                }
-
-            });
+            }
 
         });
 
