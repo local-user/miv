@@ -4,12 +4,12 @@
 
 
     #header {
-                color:          #212121;
+                color:          white;
                 width:          100%;
                 min-height:     50px;
                 height:         50px;
                 transition:     2s;
-                border-top:     1px solid rgb(34, 34, 34);
+                border-top:     1px solid white;
                 border-bottom:  1px solid rgb(34, 34, 34);
                 opacity:        1;
                 overflow:       hidden;
@@ -17,16 +17,17 @@
             }
 
     #header.input   {
-                        border-top:     1px solid rgb(34, 34, 34);
-                        border-bottom:  1px solid rgb(34, 34, 34);
+                        border-top:     1px solid white;
+                        border-bottom:  1px solid white;
+                        margin:         0 0 100px 0;
                     }
 
     #header.hidden  {
                         width:          20%;
                         min-width:      140px;
                         transition:     2s ease-in-out;
-                        border-top:     1px solid #ffffff;
-                        border-bottom:  1px solid #ffffff;
+                        border-top:     1px solid rgb(34, 34, 34);
+                        border-bottom:  1px solid rgb(34, 34, 34);
                         opacity:        0.25;
                     }
 
@@ -43,7 +44,7 @@
                         }
 
     #header .title h1 span  {
-                                color:  rgb(34,34,34);
+                                color:  white;
                             }
 
     #header .toggle {
@@ -79,11 +80,12 @@
 
 
     #header.lock {
-        height:         0px;
-        width:          0px;
-        min-width:      0px;
-        min-height:     0px;
-        transition:     0.75s;
+        height:         0;
+        width:          0;
+        margin:         0;
+        min-width:      0;
+        min-height:     0;
+        transition:     1s;
     }
 
 

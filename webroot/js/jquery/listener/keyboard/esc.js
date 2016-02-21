@@ -33,7 +33,6 @@
                         setTimeout( function() { input.display(); }, 1000);
                         urls.refresh();
                     } else {
-                        $("html, body").animate({ scrollTop: 0 }, 1500);
                         input.display();
                     }
 

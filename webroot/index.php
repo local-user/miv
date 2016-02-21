@@ -25,9 +25,11 @@
 
         <!--| 3rdparty - vendor -->
 
+            <!-- google - font(s) -->
+            <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+
             <!-- vendor - css -->
             <link rel="stylesheet" type="text/css" href="vendor/font-awesome-4.5.0/css/font-awesome.min.css"    >
-            <link rel="stylesheet" type="text/css" href="vendor/google-font-exo/exo.css"                        >
             <link rel="stylesheet" type="text/css" href="vendor/dropzonejs/dropzone.css"                        >
 
             <!-- vendor - js -->
