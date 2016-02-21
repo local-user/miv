@@ -15,7 +15,7 @@
         width:              98%;
         padding:            0px;
         transition:         0.25s;
-        border:             2px solid white;
+        border:             3px solid rgb(34, 34, 34);
         overflow:           hidden;
         margin:             auto;
     }
@@ -25,7 +25,7 @@
     }
 
     #urls .url:hover {
-        border:             2px solid rgb(34,34,34);
+        border:             3px solid white;
     }
 
     #urls .url .edit {

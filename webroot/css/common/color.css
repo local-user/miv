@@ -2,6 +2,8 @@
 
 
 
+    body                                    {   background-color: rgb(34, 34, 34);  }
+
 
     .color-edit-background                  {   background-color: #F44336;          }
     .color-edit-text                        {              color: #FFFFFF;          }
