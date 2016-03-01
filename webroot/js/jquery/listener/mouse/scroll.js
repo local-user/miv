@@ -12,6 +12,9 @@
             // ? - overlay
             if( $("body").hasClass("overlay") ){
 
+                // immediate - remove
+                $("body").removeClass("overlay");
+
                 // debug - console
                 if ( debug ){ console.log(' D js/jquery/listener/keybord/scroll.js'); }
 
@@ -23,9 +26,6 @@
 
                 // urls - refresh
                 urls.refresh();
-
-                // unbind
-                $( window ).off('scroll');
 
                 // scroll - top
                 $("#urls").scroll();

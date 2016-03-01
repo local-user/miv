@@ -7,13 +7,16 @@
 
 
             // key - press - release
-            $(document).keyup(function (e){
+            $( "#body" ).keyup(function (e){
 
                 // key - down
                 if(e.keyCode == 40){
 
                     // ? - overlay
                     if( $("body").hasClass("overlay") ){
+
+                        // immediate - remove
+                        $("body").removeClass("overlay");
 
                         // debug - console
                         if ( debug ){ console.log(' D js/jquery/listener/keybord/down.js'); }
