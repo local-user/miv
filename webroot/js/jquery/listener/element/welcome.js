@@ -9,6 +9,9 @@
     // click - welcome - display - hide
     $( '#welcome' ).click(function() {
 
+        // immediate - remove
+        $("body").removeClass("overlay");
+
         // overlay - display - hide
         overlay.display_hide();
 
