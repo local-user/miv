@@ -20,8 +20,6 @@ USE `miv` ;
 -- -----------------------------------------------------
 -- Table `miv`.`url`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `miv`.`url` ;
-
 CREATE TABLE IF NOT EXISTS `miv`.`url` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `letter` VARCHAR(1) NOT NULL,
@@ -35,8 +33,6 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `miv`.`msg`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `miv`.`msg` ;
-
 CREATE TABLE IF NOT EXISTS `miv`.`msg` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `code` INT(3) NOT NULL,
@@ -49,8 +45,6 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `miv`.`img`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `miv`.`img` ;
-
 CREATE TABLE IF NOT EXISTS `miv`.`img` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `id_url` INT NOT NULL,
@@ -72,8 +66,6 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `miv`.`config`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `miv`.`config` ;
-
 CREATE TABLE IF NOT EXISTS `miv`.`config` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `key` VARCHAR(100) NOT NULL UNIQUE,
