@@ -1,1 +1,2 @@
-webroot/img/upload/*
+vagrant/ssh
+vagrant/.vagrant
