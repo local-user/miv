@@ -7,16 +7,8 @@
 A user friendly system for quick access, storage & customization of URLs.
 
 ## Installation
-### [ vagrant ]
 - cd 'vagrant/'
 - vagrant up miv
-### [ manual ]
-- Clone the repository.
-- Configure database.
-    - Create database 'miv' with 'sql/create-database.sql'
-    - Update details in 'config/database.php'.
-- Configure webserver.
-    - Update 'DocumentRoot' path to 'webroot/'.
 
 ## Hotkey(s)
 - Edit
