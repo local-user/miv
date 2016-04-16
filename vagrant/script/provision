@@ -11,20 +11,8 @@
     set -x
 
 
-    # | system
-    if [ -d '/tmp/system' ]; then
 
-        # remove existing
-        [ -d '/opt/system' ] && rm -rf '/opt/system'
-
-        # move
-        mv '/tmp/system' '/opt/system'
-
-    fi
-    # system |
-
-
-    # | install
+    # | aptitude
 
         # apt - update
         aptitude update
@@ -35,7 +23,7 @@
         # apt - install - lamp / git / realpath / tree
         aptitude install -q -y apache2 mysql-server php5-mysql php5 libapache2-mod-php5 php5-mcrypt git realpath tree
 
-    # install |
+    # aptitude |
 
 
     # | git
@@ -50,12 +38,25 @@
     # git |
 
 
-    # | aln
+    # | system
+    if [ -d '/tmp/system' ]; then
+
+        # remove existing
+        [ -d '/opt/system' ] && rm -rf '/opt/system'
+
+        # move
+        mv '/tmp/system' '/opt/system'
+
+        # ownership - app/www
+        chown -R root:root '/opt/system'
+                      find '/opt/system' -type f -exec chmod 644 {} \;
+                      find '/opt/system' -type d -exec chmod 755 {} \;
 
         # '/opt/system/ -> /'
         /bin/bash /opt/aln/bin/aln -s '/opt/system' -d '/'
 
-    # aln |
+    fi
+    # system |
 
 
     # | restart
