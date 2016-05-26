@@ -32,7 +32,7 @@ class img {
     private $id_url                 = null;
 
     // var - paths
-    private $dir_img_upload         = 'webroot/img/upload';
+    private $dir_img_upload         = 'webroot/img/url';
 
     // var - valid
     private $valid_file_size_max    = 2048000;

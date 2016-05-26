@@ -271,7 +271,7 @@ var url = {
 
                                             // url - append - img - container
                                             setTimeout(function() {
-                                                $("#url-" + id + " .link").append("<div class='img' style='background-image: url(img/upload/" + data['img']['filename'] + ")'></div>");
+                                                $("#url-" + id + " .link").append("<div class='img' style='background-image: url(img/url/" + data['img']['filename'] + ")'></div>");
                                             }, 100 );
 
                                         },
