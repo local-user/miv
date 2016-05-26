@@ -57,7 +57,7 @@
         <link rel="stylesheet" type="text/css" href="css/content/welcome.css"   >
 
         <!-- icon - fav -->
-        <link rel="shortcut icon" href="img/icon/favicon.ico">
+        <link rel="shortcut icon" href="img/favicon.ico">
 
         <!-- js - min - config -->
         <script> var debug = 0; </script>
