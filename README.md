@@ -1,7 +1,5 @@
 # miv
-#
-####"Miv, its a movable, magical, div!"
-#
+"Miv, its a movable, magical, div!"
 
 ## Overview
 A user friendly system for quick access, storage & customization of URLs.
@@ -10,7 +8,7 @@ A user friendly system for quick access, storage & customization of URLs.
 - cd 'vagrant/'
 - vagrant up miv
 
-## Hotkey(s)
+## Keyboard Shortcuts
 - Edit
     - 'Shift + E'
 - Input
@@ -21,20 +19,6 @@ A user friendly system for quick access, storage & customization of URLs.
     - 'Shift + R'
 - Title URL
     - 'Shift + T'
-
-
-## Extra
-- Favicon
-    - Image
-        - Create 'webroot/img/icon/favicon.ico'
-- Locking.
-    - Soft Lock
-        - Key press 'shift + l'
-    - Hard Lock
-        - Update 'config/locked.php'.
-- Welcome background.
-    - Image
-        - Create 'webroot/img/bg/welcome'
 
 ## ToDo
 - Arrow key navigation.
