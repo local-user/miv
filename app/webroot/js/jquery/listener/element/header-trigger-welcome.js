@@ -12,10 +12,10 @@
             // edit - trigger - off
             edit.toggle_off();
 
-            // header - display - hide
-            header.display_hide();
+            // lock - toggle - on
+            lock.toggle_on();
 
-            // input - display - hdie
+            // input - display - hide
             input.display_hide();
 
             // welcome - display
