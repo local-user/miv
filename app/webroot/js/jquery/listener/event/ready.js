@@ -12,16 +12,8 @@
                 // debug - console
                 if ( debug ){ console.log(' D js/jquery/listener/keybord/ready.js'); }
 
-                // delay - 50ms
-                setTimeout( function() {
-
-                    // overlay - display
-                    overlay.display();
-
-                    // padding - display
-                    padding.display();
-
-                }, 50);
+                // urls - refresh
+                urls.refresh();
 
                 // return
                 return true;

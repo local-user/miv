@@ -15,9 +15,6 @@
         // overlay - display - hide
         overlay.display_hide();
 
-        // urls - refresh
-        urls.refresh();
-
         // return
         return true;
 

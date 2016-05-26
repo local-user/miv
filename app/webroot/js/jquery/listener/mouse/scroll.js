@@ -24,9 +24,6 @@
                 // overlay - input - hide
                 input.display_hide();
 
-                // urls - refresh
-                urls.refresh();
-
                 // scroll - top
                 $("#urls").scroll();
 
