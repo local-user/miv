@@ -112,8 +112,10 @@
                 <script src='js/jquery/listener/element/header-title.js'            ></script>
                 <script src='js/jquery/listener/element/header-toggle-edit.js'      ></script>
                 <script src='js/jquery/listener/element/header-toggle-input.js'     ></script>
-                <script src='js/jquery/listener/element/header-trigger-overlay.js'  ></script>
+                <script src='js/jquery/listener/element/header-trigger-welcome.js'  ></script>
                 <script src='js/jquery/listener/element/header-trigger-refresh.js'  ></script>
+                <script src='js/jquery/listener/element/header-upload-favicon.js'   ></script>
+                <script src='js/jquery/listener/element/header-upload-welcome.js'   ></script>
                 <script src='js/jquery/listener/element/input-form-input-url.js'    ></script>
                 <script src='js/jquery/listener/element/url-trigger-delete.js'      ></script>
                 <script src='js/jquery/listener/element/url-trigger-dropzone.js'    ></script>
@@ -147,11 +149,11 @@
                 <script src='js/jquery/object/lock.js'                              ></script>
                 <script src='js/jquery/object/msg.js'                               ></script>
                 <script src='js/jquery/object/msgs.js'                              ></script>
-                <script src='js/jquery/object/overlay.js'                           ></script>
                 <script src='js/jquery/object/padding.js'                           ></script>
                 <script src='js/jquery/object/turl.js'                              ></script>
                 <script src='js/jquery/object/url.js'                               ></script>
                 <script src='js/jquery/object/urls.js'                              ></script>
+                <script src='js/jquery/object/welcome.js'                           ></script>
 
             <!-- js - jquery | -->
 

@@ -12,8 +12,8 @@
         // immediate - remove
         $("body").removeClass("overlay");
 
-        // overlay - display - hide
-        overlay.display_hide();
+        // welcome - display - hide
+        welcome.display_hide();
 
         // return
         return true;

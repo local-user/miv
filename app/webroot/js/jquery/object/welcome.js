@@ -1,5 +1,5 @@
 //
-// | javascript - jquey - object - overlay
+// | javascript - jquey - object - welcome
 //
 //
 //  Function(s)
@@ -11,7 +11,7 @@
 //
 //
 //
-var overlay = {
+var welcome = {
 
 
 
@@ -24,7 +24,7 @@ var overlay = {
     identify : function() {
 
         // console - log
-        console.log(' I js/jquery/object/overlay.js');
+        console.log(' I js/jquery/object/welcome.js');
 
         // return
         return true;
@@ -34,7 +34,7 @@ var overlay = {
 
     // | function(s)
 
-        // function - overlay - display
+        // function - welcome - display
         display : function() {
 
             // display - toggle
@@ -55,12 +55,12 @@ var overlay = {
 
         },
 
-        // function - overlay - display - hide
+        // function - welcome - display - hide
         display_hide : function() {
 
-            // body - remove - class - overlay
+            // body - remove - class - welcome
             setTimeout(function() {
-                $(" #body ").removeClass('overlay');
+                $(" #body ").removeClass('welcome');
             }, 1100);
 
             // welcome - hide
@@ -77,11 +77,11 @@ var overlay = {
 
         },
 
-        // function - overlay - display - show
+        // function - welcome - display - show
         display_show : function() {
 
-            // body - add - class - overlay
-            $(" #body ").addClass('overlay');
+            // body - add - class - welcome
+            $(" #body ").addClass('welcome');
 
             // welcome - remove - class - hidden
             $(" #welcome ").removeClass('hidden');
@@ -94,10 +94,10 @@ var overlay = {
 
         },
 
-        // function - overlay - display - text
+        // function - welcome - display - text
         display_text : function() {
 
-            // overlay - welcome - toggle - class - hidden
+            // welcome - welcome - toggle - class - hidden
             $( "#welcome-title" ).toggleClass('hidden');
 
             // return
@@ -105,10 +105,10 @@ var overlay = {
 
         },
 
-        // function - overlay - display - text - hide
+        // function - welcome - display - text - hide
         display_text_hide : function() {
 
-            // overlay - welcome - add - class - hidden
+            // welcome - welcome - add - class - hidden
             $( "#welcome-title" ).addClass('hidden');
 
             // return
@@ -124,6 +124,6 @@ var overlay = {
 }
 //
 //
-// js - jquery - toggle - overlay |
+// js - jquery - toggle - welcome |
 //
-if (debug) { console.log(' . js/jquery/object/overlay.js'); }
+if (debug) { console.log(' . js/jquery/object/welcome.js'); }
