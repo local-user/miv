@@ -141,6 +141,7 @@
                 <!-- js - jquery - object(s) -->
                 <script src='js/jquery/object/error.js'                             ></script>
                 <script src='js/jquery/object/edit.js'                              ></script>
+                <script src='js/jquery/object/favicon.js'                           ></script>
                 <script src='js/jquery/object/flash.js'                             ></script>
                 <script src='js/jquery/object/footer.js'                            ></script>
                 <script src='js/jquery/object/header.js'                            ></script>
