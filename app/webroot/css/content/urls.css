@@ -108,6 +108,8 @@
 
     #urls .url .default.hidden {
         height:             0;
+        animation:          none;
+        transition:         none;
     }
 
     #urls .url .default .letter {
