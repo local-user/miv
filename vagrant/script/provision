@@ -11,7 +11,6 @@
     set -x
 
 
-
     # | aptitude
 
         # apt - update
@@ -85,9 +84,8 @@
                       find '/var/www' -type d -exec chmod 755 {} \;
 
         # ownership - img - upload
-        mkdir               '/var/www/webroot/img/upload'
-        chown root:www-data '/var/www/webroot/img/upload'
-        chmod 770           '/var/www/webroot/img/upload'
+        chown root:www-data '/var/www/webroot/img/url'
+        chmod 770           '/var/www/webroot/img/url'
 
         # sql - create - database - miv
         mysql -u root < '/var/www/sql/create-database.sql'
