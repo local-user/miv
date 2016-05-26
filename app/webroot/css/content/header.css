@@ -60,6 +60,7 @@
     #header .toggle .fa     {
                                 cursor:         pointer;
                                 transition:     1s;
+                                margin:         0 4px 0 4px;
                             }
 
     #header .toggle .hidden {
