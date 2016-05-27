@@ -18,6 +18,9 @@
             // input - display - hide
             input.display_hide();
 
+            // setting - display - hide
+            setting.display_hide();
+
             // welcome - display
             welcome.display();
 
