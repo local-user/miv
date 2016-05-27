@@ -84,8 +84,8 @@
                       find '/var/www' -type d -exec chmod 755 {} \;
 
         # ownership - img - upload
-        chown root:www-data '/var/www/webroot/img/url'
-        chmod 770           '/var/www/webroot/img/url'
+        chown root:www-data '/var/www/webroot/img'
+        chmod 770           '/var/www/webroot/img'
 
         # sql - create - database - miv
         mysql -u root < '/var/www/sql/create-database.sql'
