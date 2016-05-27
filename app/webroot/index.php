@@ -113,8 +113,7 @@
                 <script src='js/jquery/listener/element/header-toggle-input.js'     ></script>
                 <script src='js/jquery/listener/element/header-trigger-welcome.js'  ></script>
                 <script src='js/jquery/listener/element/header-trigger-refresh.js'  ></script>
-                <script src='js/jquery/listener/element/header-upload-favicon.js'   ></script>
-                <script src='js/jquery/listener/element/header-upload-welcome.js'   ></script>
+                <script src='js/jquery/listener/element/header-toggle-setting.js'   ></script>
                 <script src='js/jquery/listener/element/input-form-input-url.js'    ></script>
                 <script src='js/jquery/listener/element/url-trigger-delete.js'      ></script>
                 <script src='js/jquery/listener/element/url-trigger-dropzone.js'    ></script>
@@ -149,6 +148,7 @@
                 <script src='js/jquery/object/msg.js'                               ></script>
                 <script src='js/jquery/object/msgs.js'                              ></script>
                 <script src='js/jquery/object/padding.js'                           ></script>
+                <script src='js/jquery/object/setting.js'                           ></script>
                 <script src='js/jquery/object/turl.js'                              ></script>
                 <script src='js/jquery/object/url.js'                               ></script>
                 <script src='js/jquery/object/urls.js'                              ></script>

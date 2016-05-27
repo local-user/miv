@@ -21,8 +21,8 @@
                     // footer - display - text
                     footer.display_text();
 
-                    // overlay - display - text
-                    overlay.display_text();
+                    // welcome - display - text
+                    welcome.display_text();
 
                 }
 
@@ -46,8 +46,8 @@
                     // footer - display - text
                     footer.display_text();
 
-                    // overlay - display - text
-                    overlay.display_text();
+                    // welcome - display - text
+                    welcome.display_text();
 
                 }
 
