@@ -62,11 +62,23 @@ var setting = {
         },
 
         display_hide : function() {
-            console.log(" display_hide ");
+
+            // setting - add - hidden
+            $("#setting").addClass("hidden");
+
+            // return
+            return true;
+
         },
 
         display_show : function() {
-            console.log(" display_show ");
+
+            // setting - remove - hidden
+            $("#setting").removeClass("hidden");
+
+            // return
+            return true;
+
         },
 
         upload_favicon : function() {

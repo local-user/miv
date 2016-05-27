@@ -34,6 +34,10 @@
     .color-flash-toggle-hide-active         {              color: #424242;          }
 
 
+    .color-footer-text                      {              color: #FFFFFF;          }
+    .color-footer-text-hover:hover          {              color: #2196F3;          }
+
+
     .color-header-title:hover               {              color: #F44336;          }
     .color-header-title-active              {              color: #F44336;          }
 
@@ -49,6 +53,8 @@
     .color-refresh-text-hover:hover         {              color: #2196F3;          }
 
 
+    .color-setting-background               {   background-color: #222222;          }
+    .color-setting-box-hover:hover          {              color: #2196F3;          }
     .color-setting-text-hover:hover         {              color: #2196F3;          }
 
 

@@ -52,6 +52,7 @@
         <link rel="stylesheet" type="text/css" href="css/content/header.css"    >
         <link rel="stylesheet" type="text/css" href="css/content/input.css"     >
         <link rel="stylesheet" type="text/css" href="css/content/padding.css"   >
+        <link rel="stylesheet" type="text/css" href="css/content/setting.css"   >
         <link rel="stylesheet" type="text/css" href="css/content/urls.css"      >
         <link rel="stylesheet" type="text/css" href="css/content/welcome.css"   >
 
@@ -86,6 +87,7 @@
                     require_once('html/content/flash.html');
                     require_once('html/content/input.html');
                     require_once('html/content/header.html');
+                    require_once('html/content/setting.html');
                     require_once('html/content/message.html');
                     require_once('html/content/urls.html');
                     require_once('html/content/footer.html');
