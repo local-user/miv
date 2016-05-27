@@ -66,6 +66,9 @@ var setting = {
             // setting - add - hidden
             $("#setting").addClass("hidden");
 
+            // setting - remove - color-text-active
+            $("#header-toggle-setting").removeClass("color-setting-text-active");
+
             // return
             return true;
 
@@ -75,6 +78,9 @@ var setting = {
 
             // setting - remove - hidden
             $("#setting").removeClass("hidden");
+
+            // setting - add - color-text-active
+            $("#header-toggle-setting").addClass("color-setting-text-active");
 
             // return
             return true;

@@ -57,6 +57,7 @@
     .color-setting .error                   {              color: #F44336;          }
     .color-setting-background               {   background-color: #222222;          }
     .color-setting-box-hover:hover          {              color: #2196F3;          }
+    .color-setting-text-active              {              color: #2196F3;          }
     .color-setting-text-hover:hover         {              color: #2196F3;          }
 
 
