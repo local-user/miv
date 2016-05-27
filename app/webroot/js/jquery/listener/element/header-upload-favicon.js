@@ -10,8 +10,8 @@
         //  'header-upload-favicon' - click - input - display
         $( '#header-upload-favicon' ).click(function() {
 
-            // facion - upload
-            favicon.upload();
+            // setting - upload - favicon
+            setting.upload_favicon();
 
             // return
             return true;

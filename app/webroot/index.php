@@ -44,7 +44,6 @@
         <link rel="stylesheet" type="text/css" href="css/common/color.css"      >
         <link rel="stylesheet" type="text/css" href="css/common/container.css"  >
         <link rel="stylesheet" type="text/css" href="css/common/font.css"       >
-        <link rel="stylesheet" type="text/css" href="css/common/overlay.css"    >
 
         <!-- css - content -->
         <link rel="stylesheet" type="text/css" href="css/content/error.css"     >
@@ -141,7 +140,6 @@
                 <!-- js - jquery - object(s) -->
                 <script src='js/jquery/object/error.js'                             ></script>
                 <script src='js/jquery/object/edit.js'                              ></script>
-                <script src='js/jquery/object/favicon.js'                           ></script>
                 <script src='js/jquery/object/flash.js'                             ></script>
                 <script src='js/jquery/object/footer.js'                            ></script>
                 <script src='js/jquery/object/header.js'                            ></script>
