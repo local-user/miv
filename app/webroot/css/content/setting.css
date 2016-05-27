@@ -50,7 +50,6 @@
 
     #setting .upload .settings .box:hover {
         border:             solid 1px #FFFFFF;
-        cursor:             pointer;
         width:              250px;
     }
 
@@ -60,6 +59,7 @@
     }
 
     #setting .upload .settings .box .icon {
+        cursor:             pointer;
         display:            inline-block;
         float:              left;
         height:             100px;

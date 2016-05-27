@@ -3,7 +3,7 @@
 
 
 
-            <div id='setting' class='color-setting color-setting-background'>
+            <div id='setting' class='color-setting color-setting-background hidden'>
 
                 <h1>Settings</h1>
 
@@ -17,14 +17,14 @@
                         <!-- setting - upload - favicon -->
                         <div id='setting-upload-favicon' class='box'>
                             <div class='icon color-setting-box-hover'>
-                                <span class='fa fa-picture-o'></span>
+                                <span class='fa fa-file-o'></span>
                             </div>
                             <div class='title'>
                                 <h2>upload a favicon.</h2>
                             </div>
                         </div>
                         <script>
-                            $("#setting-upload-favicon .fa-picture-o").dropzone({
+                            $("#setting-upload-favicon .fa").dropzone({
                                 url: "api.php?object=setting&method=upload_favicon",
                                 init: function () {
                                     var thi = this;
@@ -48,7 +48,7 @@
                             </div>
                         </div>
                         <script>
-                            $("#setting-upload-welcome .fa-picture-o").dropzone({
+                            $("#setting-upload-welcome .fa").dropzone({
                                 url: "api.php?object=setting&method=upload_welcome",
                                 init: function () {
                                     var thi = this;
