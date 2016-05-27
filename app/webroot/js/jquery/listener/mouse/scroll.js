@@ -1,5 +1,5 @@
 //
-// | js - jquery - listener - keyboard - scroll
+// | js - jquery - listener - mouse - scroll
 //
 //
 
@@ -16,12 +16,12 @@
                 $("body").removeClass("overlay");
 
                 // debug - console
-                if ( debug ){ console.log(' D js/jquery/listener/keybord/scroll.js'); }
+                if ( debug ){ console.log(' D js/jquery/listener/keyboard/scroll.js'); }
 
-                // overlay - display - hide
-                overlay.display_hide();
+                // welcome - display - hide
+                welcome.display_hide();
 
-                // overlay - input - hide
+                // input - hide
                 input.display_hide();
 
                 // scroll - top
@@ -36,6 +36,6 @@
 
 //
 //
-// js - jquery - listener - keyboard - scroll |
+// js - jquery - listener - mouse - scroll |
 //
-if (debug) { console.log(' . js/jquery/listener/keybord/scroll.js'); }
+if (debug) { console.log(' . js/jquery/listener/keyboard/scroll.js'); }

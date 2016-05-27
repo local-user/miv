@@ -58,13 +58,8 @@ var welcome = {
         // function - welcome - display - hide
         display_hide : function() {
 
-            // body - remove - class - welcome
-            setTimeout(function() {
-                $(" #body ").removeClass('welcome');
-            }, 1100);
-
             // welcome - hide
-            $(" #welcome ").addClass('hidden');
+            $("#welcome").addClass('hidden');
 
             // update - visibility
             this.visibility = 0;
@@ -80,11 +75,8 @@ var welcome = {
         // function - welcome - display - show
         display_show : function() {
 
-            // body - add - class - welcome
-            $(" #body ").addClass('welcome');
-
             // welcome - remove - class - hidden
-            $(" #welcome ").removeClass('hidden');
+            $("#welcome").removeClass('hidden');
 
             // update - visibility
             this.visibility = 1;
