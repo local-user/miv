@@ -56,6 +56,69 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
         end
         # miv |
 
+        # | build
+        config.vm.define "build" do |web|
+            config.vm.hostname = "build"
+            config.vm.provider :virtualbox do |vb|
+                vb.name = "build"
+            end
+        end
+        # build |
+
+        # | home
+        config.vm.define "home" do |web|
+            config.vm.hostname = "home"
+            config.vm.provider :virtualbox do |vb|
+                vb.name = "home"
+            end
+        end
+        # home |
+
+        # | learn
+        config.vm.define "learn" do |web|
+            config.vm.hostname = "learn"
+            config.vm.provider :virtualbox do |vb|
+                vb.name = "learn"
+            end
+        end
+        # learn |
+
+        # | media
+        config.vm.define "media" do |web|
+            config.vm.hostname = "media"
+            config.vm.provider :virtualbox do |vb|
+                vb.name = "media"
+            end
+        end
+        # media |
+
+        # | network
+        config.vm.define "network" do |web|
+            config.vm.hostname = "network"
+            config.vm.provider :virtualbox do |vb|
+                vb.name = "network"
+            end
+        end
+        # network |
+
+        # | stream
+        config.vm.define "stream" do |web|
+            config.vm.hostname = "stream"
+            config.vm.provider :virtualbox do |vb|
+                vb.name = "stream"
+            end
+        end
+        # stream |
+
+        # | system
+        config.vm.define "system" do |web|
+            config.vm.hostname = "system"
+            config.vm.provider :virtualbox do |vb|
+                vb.name = "system"
+            end
+        end
+        # system |
+
     # machine(s) |
 
 
