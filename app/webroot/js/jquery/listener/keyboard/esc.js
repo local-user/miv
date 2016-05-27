@@ -19,9 +19,6 @@
                     // edit - toggle - off
                     edit.toggle_off();
 
-                    // welcome - display - hide
-                    welcome.display_hide();
-
                     // flash - display - hide
                     flash.display_hide();
 
@@ -31,13 +28,8 @@
                     // setting - display - hide
                     setting.display_hide();
 
-                    // input - display - welcome ?
-                    if( $("body").hasClass('overlay') ){
-                        setTimeout( function() { input.display(); }, 1000);
-                        urls.refresh();
-                    } else {
-                        input.display();
-                    }
+                    // input - display - welcome
+                    input.display();
 
                 }
 

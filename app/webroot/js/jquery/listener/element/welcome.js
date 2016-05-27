@@ -9,11 +9,10 @@
     // click - welcome - display - hide
     $( '#welcome' ).click(function() {
 
-        // immediate - remove
-        $("body").removeClass("overlay");
-
-        // welcome - display - hide
-        welcome.display_hide();
+        // scroll - urls - animated
+        $('html, body').animate({
+            scrollTop: $("#input").offset().top
+        }, 500);
 
         // return
         return true;
