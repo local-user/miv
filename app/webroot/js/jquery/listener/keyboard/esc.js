@@ -28,7 +28,7 @@
                     // setting - display - hide
                     setting.display_hide();
 
-                    // input - display - welcome
+                    // input - display
                     input.display();
 
                 }

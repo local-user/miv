@@ -117,7 +117,6 @@
                 <script src='js/jquery/listener/element/header-trigger-refresh.js'  ></script>
                 <script src='js/jquery/listener/element/header-toggle-setting.js'   ></script>
                 <script src='js/jquery/listener/element/input-form-input-url.js'    ></script>
-                <script src='js/jquery/listener/element/setting-upload-favicon.js'  ></script>
                 <script src='js/jquery/listener/element/url-trigger-delete.js'      ></script>
                 <script src='js/jquery/listener/element/url-trigger-dropzone.js'    ></script>
                 <script src='js/jquery/listener/element/url-trigger-priority.js'    ></script>
@@ -129,7 +128,6 @@
 
                 <!-- js - jquery - listener(s) - keyboard -->
                 <script src='js/jquery/listener/keyboard/ctrl.js'                   ></script>
-                <script src='js/jquery/listener/keyboard/down.js'                   ></script>
                 <script src='js/jquery/listener/keyboard/esc.js'                    ></script>
                 <script src='js/jquery/listener/keyboard/shift-e.js'                ></script>
                 <script src='js/jquery/listener/keyboard/shift-l.js'                ></script>
