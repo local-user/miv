@@ -269,6 +269,9 @@ var url = {
                                             // url - default - add - class - hidden
                                             $("#url-" + id + " .default").addClass("hidden");
 
+                                            // url - remove - img - container - img
+                                            $("#url-" + id + " .link .img").remove();
+
                                             // url - append - img - container
                                             setTimeout(function() {
                                                 $("#url-" + id + " .link").append("<div class='img' style='background-image: url(img/url/" + data['img']['filename'] + ")'></div>");
