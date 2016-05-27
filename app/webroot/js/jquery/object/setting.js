@@ -81,14 +81,6 @@ var setting = {
 
         },
 
-        upload_favicon : function() {
-            console.log("upload_favicon under development");
-        },
-
-        upload_welcome : function() {
-            console.log("upload_welcome under development");
-        },
-
     // function(s) |
 
 

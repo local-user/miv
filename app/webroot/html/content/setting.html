@@ -3,7 +3,7 @@
 
 
 
-            <div id='setting' class='color-setting-background'>
+            <div id='setting' class='color-setting color-setting-background'>
 
                 <h1>Settings</h1>
 
@@ -23,9 +23,23 @@
                                 <h2>upload a favicon.</h2>
                             </div>
                         </div>
+                        <script>
+                            $("#setting-upload-favicon .fa-picture-o").dropzone({
+                                url: "api.php?object=setting&method=upload_favicon",
+                                init: function () {
+                                    var thi = this;
+                                    this.on('error', function () {
+                                        $("#setting-upload-favicon .icon").addClass("error");
+                                    });
+                                    this.on('success', function () {
+                                        $("#setting-upload-favicon .icon").addClass("success");
+                                    });
+                                }
+                            });
+                        </script>
 
                         <!-- setting - upload - welcome -->
-                        <div id='setting-upload-favicon' class='box'>
+                        <div id='setting-upload-welcome' class='box'>
                             <div class='icon color-setting-box-hover'>
                                 <span class='fa fa-picture-o'></span>
                             </div>
@@ -33,6 +47,20 @@
                                 <h2>upload a welcome.</h2>
                             </div>
                         </div>
+                        <script>
+                            $("#setting-upload-welcome .fa-picture-o").dropzone({
+                                url: "api.php?object=setting&method=upload_welcome",
+                                init: function () {
+                                    var thi = this;
+                                    this.on('error', function () {
+                                        $("#setting-upload-welcome .icon").addClass("error");
+                                    });
+                                    this.on('success', function () {
+                                        $("#setting-upload-welcome .icon").addClass("success");
+                                    });
+                                }
+                            });
+                        </script>
 
                     </div>
                 </div>
