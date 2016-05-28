@@ -114,6 +114,9 @@ var lock = {
             // usert - key_flagged - false
             this.usert("flag_locked", "false");
 
+            // header - toggle
+            header.display_show();
+
             // return
             return true;
 
