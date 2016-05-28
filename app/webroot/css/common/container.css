@@ -4,6 +4,7 @@
 
 
     body {
+        max-width:  840px;
         min-width:  420px;
         margin:     auto;
     }
