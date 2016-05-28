@@ -43,15 +43,6 @@ var input = {
 
     // | function(s)
 
-        // function - active
-        active : function() {
-            if( this.active == 1 ) {
-                return true;
-            } else {
-                return false;
-            }
-        },
-
         // function - input - display
         display : function() {
 
@@ -59,10 +50,7 @@ var input = {
             this.display_reset();
 
             // input - display - toggle
-            if ( this.active === 0 ){
-
-                // header - display - show
-                header.display_show();
+            if ( this.active == 0 ){
 
                 // input - display - show
                 this.display_show();
