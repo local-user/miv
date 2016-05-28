@@ -1,5 +1,5 @@
 //
-// | js - jquery - listener - keyboard - shift - t
+// | js - jquery - listener - keyboard - t
 //
 //
 
@@ -9,16 +9,16 @@
             // key - telease
             $(document).keyup(function (e){
 
-                // key - shift - t
+                // key - t
                 if (e.keyCode == 84) {
 
                     // input - hidden
                     if( $("#input").hasClass("hidden") ){
 
                         // debug - console
-                        if ( debug ){ console.log(' D js/jquery/listener/keybord/shift-t.js'); }
+                        if ( debug ){ console.log(' D js/jquery/listener/keybord/t.js'); }
 
-                        // urls - display - title [turl]
+                        // urls - display - title-url/turl
                         turl.toggle();
 
                     }
@@ -35,6 +35,6 @@
 
 //
 //
-// js - jquery - listener - keyboard - shift - t |
+// js - jquery - listener - keyboard - t |
 //
-if (debug) { console.log(' . js/jquery/listener/keybord/shift-t.js'); }
+if (debug) { console.log(' . js/jquery/listener/keybord/t.js'); }

@@ -129,10 +129,11 @@
                 <!-- js - jquery - listener(s) - keyboard -->
                 <script src='js/jquery/listener/keyboard/ctrl.js'                   ></script>
                 <script src='js/jquery/listener/keyboard/esc.js'                    ></script>
-                <script src='js/jquery/listener/keyboard/shift-e.js'                ></script>
-                <script src='js/jquery/listener/keyboard/shift-l.js'                ></script>
-                <script src='js/jquery/listener/keyboard/shift-r.js'                ></script>
-                <script src='js/jquery/listener/keyboard/shift-t.js'                ></script>
+                <script src='js/jquery/listener/keyboard/e.js'                      ></script>
+                <script src='js/jquery/listener/keyboard/l.js'                      ></script>
+                <script src='js/jquery/listener/keyboard/r.js'                      ></script>
+                <script src='js/jquery/listener/keyboard/s.js'                      ></script>
+                <script src='js/jquery/listener/keyboard/t.js'                      ></script>
 
                 <!-- js - jquery - object(s) -->
                 <script src='js/jquery/object/error.js'                             ></script>

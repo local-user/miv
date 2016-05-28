@@ -1,5 +1,5 @@
 //
-// | js - jquery - listener - keyboard - shift - l
+// | js - jquery - listener - keyboard - l
 //
 //
 
@@ -9,14 +9,14 @@
             // key - release
             $(document).keyup(function (e){
 
-                // key - shift - l
+                // key - l
                 if(e.keyCode == 76){
 
                     // input - hidden
                     if( $("#input").hasClass("hidden") ){
 
                         // debug - console
-                        if ( debug ){ console.log(' D js/jquery/listener/keybord/shift-l.js'); }
+                        if ( debug ){ console.log(' D js/jquery/listener/keybord/l.js'); }
 
                         // toggle - lock
                         lock.toggle();
@@ -35,6 +35,6 @@
 
 //
 //
-// js - jquery - listener - keyboard - shift - l |
+// js - jquery - listener - keyboard - l |
 //
-if (debug) { console.log(' . js/jquery/listener/keybord/shift-l.js'); }
+if (debug) { console.log(' . js/jquery/listener/keybord/l.js'); }
