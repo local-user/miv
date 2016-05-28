@@ -82,6 +82,11 @@ var setting = {
             // setting - add - color-text-active
             $("#header-toggle-setting").addClass("color-setting-text-active");
 
+            // scroll - to - settings
+            $('html, body').animate({
+                scrollTop: $("#setting").offset().top
+            }, 1000);
+
             // return
             return true;
 
