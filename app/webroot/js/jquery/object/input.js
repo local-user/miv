@@ -152,6 +152,11 @@ var input = {
             // input - form - input - url -  empty
             $( "#input-form-input-url" ).val('');
 
+            // scroll - to - input
+            $('html, body').animate({
+                scrollTop: $("#input").offset().top
+            }, 1500);
+
             // update - active
             this.active = 1;
 
