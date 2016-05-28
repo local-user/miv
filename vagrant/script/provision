@@ -58,19 +58,14 @@
     # system |
 
 
-    # | restart
-
-        # restart - apache2
-        service apache2 reload
-
-        # restart - sshd
-        service ssh reload
-
-    # restart |
-
-
-    # | app
+    # | miv
     if [ -d '/tmp/app' ]; then
+
+        # backup - img
+        if [ -d '/var/www/webroot/img' ]; then
+            rm -r '/tmp/app/webroot/img'
+            mv    '/var/www/webroot/img' '/tmp/app/webroot/img'
+        fi
 
         # remove existing
         [ -d '/var/www' ] && rm -rf '/var/www'
@@ -91,7 +86,18 @@
         mysql -u root < '/var/www/sql/create-database.sql'
 
     fi
-    # app |
+    # miv |
+
+
+    # | restart
+
+        # restart - apache2
+        service apache2 reload
+
+        # restart - sshd
+        service ssh reload
+
+    # restart |
 
 
 
