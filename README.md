@@ -12,6 +12,7 @@ A picture based menu system, for ease of access.
 - [esc] input
 - [e]   edit
 - [l]   lock
+- [n]   navigation
 - [r]   refresh
 - [s]   settings
 - [t]   url titles
