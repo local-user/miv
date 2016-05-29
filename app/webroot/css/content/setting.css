@@ -6,7 +6,7 @@
     #setting {
         margin:             10% auto 10% auto;
         color:              white;
-        height:             400px;
+        height:             100%;
         width:              80%;
         transition:         1s;
         overflow:           hidden;
@@ -37,7 +37,7 @@
     }
 
     #setting .upload .settings {
-        margin:             25px;
+        margin:             25px 0 25px 0;
     }
 
     #setting .upload .settings .box {
