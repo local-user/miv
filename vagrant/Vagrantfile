@@ -56,6 +56,15 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
         end
         # miv |
 
+        # | build-miv
+        config.vm.define "build-miv" do |web|
+            config.vm.hostname = "build-miv"
+            config.vm.provider :virtualbox do |vb|
+                vb.name = "build-miv"
+            end
+        end
+        # build-miv |
+
         # | build
         config.vm.define "build" do |web|
             config.vm.hostname = "build"
