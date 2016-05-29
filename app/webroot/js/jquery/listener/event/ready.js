@@ -12,6 +12,9 @@
                 // debug - console
                 if ( debug ){ console.log(' D js/jquery/listener/keybord/ready.js'); }
 
+                // welccome - display - hide
+                welcome.display_hide();
+
                 // urls - refresh
                 urls.refresh();
 

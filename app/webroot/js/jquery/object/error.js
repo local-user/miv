@@ -69,11 +69,6 @@ var error = {
             // error - add - class(s)
             $( '#error' ).addClass( "hidden" );
 
-            // body - remove - class - overlay
-            setTimeout(function () {
-                $( '#body' ).removeClass( "overlay" );
-            }, 1050);
-
             // return
             return true;
 
@@ -82,10 +77,8 @@ var error = {
         // function - error - display - show
         display_show : function(message) {
 
-            // body - add - class - overlay
-            setTimeout(function () {
-                $( '#body' ).addClass( "overlay" );
-            }, 1100);
+            // welcome - display - hide
+            welcome.display_hide();
 
             // error - set - text - message
             $( '#error-message' ).text(message);
