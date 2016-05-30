@@ -87,6 +87,11 @@ var header = {
             $( "#header"        ).removeClass( "hidden" );
             $( "#header-toggle" ).removeClass( "hidden" );
 
+            // scroll - to - input
+            $('html, body').animate({
+                scrollTop: $("#input").offset().top
+            }, 1000);
+
             // return
             return true;
 
