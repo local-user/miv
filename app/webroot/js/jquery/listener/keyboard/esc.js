@@ -16,17 +16,28 @@
                     // debug - console
                     if ( debug ){ console.log(' D js/jquery/listener/keybord/escape.js'); }
 
-                    // edit - toggle - off
-                    edit.toggle_off();
+                    // | input - hidden
+                    if( $("#input").hasClass("hidden") ){
 
-                    // flash - display - hide
-                    flash.display_hide();
+                        // edit - toggle - off
+                        edit.toggle_off();
 
-                    // input - display - hide
-                    input.display_hide();
+                        // flash - display - hide
+                        flash.display_hide();
 
-                    // setting - display - hide
-                    setting.display_hide();
+                        // input - display - hide
+                        input.display_hide();
+
+                        // setting - display - hide
+                        setting.display_hide();
+
+                    } else {
+
+                        // input - display - hide
+                        input.display_hide();
+
+                    }
+                    // input - hidden |
 
                 }
 

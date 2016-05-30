@@ -14,8 +14,13 @@
             // debug - console
             if ( debug ){ console.log(' D js/jquery/listener/keybord/i.js'); }
 
-            // input - display
-            input.display();
+            // input - hidden
+           	if( $("#input").hasClass("hidden") ){
+
+                // input - display
+                input.display();
+
+            }
 
         }
 
