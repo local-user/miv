@@ -4,26 +4,24 @@
 //
 
 
+    // document - ready
+    $(document).ready( function() {
 
+        // debug - console
+        if ( debug ){ console.log(' D js/jquery/listener/keybord/ready.js'); }
 
-            // document - ready
-            $(document).ready( function() {
+        // scroll - to - input
+        $('html, body').animate({
+            scrollTop: $("#input").offset().top
+        }, 1000);
 
-                // debug - console
-                if ( debug ){ console.log(' D js/jquery/listener/keybord/ready.js'); }
+        // urls - refresh
+        urls.refresh();
 
-                // welccome - display - hide
-                welcome.display_hide();
+        // return
+        return true;
 
-                // urls - refresh
-                urls.refresh();
-
-                // return
-                return true;
-
-            });
-
-
+    });
 
 
 //
