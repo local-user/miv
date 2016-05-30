@@ -22,14 +22,11 @@
                     // flash - display - hide
                     flash.display_hide();
 
-                    // header - display - hide
-                    header.display_hide();
+                    // input - display - hide
+                    input.display_hide();
 
                     // setting - display - hide
                     setting.display_hide();
-
-                    // input - display
-                    input.display();
 
                 }
 

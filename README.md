@@ -9,8 +9,9 @@ A picture based menu system, for ease of access.
 - vagrant up miv
 
 ## Shortcuts
-- [esc] input
+- [esc] escape
 - [e]   edit
+- [i]   input
 - [l]   lock
 - [n]   navigation
 - [r]   refresh
