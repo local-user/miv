@@ -10,10 +10,8 @@
         // debug - console
         if ( debug ){ console.log(' D js/jquery/listener/keybord/ready.js'); }
 
-        // scroll - to - input
-        $('html, body').animate({
-            scrollTop: $("#input").offset().top
-        }, 1000);
+        // hide - welcome
+        $( "#welcome" ).hide( "slow", function() {} );
 
         // urls - refresh
         urls.refresh();
