@@ -77,7 +77,7 @@
         mv '/tmp/app' '/var/www'
 
         # database - app/config
-        cp '/var/www/app/config/database.php.sample' '/var/www/app/config/database.php'
+        cp '/var/www/config/database.php.sample' '/var/www/config/database.php'
 
         # ownership - app/www
         chown -R root:root '/var/www'
