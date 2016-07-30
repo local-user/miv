@@ -17,12 +17,12 @@
 
         <!-- meta -->
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=0.8">">
+        <meta name="viewport" content="width=device-width">">
         <meta name="mobile-web-app-capable" content="yes">
         <meta name="theme-color" content="#222222" />
 
         <!-- css - common - reset -->
-        <link rel="stylesheet" type="text/css" href="css/common/reset.css"      >
+        <link rel="stylesheet" type="text/css" href="css/common/reset.css" >
 
         <!--| 3rdparty - vendor -->
 
