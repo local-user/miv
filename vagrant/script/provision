@@ -76,6 +76,9 @@
         # move
         mv '/tmp/app' '/var/www'
 
+        # database - app/config
+        cp '/var/www/app/config/database.php.sample' '/var/www/app/config/database.php'
+
         # ownership - app/www
         chown -R root:root '/var/www'
                       find '/var/www' -type f -exec chmod 644 {} \;
