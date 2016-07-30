@@ -37,6 +37,10 @@
             <script src="vendor/jquery-2.1.4/jquery-2.1.4.min.js"></script>
             <script src="vendor/dropzonejs/dropzone.js"></script>
 
+            <!-- vendor - materialzie -->
+            <link type="text/css" rel="stylesheet" href="vendor/materialize/css/materialize.min.css"  media="screen,projection"/>
+            <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
         <!-- 3rdparty - vendor |-->
 
         <!-- css - common -->
@@ -51,6 +55,7 @@
         <link rel="stylesheet" type="text/css" href="css/content/flash.css"     >
         <link rel="stylesheet" type="text/css" href="css/content/header.css"    >
         <link rel="stylesheet" type="text/css" href="css/content/input.css"     >
+        <link rel="stylesheet" type="text/css" href="css/content/loading.css"   >
         <link rel="stylesheet" type="text/css" href="css/content/padding.css"   >
         <link rel="stylesheet" type="text/css" href="css/content/setting.css"   >
         <link rel="stylesheet" type="text/css" href="css/content/urls.css"      >
@@ -83,6 +88,7 @@
                 if( ! $locked ){
                     require_once('html/content/error.html');
                     require_once('html/content/welcome.html');
+                    require_once('html/content/loading.html');
                     require_once('html/content/padding.html');
                     require_once('html/content/flash.html');
                     require_once('html/content/input.html');
@@ -145,6 +151,7 @@
                 <script src='js/jquery/object/header.js'                            ></script>
                 <script src='js/jquery/object/img.js'                               ></script>
                 <script src='js/jquery/object/input.js'                             ></script>
+                <script src='js/jquery/object/loading.js'                           ></script>
                 <script src='js/jquery/object/lock.js'                              ></script>
                 <script src='js/jquery/object/msg.js'                               ></script>
                 <script src='js/jquery/object/msgs.js'                              ></script>
@@ -154,6 +161,9 @@
                 <script src='js/jquery/object/url.js'                               ></script>
                 <script src='js/jquery/object/urls.js'                              ></script>
                 <script src='js/jquery/object/welcome.js'                           ></script>
+
+                <!-- vendor - materialize -->
+                <script type="text/javascript" src="vendor/materialize/js/materialize.min.js"></script>
 
             <!-- js - jquery | -->
 

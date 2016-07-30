@@ -1,0 +1,28 @@
+/**| css -- content -- input **/
+
+
+
+
+    #loading {
+        height:                     4%;
+        width:                      100%;
+        overflow:                   hidden;
+    }
+
+    #loading.hidden {
+        height:                     0%;
+        width:                      100%;
+    }
+
+    #loading .progress {
+        box-sizing:                 border-box;
+        border:                     10px solid rgb(34, 34, 34);
+        height:                     100%;
+        width:                      100%;
+        background-color:           rgb(34, 34, 34);
+    }
+
+
+
+
+/** css -- content -- input |**/

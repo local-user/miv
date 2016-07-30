@@ -4,10 +4,10 @@
 
 
     #welcome {
-        height:             100%;
+        height:             94%;
         width:              100%;
         overflow:           hidden;
-        transition:         1.0s;
+        transition:         0.75s;
         cursor:             pointer;
     }
 
@@ -19,7 +19,6 @@
 
     #welcome.hidden {
         height:             0;
-        transition:         1.5s;
     }
 
     #welcome span {
