@@ -5,10 +5,11 @@
 
     #welcome {
         height:             97%;
-        width:              100%;
+        width:              94%;
         overflow:           hidden;
         transition:         0.75s;
         cursor:             pointer;
+        margin:             auto;
     }
 
     #welcome.bg {

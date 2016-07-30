@@ -5,8 +5,9 @@
 
     #loading {
         height:                     2%;
-        width:                      100%;
+        width:                      90%;
         overflow:                   hidden;
+        margin:                     auto;
     }
 
     #loading.hidden {

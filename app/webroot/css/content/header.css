@@ -4,89 +4,95 @@
 
 
     #header {
-                color:          white;
-                width:          100%;
-                min-height:     50px;
-                height:         50px;
-                transition:     2s;
-                border-top:     1px solid white;
-                border-bottom:  1px solid rgb(34, 34, 34);
-                opacity:        1;
-                overflow:       hidden;
-                transition:     1s;
-            }
-
-    #header.input   {
-                        border-top:     1px solid white;
-                        border-bottom:  1px solid white;
-                        margin:         0 0 100px 0;
-                    }
-
-    #header.hidden  {
-                        width:          20%;
-                        min-width:      140px;
-                        transition:     2s ease-in-out;
-                        border-top:     1px solid rgb(34, 34, 34);
-                        border-bottom:  1px solid rgb(34, 34, 34);
-                        opacity:        0.25;
-                    }
+        color:                              white;
+        width:                              100%;
+        min-height:                         50px;
+        height:                             50px;
+        transition:                         2s;
+        border-top:                         1px solid white;
+        border-bottom:                      1px solid rgb(34, 34, 34);
+        opacity:                            1;
+        overflow:                           hidden;
+        transition:                         1s;
+    }
 
 
-    #header .title  {
-                        padding:        20px 80px 20px 80px;
-                        float:          left;
-                        cursor:         pointer;
-                    }
+    #header.hidden {
+        border-top:                         1px solid rgb(34, 34, 34);
+        border-bottom:                      1px solid rgb(34, 34, 34);
+        opacity:                            0.25;
+        transition:                         2s ease-in-out;
+        min-width:                          140px;
+        width:                              20%;
+    }
 
-    #header .title h1   {
-                            font-size:  20px;
-                            color:      #F44336;
-                        }
 
-    #header .title h1 span  {
-                                color:  white;
-                            }
+    #header.input {
+        border-top:                         1px solid white;
+        border-bottom:                      1px solid white;
+        margin:                             0 0 100px 0;
+    }
+
+
+    #header .title {
+        cursor:                             pointer;
+        float:                              left;
+        height:                             50px;
+        padding:                            20px 0px 20px 40px;
+    }
+
+    #header .title h1 {
+        color:                              #F44336;
+        font-size:                          18px;
+        margin:                             0;
+        padding:                            0;
+    }
+
+    #header .title h1 span {
+        color:                              white;
+    }
+
 
     #header .toggle {
-                        padding:        20px 80px 0 0;
-                        float:          right;
-                        user-select:    none;
-                    }
+        padding:                            20px 40px 20px 0px;
+        float:                              right;
+        user-select:                        none;
+    }
 
     #header .toggle.hidden .fa {
-                                    font-size:  0px;
-                               }
+        font-size:                          0px;
+    }
 
-    #header .toggle .fa     {
-                                cursor:         pointer;
-                                transition:     1s;
-                                margin:         0 4px 0 4px;
-                            }
+    #header .toggle .fa {
+        cursor:                             pointer;
+        transition:                         1s;
+        margin:                             0 4px 0 4px;
+    }
 
     #header .toggle .hidden {
-                                color:          white;
-                            }
+        color:                              white;
+    }
 
     #header .toggle .spacer {
-                                height:         10px;
-                                width:          50px;
-                                display:        inline-block;
-                                transition:     0.5s;
-                            }
+        display:                            inline-block;
+        height:                             10px;
+        transition:                         0.5s;
+        width:                              50px;
+    }
 
     #header .toggle .spacer.hidden  {
-                                        width:          0px;
-                                        font-size:      2px;
-                                    }
+        font-size:                          2px;
+        width:                              0px;
+    }
 
 
     #header.lock {
-        height:         0;
-        width:          0;
-        margin:         0;
-        min-width:      0;
-        min-height:     0;
-        transition:     1s;
+        height:                             0;
+        width:                              0;
+        margin:                             0;
+        min-width:                          0;
+        min-height:                         0;
+        transition:                         1s;
     }
 
 
