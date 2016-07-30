@@ -17,7 +17,7 @@
 
         <!-- meta -->
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=420, initial-scale=0.85">
+        <meta name="viewport" content="width=420">
         <meta name="mobile-web-app-capable" content="yes">
         <meta name="theme-color" content="#222222" />
 
