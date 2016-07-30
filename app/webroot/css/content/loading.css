@@ -4,7 +4,7 @@
 
 
     #loading {
-        height:                     4%;
+        height:                     2%;
         width:                      100%;
         overflow:                   hidden;
     }
@@ -15,9 +15,7 @@
     }
 
     #loading .progress {
-        box-sizing:                 border-box;
-        border:                     10px solid rgb(34, 34, 34);
-        height:                     100%;
+        height:                     50%;
         width:                      100%;
         background-color:           rgb(34, 34, 34);
     }

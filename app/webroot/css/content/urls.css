@@ -7,7 +7,7 @@
         margin:             auto;
         padding:            0px;
         text-align:         center;
-        transition:         2s;
+        transition:         none;
     }
 
     #urls .url {
