@@ -14,14 +14,14 @@
         height:             99%;
         width:              99%;
         padding:            0px;
-        transition:         0.25s;
         border:             3px solid rgb(34, 34, 34);
         overflow:           hidden;
         margin:             auto;
+        transition:         none;
     }
 
     #urls .url img {
-        transition:         2s;
+        transition:         none;
     }
 
     #urls .url:hover {
@@ -32,7 +32,6 @@
         height:             25px;
         background-color:   rgb(34, 34, 34);
         overflow:           hidden;
-        transition:         0.5s;
     }
 
     #urls .url .edit.hidden {
