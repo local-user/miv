@@ -4,12 +4,16 @@
 
 
     #welcome {
-        height:             97%;
+        height:             100%;
         width:              94%;
         overflow:           hidden;
         transition:         0.75s;
         cursor:             pointer;
         margin:             auto;
+    }
+
+    #welcome.loading {
+        height:             98%;
     }
 
     #welcome.bg {
