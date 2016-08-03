@@ -20,15 +20,6 @@
 
 
 
-    #setting .footer {
-        background-color:   whitesmoke;
-        color:              #222222;
-        padding:            15px 0 15px 0;
-    }
-
-
-
-
     #setting .header {
         background-color:   whitesmoke;
         color:              #222222;
@@ -39,6 +30,15 @@
         margin:             50px 50px 0 50px;;
         font-size:          28px;
         user-select:        none;
+    }
+
+
+
+
+    #setting .footer {
+        background-color:   whitesmoke;
+        color:              #222222;
+        padding:            15px 0 15px 0;
     }
 
 
