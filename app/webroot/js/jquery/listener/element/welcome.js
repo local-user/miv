@@ -9,10 +9,8 @@
     // click - welcome - display - hide
     $( '#welcome' ).click(function() {
 
-        // scroll - to - input
-        $('html, body').animate({
-            scrollTop: $("#input").offset().top
-        }, 500);
+        // welcome - display - hide
+        welcome.display_hide();
 
         // return
         return true;
