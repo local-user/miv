@@ -65,13 +65,13 @@
     #setting .upload .settings .box {
         height:             100px;
         width:              100px;
-        border:             solid 1px #222222;
+        border:             solid 1px tomato;
         overflow:           hidden;
+        display:            inline-block;
     }
 
     #setting .upload .settings .box:hover {
-        border:             solid 1px #222222;
-        width:              250px;
+        height:             200px;
     }
 
     #setting .upload .settings .box.complete {
@@ -83,7 +83,7 @@
         cursor:             pointer;
         display:            inline-block;
         float:              left;
-        height:             100px;
+        height:             50px;
         width:              100px;
         font-size:          40px;
         text-align:         center;
@@ -91,16 +91,18 @@
         transition:         0.05s;
     }
 
+    #setting .upload .settings .box .icon:hover {
+        color:              #222222;
+    }
+
     #setting .upload .settings .box .title {
-        margin:             15px auto;
+        margin:             auto;
         display:            inline-block;
-        height:             150px;
         text-align:         center;
-        width:              100px;
     }
 
     #setting .upload .settings .box .title h2 {
-        font-size:          12px;
+        font-size:          16px;
     }
 
     #setting .upload .settings .dz-preview {

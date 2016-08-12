@@ -1,0 +1,90 @@
+#!/bin/bash
+
+
+
+
+    # default(s)
+    builtin_bind="localhost:2020"
+    builtin_root="/"
+
+    # global(s)
+    script_dir=$( dirname $0 )
+
+    # trap(s)
+    trap "rm -f $script_dir/app/config/global.root; exit" 1 2
+
+
+
+
+    # | function(s)
+
+        function display_usage {
+            echo "miv usage: miv --server [ --built-in | --vagrant ] --version"
+        }
+
+        function input_builtin_bind {
+            if [   -z "$1" ]; then
+                printf "Enter server mask [$builtin_bind]: "
+                read input
+            else
+                input="$1"
+            fi
+            if [ ! -z "$input" ]; then
+                builtin_bind="$input"
+            fi
+        }
+
+        function start_builtin {
+            php -S "$builtin_bind" -t "$script_dir/app/webroot"
+        }
+
+        function start_vagrant {
+            cd "$script_dir/vagrant"
+            vagrant "$@"
+        }
+
+    # function(s) |
+
+
+    # | main
+
+        # ? - argv - count
+        if [ $# -eq 0 ]; then
+            input_builtin_bind
+            echo ""
+            start_builtin
+        fi
+
+        # arg(s) - type
+        case "$1" in
+            '--server')
+                case "$2" in
+                    '--built-in')
+                        input_builtin_bind "$3"
+                        start_builtin
+                        ;;
+                    '--vagrant')
+                        shift
+                        shift
+                        start_vagrant "$@"
+                        ;;
+                    *)
+                        display_usage
+                        exit 2
+                        ;;
+                esac
+                ;;
+            '--version')
+                echo "Version: `cat "$script_dir/VERSION"`"
+                exit 0
+                ;;
+            *)
+                display_usage
+                exit 2
+                ;;
+        esac
+
+    # main |
+
+
+# miv |
