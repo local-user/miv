@@ -20,6 +20,7 @@
 
         // setting(s)
         setting_container.load();
+        setting_url.load();
 
         // urls - refresh
         urls.refresh();

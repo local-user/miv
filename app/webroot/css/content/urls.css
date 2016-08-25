@@ -7,7 +7,6 @@
         margin:             auto;
         padding:            0px;
         text-align:         center;
-        transition:         none;
     }
 
     #urls .url {
@@ -17,11 +16,11 @@
         border:             3px solid rgb(34, 34, 34);
         overflow:           hidden;
         margin:             auto;
-        transition:         none;
+        transition:         2s;
+        display:            inline-block;
     }
 
     #urls .url img {
-        transition:         none;
     }
 
     #urls .url:hover {

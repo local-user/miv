@@ -125,6 +125,8 @@
                 <script src='js/jquery/listener/element/input-form-input-url.js'    ></script>
                 <script src='js/jquery/listener/element/setting-container-height.js'></script>
                 <script src='js/jquery/listener/element/setting-container-width.js' ></script>
+                <script src='js/jquery/listener/element/setting-url-height.js'      ></script>
+                <script src='js/jquery/listener/element/setting-url-width.js'       ></script>
                 <script src='js/jquery/listener/element/url-trigger-delete.js'      ></script>
                 <script src='js/jquery/listener/element/url-trigger-dropzone.js'    ></script>
                 <script src='js/jquery/listener/element/url-trigger-priority.js'    ></script>
@@ -160,6 +162,7 @@
                 <script src='js/jquery/object/padding.js'                           ></script>
                 <script src='js/jquery/object/setting.js'                           ></script>
                 <script src='js/jquery/object/setting.container.js'                 ></script>
+                <script src='js/jquery/object/setting.url.js'                       ></script>
                 <script src='js/jquery/object/turl.js'                              ></script>
                 <script src='js/jquery/object/url.js'                               ></script>
                 <script src='js/jquery/object/urls.js'                              ></script>

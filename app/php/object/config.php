@@ -33,7 +33,9 @@ class config {
         'container_height',
         'container_width',
         'flag_locked',
-        'flag_turled'
+        'flag_turled',
+        'url_height',
+        'url_width'
     );
 
 
