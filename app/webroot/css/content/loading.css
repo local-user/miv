@@ -4,20 +4,21 @@
 
 
     #loading {
-        height:                     1%;
-        min-height:                 2px;
-        width:                      94%;
+        height:                     2%;
+        min-height:                 8px;
+        width:                      90%;
         overflow:                   hidden;
         margin:                     auto;
     }
 
     #loading.hidden {
+        min-height:                 0;
         height:                     0%;
-        width:                      100%;
+        width:                      90%;
     }
 
     #loading .progress {
-        height:                     50%;
+        height:                     10%;
         width:                      100%;
         background-color:           rgb(34, 34, 34);
     }
