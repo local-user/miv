@@ -44,28 +44,41 @@
 
 
 
-    #setting .upload {
-        padding:            5px 0 5px 80px;;
-        border:             solid 1px #222222;
+    #setting > div {
+        background-color:   #2196f3;
+        margin:             20px;
+        padding:            5px 0 5px 80px;a
         width:              100%;
-        background-color:   #fb8c00;
     }
 
-    #setting .upload .title h1 {
+    #setting > div .title h1 {
         font-size:          20px;
     }
 
-    #setting .upload .settings {
+    #setting > div .settings {
         margin:             25px 0 25px 0;
     }
 
-    #setting .upload .settings .box {
+    #setting > div .settings .box {
         height:             100px;
         width:              100px;
-        border:             solid 1px #fb8c00;
         overflow:           hidden;
         display:            inline-block;
     }
+
+    #setting > div .settings .slider {
+        color:              white;
+        width:              90%;
+        height:             40px;
+        margin:             25px 0 0 0;
+    }
+
+    #setting > div .settings .slider label {
+        color:              white;
+    }
+
+
+
 
     #setting .upload .settings .box.complete {
         height:             300px;
