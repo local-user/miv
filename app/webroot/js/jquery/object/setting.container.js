@@ -32,6 +32,10 @@ var setting_container = {
                                     key: 'container_height'
                                 },
                     success:    function(data) {
+                                    setTimeout( function() {
+                                        height = $("#setting-container-height input").val() + "%";
+                                        $("body").css("height", height);
+                                    }, 1000);
                                     $("#setting-container-height input").val(
                                         data['config']['container_height']
                                     );
@@ -48,6 +52,10 @@ var setting_container = {
                                     key: 'container_width'
                                 },
                     success:    function(data) {
+                                    setTimeout( function() {
+                                        width = $("#setting-container-width input").val() + "%";
+                                        $("body").css("max-width", width);
+                                    }, 1000);
                                     $("#setting-container-width input").val(
                                         data['config']['container_width']
                                     );
@@ -73,7 +81,10 @@ var setting_container = {
                                     key:    'container_height',
                                     value:  $("#setting-container-height input").val()
                                 },
-                    success:    function(data) {},
+                    success:    function(data) {
+                                    height = $("#setting-container-height input").val() + "%";
+                                    $("body").css("height", height);
+                                },
                     error:      function() {
                                     error.display_show('Unable to update or insert config.');
                                 }
@@ -88,7 +99,10 @@ var setting_container = {
                                     key:    'container_width',
                                     value:  $("#setting-container-width input").val()
                                 },
-                    success:    function(data) {},
+                    success:    function(data) {
+                                    width = $("#setting-container-width input").val() + "%";
+                                    $("body").css("max-width", width);
+                                },
                     error:      function() {
                                     error.display_show('Unable to update or insert config.');
                                 }
