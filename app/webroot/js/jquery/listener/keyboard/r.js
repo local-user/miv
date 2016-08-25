@@ -18,8 +18,8 @@
                         // debug - console
                         if ( debug ){ console.log(' D js/jquery/listener/keybord/r.js'); }
 
-                        // urls - refresh
-                        urls.refresh();
+                        // reload - page
+                        location.reload();
 
                     }
 
