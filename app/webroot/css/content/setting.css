@@ -22,7 +22,7 @@
 
 
     #setting .header {
-        background-color:   whitesmoke;
+        background-color:   white;
         color:              #222222;
         padding:            15px 0 15px 0;
     }
@@ -37,7 +37,7 @@
 
 
     #setting .footer {
-        background-color:   whitesmoke;
+        background-color:   white;
         color:              #222222;
         padding:            15px 0 15px 0;
     }
@@ -46,7 +46,7 @@
 
 
     #setting > div {
-        background-color:   whitesmoke;
+        background-color:   white;
         color:              black;
         margin:             20px;
         padding:            5px 0 5px 80px;a
