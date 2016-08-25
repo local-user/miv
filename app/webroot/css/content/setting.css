@@ -48,10 +48,7 @@
         padding:            5px 0 5px 80px;;
         border:             solid 1px #222222;
         width:              100%;
-        background-color:   tomato;
-    }
-
-    #setting .upload:hover {
+        background-color:   #fb8c00;
     }
 
     #setting .upload .title h1 {
@@ -65,13 +62,9 @@
     #setting .upload .settings .box {
         height:             100px;
         width:              100px;
-        border:             solid 1px tomato;
+        border:             solid 1px #fb8c00;
         overflow:           hidden;
         display:            inline-block;
-    }
-
-    #setting .upload .settings .box:hover {
-        height:             200px;
     }
 
     #setting .upload .settings .box.complete {
