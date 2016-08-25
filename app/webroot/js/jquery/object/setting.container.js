@@ -32,13 +32,13 @@ var setting_container = {
                                     key: 'container_height'
                                 },
                     success:    function(data) {
+                                    $("#setting-container-height input").val(
+                                        data['config']['container_height']
+                                    );
                                     setTimeout( function() {
                                         height = $("#setting-container-height input").val() + "%";
                                         $("body").css("height", height);
                                     }, 1000);
-                                    $("#setting-container-height input").val(
-                                        data['config']['container_height']
-                                    );
                                 },
                     error:      function() {}
                 });
@@ -52,13 +52,13 @@ var setting_container = {
                                     key: 'container_width'
                                 },
                     success:    function(data) {
+                                    $("#setting-container-width input").val(
+                                        data['config']['container_width']
+                                    );
                                     setTimeout( function() {
                                         width = $("#setting-container-width input").val() + "%";
                                         $("body").css("max-width", width);
                                     }, 1000);
-                                    $("#setting-container-width input").val(
-                                        data['config']['container_width']
-                                    );
                                 },
                     error:      function() {}
                 });
