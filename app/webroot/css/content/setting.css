@@ -46,7 +46,8 @@
 
 
     #setting > div {
-        background-color:   #2196f3;
+        background-color:   whitesmoke;
+        color:              black;
         margin:             20px;
         padding:            5px 0 5px 80px;a
         width:              100%;
@@ -75,7 +76,7 @@
     }
 
     #setting > div .settings .slider label {
-        color:              white;
+        color:              black;
     }
 
 
@@ -99,7 +100,7 @@
     }
 
     #setting .upload .settings .box .icon:hover {
-        color:              #222222;
+        color:              #fb8c00;
     }
 
     #setting .upload .settings .box .title {
