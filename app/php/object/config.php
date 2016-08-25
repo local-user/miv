@@ -30,6 +30,8 @@ class config {
 
     // var - valid
     private $valid_keys = array(
+        'container_height',
+        'container_width',
         'flag_locked',
         'flag_turled'
     );
