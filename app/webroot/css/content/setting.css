@@ -7,10 +7,10 @@
         background-color:   white;
         color:              white;
         height:             100%;
-        margin:             10% auto 10% auto;
+        margin:             auto;
         overflow-y:         auto;
         transition:         1s;
-        width:              80%;
+        width:              100%;
     }
 
     #setting.hidden {
@@ -23,15 +23,9 @@
 
     #setting .header {
         color:              #222222;
-        padding:            25px 25px 25px 0;
+        padding:            25px 25px 25px 25px;
         transition:         0.5s;
-        width:              90%;
-    }
-
-    #setting .header > h1 {
-        margin:             50px 50px 0 50px;;
-        font-size:          28px;
-        user-select:        none;
+        width:              95%;
     }
 
     #setting .header {
@@ -44,7 +38,12 @@
         color:              white;
     }
 
+    #setting .header h1 {
+        font-size:          20px;
+    }
+
     #setting .header h4 {
+        font-size:          32px;
         opacity:            0.2;
     }
 
@@ -65,7 +64,6 @@
 
     #setting > div {
         color:              black;
-        margin:             20px;
         padding:            5px 0 5px 80px;a
         width:              100%;
     }
@@ -77,7 +75,6 @@
     }
 
     #setting > div .settings {
-        margin:             25px 0 25px 0;
     }
 
     #setting > div .settings .box {
@@ -94,12 +91,21 @@
         margin:             25px 0 0 0;
     }
 
+    #setting > div .settings .slider {
+    }
+
     #setting > div .settings .slider label {
         color:              black;
+        font-size:          14px;
+        margin:             0 0 0 15px;
     }
 
 
 
+
+    #setting .upload {
+        margin:             50px 0 0 0;
+    }
 
     #setting .upload .settings .box.complete {
         height:             300px;
