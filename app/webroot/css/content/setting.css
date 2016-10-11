@@ -23,13 +23,33 @@
 
     #setting .header {
         color:              #222222;
-        padding:            15px 0 15px 0;
+        padding:            25px 25px 25px 0;
+        transition:         0.5s;
+        width:              90%;
     }
 
     #setting .header > h1 {
         margin:             50px 50px 0 50px;;
         font-size:          28px;
         user-select:        none;
+    }
+
+    #setting .header {
+        cursor:             pointer;
+        color:              #2196F3;
+    }
+
+    #setting.hidden > .header {
+        cursor:             none;
+        color:              white;
+    }
+
+    #setting .header h4 {
+        opacity:            0.2;
+    }
+
+    #setting .header h4:hover {
+        opacity:            1;
     }
 
 
@@ -52,6 +72,8 @@
 
     #setting > div .title h1 {
         font-size:          20px;
+        color:              #2196F3;
+        font-
     }
 
     #setting > div .settings {
