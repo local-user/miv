@@ -8,6 +8,7 @@
         max-width:  800px;
         margin:     auto;
         -webkit-overflow-scrolling: touch;
+        font-family: 'Titillium Web', sans-serif;
     }
 
     body.lock {

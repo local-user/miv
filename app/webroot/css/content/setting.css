@@ -4,10 +4,10 @@
 
 
     #setting {
+        background-color:   white;
         color:              white;
         height:             100%;
         margin:             10% auto 10% auto;
-        overflow:           hidden;
         overflow-y:         auto;
         transition:         1s;
         width:              80%;
@@ -22,7 +22,6 @@
 
 
     #setting .header {
-        background-color:   white;
         color:              #222222;
         padding:            15px 0 15px 0;
     }
@@ -37,7 +36,6 @@
 
 
     #setting .footer {
-        background-color:   white;
         color:              #222222;
         padding:            15px 0 15px 0;
     }
@@ -46,7 +44,6 @@
 
 
     #setting > div {
-        background-color:   white;
         color:              black;
         margin:             20px;
         padding:            5px 0 5px 80px;a
@@ -116,8 +113,6 @@
     #setting .upload .settings .dz-preview {
         display:            none;
     }
-
-
 
 
 /**| css - content - setting **/
