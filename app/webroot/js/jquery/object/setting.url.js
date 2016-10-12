@@ -57,7 +57,7 @@ var setting_url = {
                                     if( data['config']['url_width'] != undefined ){
                                         width = data['config']['url_width'];
                                     } else {
-                                        width = "99";
+                                        width = "100";
                                     }
                                     $("#setting-url-width input").val( width );
                                     setTimeout( function() {
