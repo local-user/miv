@@ -32,12 +32,14 @@ var setting_url = {
                                     key: 'url_height'
                                 },
                     success:    function(data) {
-                                    $("#setting-url-height input").val(
-                                        data['config']['url_height']
-                                    );
+                                    if( data['config']['url_height'] != undefined ){
+                                        height = data['config']['url_height'];
+                                    } else {
+                                        height = "100";
+                                    }
+                                    $("#setting-url-height input").val( height );
                                     setTimeout( function() {
-                                        height = $("#setting-url-height input").val() + "%";
-                                        $(".url").css("height", height);
+                                        $(".url").css("height", height + "%");
                                     }, 1000);
                                 },
                     error:      function() {}
@@ -52,12 +54,14 @@ var setting_url = {
                                     key: 'url_width'
                                 },
                     success:    function(data) {
-                                    $("#setting-url-width input").val(
-                                        data['config']['url_width']
-                                    );
+                                    if( data['config']['url_width'] != undefined ){
+                                        width = data['config']['url_width'];
+                                    } else {
+                                        width = "99";
+                                    }
+                                    $("#setting-url-width input").val( width );
                                     setTimeout( function() {
-                                        width = $("#setting-url-width input").val() + "%";
-                                        $(".url").css("max-width", width);
+                                        $(".url").css("width", width + "%");
                                     }, 1000);
                                 },
                     error:      function() {}

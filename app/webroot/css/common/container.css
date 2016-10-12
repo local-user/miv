@@ -4,16 +4,16 @@
 
 
     body {
-        margin:     auto;
-        height:     100%;
-        width:      100%;
-        -webkit-overflow-scrolling: touch;
-        font-family: 'Titillium Web', sans-serif;
+        margin:                         auto;
+        height:                         100%;
+        width:                          100%;
+        font-family:                    'Titillium Web', sans-serif;
+        -webkit-overflow-scrolling:     touch;
     }
 
     body.lock {
-        height:     100%;
-        overflow:   hidden;
+        height:                         100%;
+        overflow:                       hidden;
     }
 
 
