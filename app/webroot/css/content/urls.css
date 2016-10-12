@@ -13,13 +13,16 @@
 
     #urls .url {
         height:             100%;
-        width:              94%;
+        width:              100%;
         padding:            0px;
-        border:             3px solid rgb(34, 34, 34);
         overflow:           hidden;
         margin:             auto;
         transition:         1s;
         display:            inline-block;
+    }
+
+    #urls .url.border {
+        border:             2px solid rgb(34, 34, 34);
     }
 
     #urls .url img {

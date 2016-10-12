@@ -37,7 +37,7 @@ var url = {
         append : function( id ){
 
             // append - urls - url[ id ]
-            $("#urls").append("<div id='url-" + id + "' class='url animate-appear' data-url-id='" + id + "'></div>");
+            $("#urls").append("<div id='url-" + id + "' class='url animate-appear border' data-url-id='" + id + "'></div>");
 
             // append - urls - url[ id ] - edit
             $("#url-" + id).append("<div class='edit hidden color-edit-text'></div>");
