@@ -32,15 +32,18 @@ var setting_container = {
                                     key: 'container_height'
                                 },
                     success:    function(data) {
-                                    $("#setting-container-height input").val(
-                                        data['config']['container_height']
-                                    );
+                                    if( data['config']['container_height'] != undefined ){
+                                        height = data['config']['container_height'];
+                                    } else {
+                                        height = "100";
+                                    }
+                                    $("#setting-container-height input").val(height);
                                     setTimeout( function() {
-                                        height = $("#setting-container-height input").val() + "%";
-                                        $("body").css("height", height);
+                                        $("body").css("height", height + "%");
                                     }, 1000);
                                 },
-                    error:      function() {}
+                    error:      function() {
+                                },
                 });
             },
 
@@ -52,12 +55,14 @@ var setting_container = {
                                     key: 'container_width'
                                 },
                     success:    function(data) {
-                                    $("#setting-container-width input").val(
-                                        data['config']['container_width']
-                                    );
+                                    if( data['config']['container_width'] != undefined ){
+                                        width = data['config']['container_width'];
+                                    } else {
+                                        width = "100";
+                                    }
+                                    $("#setting-container-width input").val(width);
                                     setTimeout( function() {
-                                        width = $("#setting-container-width input").val() + "%";
-                                        $("body").css("max-width", width);
+                                        $("body").css("width", width + "%");
                                     }, 1000);
                                 },
                     error:      function() {}

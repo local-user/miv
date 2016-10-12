@@ -18,9 +18,9 @@
         // loading - display - [ 1500ms ]
         loading.display_loading( 1500 );
 
-        // setting(s)
+        // setting(s) - load
         setting_container.load();
-        setting_url.load();
+//        setting_url.load();
 
         // urls - refresh
         urls.refresh();

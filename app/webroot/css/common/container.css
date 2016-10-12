@@ -4,9 +4,9 @@
 
 
     body {
-        max-width:  80%;
-        max-width:  800px;
         margin:     auto;
+        height:     100%;
+        width:      100%;
         -webkit-overflow-scrolling: touch;
         font-family: 'Titillium Web', sans-serif;
     }
