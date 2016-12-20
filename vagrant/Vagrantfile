@@ -11,7 +11,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     # | global
 
         # base - box
-        config.vm.box = "ubuntu/trusty64"
+        config.vm.box = "ubuntu/xenial64"
 
         # network - adapter - bridged
         config.vm.network "public_network"
