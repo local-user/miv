@@ -7,7 +7,7 @@
 
     .color-edit-background                  {   background-color: #F44336;          }
     .color-edit-text                        {              color: #FFFFFF;          }
-    .color-edit-text-active                 {              color: #2196F3;          }
+    .color-edit-text-active                 {              color: #F44336;          }
     .color-edit-text-active:hover           {              color: #2196F3;          }
     .color-edit-text-hover:hover            {              color: #F44336;          }
 
@@ -44,7 +44,7 @@
 
     .color-input-background                 {   background-color: rgb(34, 34, 34);  }
     .color-input-text                       {              color: #FFFFFF;          }
-    .color-input-text-active                {              color: #2196F3;          }
+    .color-input-text-active                {              color: #F44336;          }
     .color-input-text-hover:hover           {              color: #F44336;          }
     .color-input-text-invalid               {              color: #F44336;          }
     .color-input-text-valid                 {              color: #6CCD6C;          }
@@ -57,7 +57,7 @@
     .color-setting .error                   {              color: #F44336;          }
     .color-setting-background               {   background-color: #222222;          }
     .color-setting-box-hover:hover          {              color: #2196F3;          }
-    .color-setting-text-active              {              color: #2196F3;          }
+    .color-setting-text-active              {              color: #F44336;          }
     .color-setting-text-hover:hover         {              color: #F44336;          }
 
 
