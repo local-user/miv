@@ -148,7 +148,6 @@ var lock = {
 
 
 };
-$(document).ready( function() { lock.load(); } );
 //
 //
 // javascript - jquey - object - lock |

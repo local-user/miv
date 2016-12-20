@@ -10,17 +10,20 @@
         // debug - console
         if ( debug ){ console.log(' D js/jquery/listener/keybord/ready.js'); }
 
-        // welcome - display - hide
-        setTimeout( function() {
-            welcome.display_hide();
-        }, 1000);
-
         // loading - display - [ 1500ms ]
         loading.display_loading( 1500 );
+
+        // lock - load
+        lock.load();
 
         // setting(s) - load
         setting_container.load();
         setting_url.load();
+
+        // welcome - display - hide
+        setTimeout( function() {
+            welcome.display_hide();
+        }, 1000);
 
         // urls - refresh
         urls.refresh();
