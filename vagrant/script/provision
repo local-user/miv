@@ -14,13 +14,13 @@
     # | aptitude
 
         # apt - update
-        aptitude update
+        apt-get update  -q
 
         # apt - upgrade
-        aptitude upgrade -q -y
+        apt-get upgrade -q -y
 
         # apt - install - lamp / git / realpath / tree
-        aptitude install -q -y apache2 mysql-server php5-mysql php5 libapache2-mod-php5 php5-mcrypt git realpath tree
+        apt-get install -q -y apache2 mysql-server php-mysql php libapache2-mod-php php-mcrypt git realpath tree
 
         # apt - cleanup
         apt-get autoremove
@@ -28,40 +28,9 @@
     # aptitude |
 
 
-    # | git
-
-        # git - clone - aln
-        if [ -d '/opt/aln' ]; then
-            cd '/opt/aln' && git pull
-        else
-            git clone 'https://github.com/local-user/aln.git' '/opt/aln'
-        fi
-
-    # git |
 
 
-    # | system
-    if [ -d '/tmp/system' ]; then
-
-        # remove existing
-        [ -d '/opt/system' ] && rm -rf '/opt/system'
-
-        # move
-        mv '/tmp/system' '/opt/system'
-
-        # ownership - app/www
-        chown -R root:root '/opt/system'
-                      find '/opt/system' -type f -exec chmod 644 {} \;
-                      find '/opt/system' -type d -exec chmod 755 {} \;
-
-        # '/opt/system/ -> /'
-        /bin/bash /opt/aln/bin/aln -s '/opt/system' -d '/'
-
-    fi
-    # system |
-
-
-    # | miv
+    # | app
     if [ -d '/tmp/app' ]; then
 
         # backup - img
@@ -88,22 +57,39 @@
         chown -R root:www-data '/var/www/webroot/img'
         chmod -R 770           '/var/www/webroot/img'
 
-        # sql - create - database - miv
-        mysql -u root < '/var/www/sql/create-database.sql'
+        # sql - access/database
+        mysql -u root < '/var/www/sql/access.sql'
+        mysql -u root < '/var/www/sql/database.sql'
 
     fi
-    # miv |
+    # app |
 
 
-    # | restart
+    # | system
+    if [ -d '/tmp/system' ]; then
 
-        # restart - apache2
-        service apache2 reload
+        # remove - existing
+        [ -d '/opt/system' ] && rm -rf '/opt/system'
 
-        # restart - sshd
-        service ssh reload
+        # set - permission(s)
+        chown -R root:root '/tmp/system'
+                      find '/tmp/system' -type f -exec chmod 644 {} \;
+                      find '/tmp/system' -type d -exec chmod 755 {} \;
 
-    # restart |
+        # move - config(s)
+        mv -v '/tmp/system/etc/apache2/sites-enabled/000-default.conf'  '/etc/apache2/sites-enabled/000-default.conf'
+        mv -v '/tmp/system/etc/ssh/ssh_config'                          '/etc/ssh/ssh_config'
+        mv -v '/tmp/system/etc/ssh/sshd_config'                         '/etc/ssh/sshd_config'
+
+        # remove - tmp/system
+        rm -rf '/tmp/system'
+
+        # restart - services
+        service apache2 restart
+        service ssh     restart
+
+    fi
+    # system |
 
 
 
